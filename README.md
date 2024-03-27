@@ -122,5 +122,5 @@ hotfix(빨리 고치기): main 브랜치로 배포를 하고 나서 버그가 �
 
 
 
-## hci-proejct.vercel.app
+## https://hci-proejct.vercel.app
 
