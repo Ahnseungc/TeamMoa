@@ -125,38 +125,9 @@ hotfix(빨리 고치기): main 브랜치로 배포를 하고 나서 버그가 �
 
 ---
 
-<aside>
-
-![스크린샷 2024-03-27 오후 8 22 48](https://github.com/Ahnseungc/HCI_Proejct/assets/94547692/0bd4ecdd-0db4-45af-89b6-838e814f2c4e)
-react
-
-</aside>
-
-<aside>
-<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/4d825104-fe89-4ebe-9308-342789c00893/1b72b10f-a67a-4ee9-b31b-eebc6bcc8921/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.22.21.png" alt="https://prod-files-secure.s3.us-west-2.amazonaws.com/4d825104-fe89-4ebe-9308-342789c00893/1b72b10f-a67a-4ee9-b31b-eebc6bcc8921/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.22.21.png" width="40px" /> TS
-
-</aside>
-
 ## Library
 
 ---
-
-<aside>
-<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/4d825104-fe89-4ebe-9308-342789c00893/5606e2bb-6bbd-4c1a-8a99-014ed33733e6/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.24.37.png" alt="https://prod-files-secure.s3.us-west-2.amazonaws.com/4d825104-fe89-4ebe-9308-342789c00893/5606e2bb-6bbd-4c1a-8a99-014ed33733e6/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.24.37.png" width="40px" /> Styled-Components
-
-</aside>
-
-</aside>
-
-<aside>
-<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/4d825104-fe89-4ebe-9308-342789c00893/8c8f0fb6-e2e8-4002-af22-8bb482893072/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.25.31.png" alt="https://prod-files-secure.s3.us-west-2.amazonaws.com/4d825104-fe89-4ebe-9308-342789c00893/8c8f0fb6-e2e8-4002-af22-8bb482893072/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.25.31.png" width="40px" /> SWR
-
-</aside>
-
-<aside>
-<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/4d825104-fe89-4ebe-9308-342789c00893/bffa1fda-d725-4d33-acf2-02ffd4d45f97/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.25.41.png" alt="https://prod-files-secure.s3.us-west-2.amazonaws.com/4d825104-fe89-4ebe-9308-342789c00893/bffa1fda-d725-4d33-acf2-02ffd4d45f97/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.25.41.png" width="40px" /> Recoil
-
-</aside>
 
 
 
