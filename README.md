@@ -126,7 +126,9 @@ hotfix(빨리 고치기): main 브랜치로 배포를 하고 나서 버그가 �
 ---
 
 <aside>
- ![스크린샷 2024-03-27 오후 8 22 05](https://github.com/Ahnseungc/HCI_Proejct/assets/94547692/90b930f0-bb59-476b-a780-6e3a73ffc5f7)react
+
+![스크린샷 2024-03-27 오후 8 22 48](https://github.com/Ahnseungc/HCI_Proejct/assets/94547692/0bd4ecdd-0db4-45af-89b6-838e814f2c4e)
+react
 
 </aside>
 
