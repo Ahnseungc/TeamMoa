@@ -1,7 +1,6 @@
 ##  커밋 메시지 컨벤션
 
 <aside>
-✅
 
 ### 1. 커밋 유형 지정
 
@@ -108,3 +107,15 @@ function Person(){}
 </aside>
 
 ---
+
+
+## git-flow
+
+<aside>
+
+<img width="846" alt="스크린샷 2024-03-27 오후 7 13 58" src="https://github.com/Ahnseungc/HCI_Proejct/assets/94547692/b896415f-f48e-4235-9ef2-28ffd5c7175a">
+
+main(master): 서비스을 직접 배포하는 역할을 하는 브랜치
+feature(기능): 각 기능 별 개발 브랜치
+develop(개발): feature에서 개발된 내용이 저장되는 브랜치
+hotfix(빨리 고치기): main 브랜치로 배포를 하고 나서 버그가 생겼을 때 빨리 고치기 위한 브랜치
