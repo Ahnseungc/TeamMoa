@@ -1,13 +1,14 @@
 import { FunctionComponent } from "react";
 import { InputLayout } from "./styles";
-import { InputType } from "../../../type/Tb";
+import { InputType } from "../../../../type/Tb";
 
-const Input: FunctionComponent<InputType> = ({
+const SignUpInput: FunctionComponent<InputType> = ({
   placeholder,
   readonly,
   disabled,
   error,
   type,
+  inputtype,
   ...others
 }) => {
   return (
@@ -17,9 +18,10 @@ const Input: FunctionComponent<InputType> = ({
       readOnly={readonly}
       disabled={disabled}
       error={error}
+      Inputtype={inputtype}
       {...others}
     />
   );
 };
 
-export default Input;
+export default SignUpInput;

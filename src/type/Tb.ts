@@ -5,4 +5,5 @@ export interface InputType {
   value: string;
   error: string;
   type: "text" | "password";
+  inputtype: "text" | "password" | "website" | "textheader";
 }
