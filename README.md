@@ -119,3 +119,17 @@ main(master): 서비스을 직접 배포하는 역할을 하는 브랜치 </br>
 feature(기능): 각 기능 별 개발 브랜치 </br>
 develop(개발): feature에서 개발된 내용이 저장되는 브랜치 </br>
 hotfix(빨리 고치기): main 브랜치로 배포를 하고 나서 버그가 생겼을 때 빨리 고치기 위한 브랜치 </br>
+
+
+## Front-End Framework & Language
+
+---
+
+## Library
+
+---
+
+
+
+## https://hci-proejct.vercel.app
+
