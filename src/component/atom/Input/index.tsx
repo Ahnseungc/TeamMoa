@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import { InputLayout } from "./styles";
-import { InputType } from "../../../../type/Tb";
+import { InputType } from "../../../type/Tb";
 
 const SignUpInput: FunctionComponent<InputType> = ({
   placeholder,
