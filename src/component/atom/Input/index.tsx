@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import { InputLayout } from "./styles";
-import { InputType } from "../../../../type/Tb";
+import { InputType } from "../../../type/Tb";
 
 const SignUpInput: FunctionComponent<InputType> = ({
   placeholder,
@@ -9,17 +9,19 @@ const SignUpInput: FunctionComponent<InputType> = ({
   error,
   type,
   inputtype,
-  ...others
+  id,
+  value,
 }) => {
   return (
     <InputLayout
       type={type}
+      id={id}
       placeholder={placeholder}
       readOnly={readonly}
       disabled={disabled}
       error={error}
       Inputtype={inputtype}
-      {...others}
+      value={value}
     />
   );
 };

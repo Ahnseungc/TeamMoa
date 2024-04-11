@@ -4,6 +4,7 @@ export interface InputType {
   disabled: boolean;
   value: string;
   error: string;
+  id: string;
   type: "text" | "password";
   inputtype: "text" | "password" | "website" | "textheader";
 }

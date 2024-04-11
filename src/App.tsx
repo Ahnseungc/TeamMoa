@@ -1,25 +1,18 @@
-import "./App.css";
+import SignIn from "./page/Login/SignIn";
+import SignUp from "./page/Login/SignUp";
 import { GlobalStyle } from "./global-style";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/auth/signin" element={<SignIn />} />
+          <Route path="/auth/signup" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
