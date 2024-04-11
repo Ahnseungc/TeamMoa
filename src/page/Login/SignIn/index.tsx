@@ -1,20 +1,23 @@
+import KaKaoLogin from "react-kakao-login";
+
 const SignIn = () => {
-  const Restapi_Key = process.env.REACT_APP_REST_API_KEY;
-  const Redirect_Uri = process.env.REACT_APP_REDIRECT_URI;
+  const kakaoKey = "3eb698081391d6acf1c0b1a85aaff884";
 
-  const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${Restapi_Key}&redirect_uri=${Redirect_Uri}&response_type=code`;
-
-  const handleLogin = () => {
-    window.location.href = kakaoURL;
+  const kakaoOnSuccess = async (data: object) => {
+    console.log(data);
   };
-  const code = new URL(window.location.href).searchParams.get("code");
-
-  console.log(code);
+  const kakaoOnFailure = (error: any) => {
+    console.log(error);
+  };
 
   return (
     <div>
       로그인 페이지
-      <button onClick={handleLogin}>로그인 버튼</button>
+      <KaKaoLogin
+        token={kakaoKey}
+        onSuccess={kakaoOnSuccess}
+        onFail={kakaoOnFailure}
+      />
     </div>
   );
 };
