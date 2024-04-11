@@ -9,17 +9,19 @@ const SignUpInput: FunctionComponent<InputType> = ({
   error,
   type,
   inputtype,
-  ...others
+  id,
+  value,
 }) => {
   return (
     <InputLayout
       type={type}
+      id={id}
       placeholder={placeholder}
       readOnly={readonly}
       disabled={disabled}
       error={error}
       Inputtype={inputtype}
-      {...others}
+      value={value}
     />
   );
 };
