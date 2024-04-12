@@ -1,69 +1,70 @@
 import styled, { css } from "styled-components";
+import { ButtonType } from "../../../type/Tb";
 
-export interface ButtonLayoutProps {
-  buttonType: "primary" | "ghost" | "default";
-  isFull?: boolean;
+export interface ButtonLayoutType {
+  Buttontype: "text" | "largebutton" | "addposition" | "middlebutton" | "smallbutton";
 }
 
-export const defaultButtonStyles = css`
-  background: #e1e1e1;
-  color: #4b4b4b;
-
-  &:hover {
-    background: #e7e7e7;
-  }
-
-  &:active {
-    background: #d7d7d7;
-  }
-`;
-
-export const primaryButtonStyles = css`
-  background: #33ccbd;
-  color: #fff;
-
-  &:hover {
-    background: #6fd0c6;
-  }
-
-  &:active {
-    background: #0b9688;
-  }
-`;
-
-export const ghostButtonStyles = css`
-  background: transparent;
-  color: #33ccbd;
-  border: 1px solid #33ccbd;
-
-  &:hover {
-    background: #33ccbd;
-    color: #fff;
-  }
-
-  &:active {
-    background: #0b9688;
-  }
-`;
-
-export const ButtonLayout = styled.button<ButtonLayoutProps>`
-  padding: 10px 30px;
+export const textButtonStyles = css`
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
   border: none;
-  width: ${({ isFull }) => (isFull ? "100%" : "auto")};
-  ${({ buttonType }) => {
-    switch (buttonType) {
-      case "primary":
-        return primaryButtonStyles;
-      case "ghost":
-        return ghostButtonStyles;
-      case "default":
-        return defaultButtonStyles;
+  background-color: #FFFFFF;
+`;
+
+export const largebuttonStyles = css`
+  width: 374px;
+  height: 73px;
+  background-color: #D9D9D9;
+  font-size: 20px;
+  border: none;
+  color: black;
+`;
+
+export const addpositionStyles = css`
+  width: 305px;
+  height: 26px;
+  background-color: #EBEBEB;
+  font-size: 13px;
+  border: none;
+  border-radius: 5px;
+  color: #363636;
+`;
+
+export const middlebuttonStyles = css`
+  width: 189px;
+  height: 82px;
+  background-color: #D9D9D9;
+  font-size: 20px;
+  border: none;
+  color: black;
+`;
+
+export const smallbuttonStyles = css`
+  width: 104px;
+  height: 28px;
+  background-color: #D9D9D9;
+  font-size: 15px;
+  border: none;
+  color: black;
+`;
+
+export const ButtonLayout = styled.button<ButtonLayoutType>`
+  ${(props) => {
+    switch (props.Buttontype) {
+      case "text":
+        return textButtonStyles;
+      case "largebutton":
+        return largebuttonStyles;
+      case "addposition":
+        return addpositionStyles;
+      case "middlebutton":
+        return middlebuttonStyles;
+      case "smallbutton":
+        return smallbuttonStyles;
       default:
-        return primaryButtonStyles;
+        return textButtonStyles;
     }
   }}
 `;
-
-export default {
-  ButtonLayout,
-};
