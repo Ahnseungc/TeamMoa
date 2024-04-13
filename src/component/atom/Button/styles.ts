@@ -1,8 +1,7 @@
 import styled, { css } from "styled-components";
-import { ButtonType } from "../../../type/Tb";
 
 export interface ButtonLayoutType {
-  Buttontype: "text" | "largebutton" | "addposition" | "middlebutton" | "smallbutton";
+  Buttontype: "text" | "icon" | "largebutton" | "addposition" | "middlebutton" | "smallbutton";
 }
 
 export const textButtonStyles = css`
@@ -11,6 +10,13 @@ export const textButtonStyles = css`
   color: black;
   border: none;
   background-color: #FFFFFF;
+`;
+
+export const iconButtonStyles = css`
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: none;
 `;
 
 export const largebuttonStyles = css`
@@ -55,6 +61,8 @@ export const ButtonLayout = styled.button<ButtonLayoutType>`
     switch (props.Buttontype) {
       case "text":
         return textButtonStyles;
+      case "icon":
+        return iconButtonStyles;
       case "largebutton":
         return largebuttonStyles;
       case "addposition":

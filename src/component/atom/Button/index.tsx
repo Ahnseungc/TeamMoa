@@ -8,6 +8,7 @@ const Button: FunctionComponent<ButtonType> = ({
   disabled,
   content,
   onClick,
+  icon,
 }) => {
   return (
     <ButtonLayout
@@ -15,6 +16,9 @@ const Button: FunctionComponent<ButtonType> = ({
       Buttontype={buttontype}
       disabled={disabled}
       onClick={onClick}>
+      {icon && (
+        <img src={icon}/>
+      )}
       {content}
     </ButtonLayout>
   );
