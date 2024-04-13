@@ -1,3 +1,5 @@
+
+
 export interface InputType {
   placeholder: string;
   readonly: boolean;
@@ -7,4 +9,13 @@ export interface InputType {
   id: string;
   type: "text" | "password";
   inputtype: "text" | "password" | "website" | "textheader";
+}
+
+export interface ButtonType {
+  type: "submit" | "button" | undefined;
+  buttontype: "text" | "icon" | "largebutton" | "addposition" | "middlebutton" | "smallbutton";
+  disabled: boolean;
+  content: string;
+  icon?: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }

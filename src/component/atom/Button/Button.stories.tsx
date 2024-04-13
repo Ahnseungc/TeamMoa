@@ -1,35 +1,70 @@
-import React from "react";
 import { StoryFn } from "@storybook/react";
+import { ButtonType } from "../../../type/Tb";
+import Button from "./index";
 
-import Button, { ButtonProps } from "./index";
+import BackIcon from "../../../asset/image/icon_back.png";
+import CancelIcon from "../../../asset/image/icon_cancel.png";
+
 
 export default {
-  title: "Button",
+  title: "Atom/Button",
   component: Button,
 };
 
-const Template: StoryFn<ButtonProps> = (args: any) => <Button {...args} />;
+const Template: StoryFn<ButtonType> = (args: any) => <Button {...args} />;
 
-export const Default = Template.bind({});
+export const BottomBtn = Template.bind({});
 
-Default.args = {
-  buttonType: "default",
-  isFull: false,
-  children: "버튼",
+BottomBtn.args = {
+  type: "button",
+  buttontype: "largebutton",
+  content: "버튼",
 };
 
-export const Primary = Template.bind({});
+export const SmallBtn = Template.bind({});
 
-Primary.args = {
-  buttonType: "primary",
-  isFull: false,
-  children: "버튼",
+SmallBtn.args = {
+  type: "button",
+  buttontype: "smallbutton",
+  content: "회원정보수정",
 };
 
-export const Ghost = Template.bind({});
+export const middleBtn = Template.bind({});
 
-Ghost.args = {
-  buttonType: "ghost",
-  isFull: false,
-  children: "버튼",
+middleBtn.args = {
+  type: "button",
+  buttontype: "middlebutton",
+  content: "로그인",
 };
+
+export const AddPositionBtn = Template.bind({});
+
+AddPositionBtn.args = {
+  type: "button",
+  buttontype: "addposition",
+  content: "추가하기",
+};
+
+export const TextBtn = Template.bind({});
+
+TextBtn.args = {
+  type: "button",
+  buttontype: "text",
+  content: "회원가입",
+};
+
+export const BackBtn = Template.bind({});
+
+BackBtn.args = {
+  type: "button",
+  buttontype: "icon",
+  icon: BackIcon,
+}
+
+export const CancelBtn = Template.bind({});
+
+CancelBtn.args = {
+  type: "button",
+  buttontype: "icon",
+  icon: CancelIcon,
+}
