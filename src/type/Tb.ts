@@ -8,3 +8,8 @@ export interface InputType {
   type: "text" | "password";
   inputtype: "text" | "password" | "website" | "textheader";
 }
+
+export interface TextAreaType {
+  Areatype: "default" | "bordernone";
+  placeholder: string;
+}
