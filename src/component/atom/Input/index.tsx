@@ -21,7 +21,7 @@ const SignUpInput: FunctionComponent<InputType> = ({
       disabled={disabled}
       error={error}
       Inputtype={inputtype}
-      value={value}
+      // value={value}
     />
   );
 };

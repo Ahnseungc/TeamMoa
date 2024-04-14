@@ -14,7 +14,6 @@ const SignUp = () => {
         inputtype={"text"}
         id={"UserID"}
       />
-
       <label htmlFor="Password">비밀번호</label>
       <Input
         id="Password"

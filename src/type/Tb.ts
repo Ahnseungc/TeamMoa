@@ -1,5 +1,3 @@
-
-
 export interface InputType {
   placeholder: string;
   readonly: boolean;
@@ -13,9 +11,19 @@ export interface InputType {
 
 export interface ButtonType {
   type: "submit" | "button" | undefined;
-  buttontype: "text" | "icon" | "largebutton" | "addposition" | "middlebutton" | "smallbutton";
+  buttontype:
+    | "text"
+    | "icon"
+    | "largebutton"
+    | "addposition"
+    | "middlebutton"
+    | "smallbutton";
   disabled: boolean;
   content: string;
   icon?: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+}
+export interface TextAreaType {
+  Areatype: "default" | "bordernone";
+  placeholder: string;
 }
