@@ -14,7 +14,7 @@ export const defaultStyle = css`
   justify-content: center;
   align-items: center;
 
-  & span {
+  & h3 {
     font-size: 20px;
     font-weight: 700;
   }

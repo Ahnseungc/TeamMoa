@@ -5,7 +5,7 @@ import { PosistionType } from "../../../type/Tb";
 const PosistionIcon: FunctionComponent<PosistionType> = ({ text }) => {
   return (
     <PosistionIconLayout PosistionType="default">
-      <span>{text}</span>
+      <h3>{text}</h3>
     </PosistionIconLayout>
   );
 };

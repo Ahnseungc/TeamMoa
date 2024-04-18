@@ -31,3 +31,9 @@ export interface TextAreaType {
 export interface PosistionType {
   text: string;
 }
+
+export interface BannerType {
+  text: string;
+  isActive: boolean;
+  onClick: () => void;
+}
