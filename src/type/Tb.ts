@@ -27,3 +27,7 @@ export interface TextAreaType {
   Areatype: "default" | "bordernone";
   placeholder: string;
 }
+
+export interface PosistionType {
+  text: string;
+}
