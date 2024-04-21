@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { BannerType } from "../../../type/Tb";
+import { BannerType } from "@type/Tb";
 import { BannerLayout } from "./styles";
 
 const BannerButton: FC<BannerType> = ({ text, isActive, onClick }) => {

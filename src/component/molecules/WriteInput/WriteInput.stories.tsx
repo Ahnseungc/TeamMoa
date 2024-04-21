@@ -1,5 +1,5 @@
 import { StoryFn } from "@storybook/react";
-import { InputType } from "../../../type/Tb";
+import { InputType } from "@type/Tb";
 import WriteInput from ".";
 
 export interface WriteInputType extends InputType {

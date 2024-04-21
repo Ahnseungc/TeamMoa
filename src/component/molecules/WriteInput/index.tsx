@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Input from "../../atom/Input";
-import { InputType } from "../../../type/Tb";
+import Input from "@atom/Input";
+import { InputType } from "@type/Tb";
 import { WriteInputLayout, WriteHeader, WriteTitleText, Line } from "./styles";
 
 export interface WriteInputType extends InputType {
@@ -23,8 +23,8 @@ const WriteInput: FC<WriteInputType> = ({
       <WriteHeader>
         <WriteTitleText>{titleText}</WriteTitleText>
       </WriteHeader>
-      <Line/>
-      <Input 
+      <Line />
+      <Input
         id={id}
         type={type}
         readonly={readonly}
@@ -39,4 +39,3 @@ const WriteInput: FC<WriteInputType> = ({
 };
 
 export default WriteInput;
-

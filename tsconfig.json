@@ -1,11 +1,18 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
+    "paths": {
+      "@atom/*": ["src/component/atom/*"],
+      "@molecules/*": ["src/component/molecules/*"],
+      "@organisms/*": ["src/component/organisms/*"],
+      "@templates/*": ["src/component/templates/*"],
+      "@pages/*": ["src/pages/*"],
+      "@asset/*": ["src/asset/*"],
+      "@type/*": ["src/type/*"],
+      "@utils/*": ["src/utils/*"]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,7 +27,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

@@ -1,5 +1,5 @@
 import { StoryFn } from "@storybook/react";
-import { PosistionType } from "../../../type/Tb";
+import { PosistionType } from "@type/Tb";
 import PosistionIcon from "./index";
 
 export default {

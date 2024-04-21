@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Input from "../../atom/Input";
-import { InputType } from "../../../type/Tb";
+import Input from "@atom/Input";
+import { InputType } from "@type/Tb";
 import {
   LabelInputLayout,
   LabelErrorMessage,

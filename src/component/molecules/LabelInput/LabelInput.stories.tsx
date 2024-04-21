@@ -1,5 +1,5 @@
 import { StoryFn } from "@storybook/react";
-import { InputType } from "../../../type/Tb";
+import { InputType } from "@type/Tb";
 import LabelInput from ".";
 export interface LabeInputType extends InputType {
   labelText: string;

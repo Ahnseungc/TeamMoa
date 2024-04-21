@@ -1,5 +1,5 @@
 import { StoryFn } from "@storybook/react";
-import { BannerType } from "../../../type/Tb";
+import { BannerType } from "@type/Tb";
 import BannerButton from ".";
 
 export default {
@@ -16,9 +16,9 @@ Default.args = {
   isActive: false,
 };
 
-export const isActived = Template.bind({});
+export const IsActived = Template.bind({});
 
-isActived.args = {
+IsActived.args = {
   text: "공모전",
   isActive: true,
 };

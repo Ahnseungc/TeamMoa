@@ -1,5 +1,5 @@
 import { StoryFn } from "@storybook/react";
-import { TextAreaType } from "../../../type/Tb";
+import { TextAreaType } from "@type/Tb";
 import TextArea from "./index";
 
 export default {

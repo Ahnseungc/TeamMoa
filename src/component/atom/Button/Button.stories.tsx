@@ -1,10 +1,9 @@
 import { StoryFn } from "@storybook/react";
-import { ButtonType } from "../../../type/Tb";
+import { ButtonType } from "@type/Tb";
 import Button from "./index";
 
-import BackIcon from "../../../asset/image/icon_back.png";
-import CancelIcon from "../../../asset/image/icon_cancel.png";
-
+import BackIcon from "@asset/image/icon_back.png";
+import CancelIcon from "@asset/image/icon_cancel.png";
 
 export default {
   title: "Atom/Button",
@@ -59,7 +58,7 @@ BackBtn.args = {
   type: "button",
   buttontype: "icon",
   icon: BackIcon,
-}
+};
 
 export const CancelBtn = Template.bind({});
 
@@ -67,4 +66,4 @@ CancelBtn.args = {
   type: "button",
   buttontype: "icon",
   icon: CancelIcon,
-}
+};

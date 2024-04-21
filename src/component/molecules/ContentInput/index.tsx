@@ -1,6 +1,6 @@
 import { FC } from "react";
-import TextArea from "../../atom/TextArea";
-import { TextAreaType } from "../../../type/Tb";
+import TextArea from "@atom/TextArea";
+import { TextAreaType } from "@type/Tb";
 import { ContentHeader, ContentInputLayout, ContentText } from "./styles";
 
 export interface ContentInputType extends TextAreaType {
@@ -17,7 +17,7 @@ const ContentInput: FC<ContentInputType> = ({
       <ContentHeader>
         <ContentText>{contentTitle}</ContentText>
       </ContentHeader>
-      <TextArea Areatype={Areatype} placeholder={placeholder}/>
+      <TextArea Areatype={Areatype} placeholder={placeholder} />
     </ContentInputLayout>
   );
 };

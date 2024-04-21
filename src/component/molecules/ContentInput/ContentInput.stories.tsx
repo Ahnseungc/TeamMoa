@@ -1,5 +1,5 @@
 import { StoryFn } from "@storybook/react";
-import { TextAreaType } from "../../../type/Tb";
+import { TextAreaType } from "@type/Tb";
 import ContentInput from ".";
 export interface ContentInputType extends TextAreaType {
   contentTitle: string;
@@ -19,5 +19,5 @@ export const Default = Template.bind({});
 Default.args = {
   contentTitle: "지원자 포트폴리오",
   Areatype: "default",
-  placeholder: "텍스트 입력"
+  placeholder: "텍스트 입력",
 };

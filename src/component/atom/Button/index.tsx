@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import { ButtonLayout } from "./styles";
-import { ButtonType } from "../../../type/Tb";
+import { ButtonType } from "@type/Tb";
 
 const Button: FunctionComponent<ButtonType> = ({
   type,
@@ -15,10 +15,9 @@ const Button: FunctionComponent<ButtonType> = ({
       type={type}
       Buttontype={buttontype}
       disabled={disabled}
-      onClick={onClick}>
-      {icon && (
-        <img src={icon}/>
-      )}
+      onClick={onClick}
+    >
+      {icon && <img src={icon} />}
       {content}
     </ButtonLayout>
   );
