@@ -56,6 +56,11 @@ export const smallbuttonStyles = css`
   color: black;
 `;
 
+export const ImageLayout = styled.img`
+  width: 15px;
+  height: 15px;
+`;
+
 export const ButtonLayout = styled.button<ButtonLayoutType>`
   ${(props) => {
     switch (props.Buttontype) {
