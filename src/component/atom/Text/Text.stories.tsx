@@ -9,9 +9,9 @@ export default {
 
 const Template: StoryFn<TextProps> = (args: any) => <Text {...args} />;
 
-export const TextAreaDefault = Template.bind({});
+export const TextDefault = Template.bind({});
 
-TextAreaDefault.args = {
+TextDefault.args = {
   fontSize: "20px",
   color: "rgba(89, 84, 84, 1)",
   fontWeight: "700",

@@ -1,13 +1,8 @@
 import { FC } from "react";
 import Input from "@atom/Input";
 import { InputType } from "@type/Tb";
-import {
-  LabelInputLayout,
-  LabelErrorMessage,
-  LabelHeader,
-  LabelText,
-} from "./styles";
-import Text from "@atom/Text";
+import { LabelInputLayout, LabelErrorMessage, LabelHeader } from "./styles";
+import Heading from "@atom/Heading";
 
 export interface LabeInputType extends InputType {
   labelText: string;
@@ -29,9 +24,9 @@ const LabelInput: FC<LabeInputType> = ({
   return (
     <LabelInputLayout error={error} htmlFor={labelId}>
       <LabelHeader>
-        <Text fontSize="14.71px" fontWeight="bold" color="black">
+        <Heading fontSize="14.71px" fontWeight="bold" color="black">
           {labelText}
-        </Text>
+        </Heading>
         {error && <LabelErrorMessage>{error}</LabelErrorMessage>}
       </LabelHeader>
       <Input
