@@ -1,3 +1,4 @@
+import ApplyUserForm from "@molecules/ApplyUserForm";
 import { ReactNode } from "react";
 
 export interface InputType {
@@ -49,6 +50,9 @@ export interface ApplyUserFormProps {
   size: string;
   userName: string;
   userPosition: string;
+  iconSize: string;
+  fontWeight: string;
+  color: string;
 }
 
 export interface TextProps {
@@ -56,4 +60,13 @@ export interface TextProps {
   fontWeight: string;
   color: string;
   children: ReactNode;
+}
+
+export interface ApplyBoardFormProps extends ApplyUserFormProps, TextProps {
+  headingSize: string;
+  headingColor: string;
+  headingWeight: string;
+  textColor: string;
+  textSize: string;
+  writedDate: string;
 }

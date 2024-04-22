@@ -13,7 +13,10 @@ export const ApplyUserFormDefault = Template.bind({});
 
 ApplyUserFormDefault.args = {
   src: "/",
-  size: "38",
   userName: "안승찬",
   userPosition: "프론트",
+  iconSize: "38",
+  size: "20px",
+  color: "rgba(89, 84, 84, 1)",
+  fontWeight: "700",
 };

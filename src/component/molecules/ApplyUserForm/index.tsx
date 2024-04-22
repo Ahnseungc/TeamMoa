@@ -6,15 +6,18 @@ import { ApplyUserFormProps } from "@type/Tb";
 
 const ApplyUserForm: FC<ApplyUserFormProps> = ({
   src,
+  iconSize,
   size,
+  color,
   userName,
   userPosition,
+  fontWeight,
 }) => {
   return (
     <ApplyUserFormLayout>
-      <UserIcon src={src} size={size} />
+      <UserIcon src={src} size={iconSize} />
       <ApplyUserInfoLayout>
-        <Text color="rgba(89, 84, 84, 1)" fontSize="20px" fontWeight="700">
+        <Text color={color} fontSize={size} fontWeight={fontWeight}>
           {`${userName}(${userPosition})`}
         </Text>
       </ApplyUserInfoLayout>
