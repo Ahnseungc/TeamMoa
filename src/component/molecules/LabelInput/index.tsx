@@ -4,9 +4,10 @@ import { InputType } from "@type/Tb";
 import {
   LabelInputLayout,
   LabelErrorMessage,
-  LabelText,
   LabelHeader,
+  LabelText,
 } from "./styles";
+import Text from "@atom/Text";
 
 export interface LabeInputType extends InputType {
   labelText: string;
@@ -28,7 +29,9 @@ const LabelInput: FC<LabeInputType> = ({
   return (
     <LabelInputLayout error={error} htmlFor={labelId}>
       <LabelHeader>
-        <LabelText>{labelText}</LabelText>
+        <Text fontSize="14.71px" fontWeight="bold" color="black">
+          {labelText}
+        </Text>
         {error && <LabelErrorMessage>{error}</LabelErrorMessage>}
       </LabelHeader>
       <Input

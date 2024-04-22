@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface InputType {
   placeholder: string;
   readonly: boolean;
@@ -47,4 +49,11 @@ export interface ApplyUserFormProps {
   size: string;
   userName: string;
   userPosition: string;
+}
+
+export interface TextProps {
+  fontSize: string;
+  fontWeight: string;
+  color: string;
+  children: ReactNode;
 }

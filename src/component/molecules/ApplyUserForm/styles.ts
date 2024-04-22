@@ -13,9 +13,6 @@ export const ApplyUserInfoLayout = styled.p`
   width: 126px;
   max-width: max-content;
   height: 29px;
-  font-weight: 700;
   display: flex;
   align-items: center;
-  font-size: 20px;
-  color: rgba(89, 84, 84, 1);
 `;
