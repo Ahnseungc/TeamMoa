@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const ApplyBoardFormLayouts = styled.article`
-  width: 100vw;
+  width: 390px;
   height: 412px;
   padding: 11px 15px 14px 15px;
-  border-bottom: 0.75px solid rgba(189, 189, 189, 1);
   border-top: 0.75px solid rgba(189, 189, 189, 1);
   display: flex;
   flex-direction: column;
