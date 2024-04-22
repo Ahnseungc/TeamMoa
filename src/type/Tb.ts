@@ -37,3 +37,7 @@ export interface BannerType {
   isActive: boolean;
   onClick: () => void;
 }
+
+export interface UserIconProps {
+  size: string;
+}
