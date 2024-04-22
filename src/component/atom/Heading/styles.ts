@@ -5,4 +5,6 @@ export const HeadingLayout = styled.h3<TextProps>`
   font-size: ${(props) => props.fontSize};
   color: ${(props) => props.color};
   font-weight: ${(props) => props.fontWeight};
+  height: max-content;
+  margin: 0 0;
 `;
