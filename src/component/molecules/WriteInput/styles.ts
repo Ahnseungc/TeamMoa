@@ -14,13 +14,8 @@ export const WriteHeader = styled.div`
 `;
 
 export const Line = styled.div`
-  background-color: #BDBDBD;
+  background-color: #bdbdbd;
   width: 345px;
   height: 0.75px;
   margin: 10px 0;
-`;
-
-export const WriteTitleText = styled.text`
-  font-size: 20px;
-  font-weight: bold;
 `;
