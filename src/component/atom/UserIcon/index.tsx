@@ -7,7 +7,8 @@ interface UserIconPropsAdd extends UserIconProps {
 }
 
 const UserIcon: FC<UserIconPropsAdd> = ({ size, src }) => {
-  return <UserIconLayout size={size} src={src} alt="유저 아이콘" />;
+  return <UserIconLayout size={size} src={src} />;
+  // alt="/"
 };
 
 export default UserIcon;

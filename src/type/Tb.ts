@@ -41,3 +41,10 @@ export interface BannerType {
 export interface UserIconProps {
   size: string;
 }
+
+export interface ApplyUserFormProps {
+  src: string;
+  size: string;
+  userName: string;
+  userPosition: string;
+}
