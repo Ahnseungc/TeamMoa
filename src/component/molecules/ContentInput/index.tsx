@@ -2,7 +2,7 @@ import { FC } from "react";
 import TextArea from "@atom/TextArea";
 import { TextAreaType } from "@type/Tb";
 import { ContentHeader, ContentInputLayout } from "./styles";
-import Text from "@atom/Text";
+import Heading from "@atom/Heading";
 
 export interface ContentInputType extends TextAreaType {
   contentTitle: string;
@@ -16,9 +16,9 @@ const ContentInput: FC<ContentInputType> = ({
   return (
     <ContentInputLayout>
       <ContentHeader>
-        <Text color="black" fontSize="20px" fontWeight="bold">
+        <Heading color="black" fontSize="20px" fontWeight="bold">
           {contentTitle}
-        </Text>
+        </Heading>
       </ContentHeader>
       <TextArea Areatype={Areatype} placeholder={placeholder} />
     </ContentInputLayout>
