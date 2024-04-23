@@ -1,10 +1,10 @@
 import UserIcon from "@atom/UserIcon";
 import Text from "@atom/Text";
-import { ApplyUserFormLayout, ApplyUserInfoLayout } from "./styles";
+import { WritingUserFormLayout, WritingUserInfoLayout } from "./styles";
 import { FC } from "react";
-import { ApplyUserFormProps } from "@type/Tb";
+import { WritingUserFormProps } from "@type/Tb";
 
-const ApplyUserForm: FC<ApplyUserFormProps> = ({
+const WritingUserForm: FC<WritingUserFormProps> = ({
   src,
   iconSize,
   size,
@@ -14,15 +14,15 @@ const ApplyUserForm: FC<ApplyUserFormProps> = ({
   fontWeight,
 }) => {
   return (
-    <ApplyUserFormLayout>
+    <WritingUserFormLayout>
       <UserIcon src={src} size={iconSize} />
-      <ApplyUserInfoLayout>
+      <WritingUserInfoLayout>
         <Text color={color} fontSize={size} fontWeight={fontWeight}>
           {`${userName}(${userPosition})`}
         </Text>
-      </ApplyUserInfoLayout>
-    </ApplyUserFormLayout>
+      </WritingUserInfoLayout>
+    </WritingUserFormLayout>
   );
 };
 
-export default ApplyUserForm;
+export default WritingUserForm;

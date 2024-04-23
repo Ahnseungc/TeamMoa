@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ApplyBoardFormLayouts = styled.article`
+export const WritingBoardFormLayouts = styled.article`
   width: 390px;
   height: 412px;
   padding: 11px 15px 14px 15px;
@@ -10,13 +10,13 @@ export const ApplyBoardFormLayouts = styled.article`
   justify-content: space-between;
 `;
 
-export const ApplyParagraph = styled.p`
+export const WritingParagraph = styled.p`
   width: 249px;
   height: max-content;
   margin: 5px 6ox 0 6px;
 `;
 
-export const ApplyHeader = styled.header`
+export const WritingHeader = styled.header`
   width: 100%;
   display: flex;
   height: 42px;
@@ -25,7 +25,7 @@ export const ApplyHeader = styled.header`
   margin: 0 6px;
 `;
 
-export const ApplyFooter = styled.footer`
+export const WritingFooter = styled.footer`
   width: 100%;
   height: max-content;
   margin: 0 21px 0 0;

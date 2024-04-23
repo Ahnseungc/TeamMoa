@@ -1,4 +1,4 @@
-import ApplyUserForm from "@molecules/ApplyUserForm";
+import ApplyUserForm from "@molecules/WritingUserForm";
 import { ReactNode } from "react";
 
 export interface InputType {
@@ -45,7 +45,7 @@ export interface UserIconProps {
   size: string;
 }
 
-export interface ApplyUserFormProps {
+export interface WritingUserFormProps {
   src: string;
   size: string;
   userName: string;
@@ -62,7 +62,7 @@ export interface TextProps {
   children: ReactNode;
 }
 
-export interface ApplyBoardFormProps extends ApplyUserFormProps, TextProps {
+export interface WritingBoardFormProps extends WritingUserFormProps, TextProps {
   headingSize: string;
   headingColor: string;
   headingWeight: string;

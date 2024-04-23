@@ -1,5 +1,5 @@
 import { StoryFn } from "@storybook/react";
-import { ApplyBoardFormProps } from "@type/Tb";
+import { WritingBoardFormProps } from "@type/Tb";
 import ApplyBoardForm from ".";
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: ApplyBoardForm,
 };
 
-const Template: StoryFn<ApplyBoardFormProps> = (args: any) => (
+const Template: StoryFn<WritingBoardFormProps> = (args: any) => (
   <ApplyBoardForm {...args} />
 );
 
