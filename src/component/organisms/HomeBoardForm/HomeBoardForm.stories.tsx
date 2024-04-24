@@ -1,5 +1,4 @@
 import { StoryFn } from "@storybook/react";
-
 import HomeBoardForm from ".";
 
 export default {

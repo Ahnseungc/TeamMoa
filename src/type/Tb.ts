@@ -1,4 +1,3 @@
-import ApplyUserForm from "@molecules/WritingUserForm";
 import { ReactNode } from "react";
 
 export interface InputType {
@@ -69,4 +68,14 @@ export interface WritingBoardFormProps extends WritingUserFormProps, TextProps {
   textColor: string;
   textSize: string;
   writedDate: string;
+}
+
+export interface EachPosition {
+  needTitle: string;
+  needCount: number;
+  needFramework: Array<string>;
+}
+
+export interface WritingNeedPositionProps {
+  NeedPosition: Array<EachPosition>;
 }
