@@ -1,17 +1,19 @@
-import Heading from "@atom/Heading";
 import { StoryFn } from "@storybook/react";
 import { PositionAddFormProps } from "@type/Tb";
 import { PositionAddFormLayout, PositionFormContentLayout, FormTitle } from "./styles";
 import PositionInfoInput from "@molecules/PositionInfoInput";
-import Button from "@atom/Button";
+import Button from "@atom/Button"; 
 import Text from "@atom/Text";
+import Heading from "@atom/Heading";
 import cancelBtn from "@asset/image/icon_cancel.png";
+import { useState } from "react";
 
 const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
   const titleName = ["포지션명", "필요스킬", "인원수"];
-  const onClickMenu = () => {
-    positionCount++;
-  }
+  const [count, setCount] = useState(positionCount);
+
+  const onClickAdd = () => setCount(count + 1);
+  const onClickDelete = () => setCount(count - 1);
 
   return (
     <PositionAddFormLayout>
@@ -26,16 +28,30 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
             </Text>
           ))} 
         </FormTitle>       
-        {[...Array(positionCount)].map((item) => {
-          return <PositionInfoInput icon={cancelBtn}/>  
-        })}
+        {[...Array(count)].map((item, idx) => {
+          return (
+            <PositionInfoInput 
+              iptype="text"
+              btntype="button"
+              buttontype="icon"
+              inputtype="text"
+              disabled={false}
+              readonly={false}
+              id={item}
+              placeholder=""
+              value=""
+              error=""
+              content=""
+              onClick={onClickDelete}
+              icon={cancelBtn}/> 
+          )})}
       </PositionFormContentLayout>
       <Button 
         type="button"
         buttontype="addposition"
         content="추가하기"
         disabled={false}
-        onClick={onClickMenu}
+        onClick={onClickAdd}
       />
     </PositionAddFormLayout>
   );

@@ -4,7 +4,6 @@ export const PositionAddFormLayout = styled.div`
   width: 375px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 `;
 
 export const FormTitle = styled.div`
@@ -15,11 +14,10 @@ export const FormTitle = styled.div`
 `;
 
 export const PositionFormContentLayout = styled.div`
-  /* width: 345px; */
   height: 170px;
   border-top: 0.75px solid #BDBDBD;
   margin: 5px 0;
-  padding: 5px 0 0 0;
+  padding-top: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
