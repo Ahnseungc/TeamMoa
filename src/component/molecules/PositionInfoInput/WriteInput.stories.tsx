@@ -2,7 +2,7 @@ import { StoryFn } from "@storybook/react";
 import { InputType, ButtonType } from "@type/Tb";
 import PositionInfoInput from ".";
 
-import cancelBtn from "../../../asset/image/icon_cancel.png";
+import cancelBtn from "@asset/image/icon_cancel.png";
 
 export interface PositionInfoInputType extends Omit<InputType, "type">, Omit<ButtonType, "type"> {
   iptype: InputType["type"];

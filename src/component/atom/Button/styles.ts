@@ -29,7 +29,7 @@ export const largebuttonStyles = css`
 `;
 
 export const addpositionStyles = css`
-  width: 305px;
+  width: 100%;
   height: 26px;
   background-color: #EBEBEB;
   font-size: 13px;
