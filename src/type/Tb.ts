@@ -79,7 +79,3 @@ export interface EachPosition {
 export interface WritingNeedPositionProps {
   NeedPosition: Array<EachPosition>;
 }
-
-export interface PositionAddFormProps {
-  positionCount: number;
-}
