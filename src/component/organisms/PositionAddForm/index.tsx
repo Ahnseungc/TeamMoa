@@ -1,8 +1,12 @@
 import { StoryFn } from "@storybook/react";
 import { PositionAddFormProps } from "@type/Tb";
-import { PositionAddFormLayout, PositionFormContentLayout, FormTitle } from "./styles";
+import {
+  PositionAddFormLayout,
+  PositionFormContentLayout,
+  FormTitle,
+} from "./styles";
 import PositionInfoInput from "@molecules/PositionInfoInput";
-import Button from "@atom/Button"; 
+import Button from "@atom/Button";
 import Text from "@atom/Text";
 import Heading from "@atom/Heading";
 import cancelBtn from "@asset/image/icon_cancel.png";
@@ -26,11 +30,11 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
             <Text fontSize="15px" fontWeight="400" color="#363636">
               {item}
             </Text>
-          ))} 
-        </FormTitle>       
+          ))}
+        </FormTitle>
         {[...Array(count)].map((item, idx) => {
           return (
-            <PositionInfoInput 
+            <PositionInfoInput
               iptype="text"
               btntype="button"
               buttontype="icon"
@@ -43,10 +47,12 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
               error=""
               content=""
               onClick={onClickDelete}
-              icon={cancelBtn}/> 
-          )})}
+              icon={cancelBtn}
+            />
+          );
+        })}
       </PositionFormContentLayout>
-      <Button 
+      <Button
         type="button"
         buttontype="addposition"
         content="추가하기"
