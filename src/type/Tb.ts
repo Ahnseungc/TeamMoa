@@ -21,7 +21,7 @@ export interface ButtonType {
     | "middlebutton"
     | "smallbutton";
   disabled: boolean;
-  content: string;
+  content?: string;
   icon?: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
