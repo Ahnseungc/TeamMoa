@@ -2,13 +2,10 @@ import { StoryFn } from "@storybook/react";
 import {
   WritingUploadLayout,
   Header,
-  ContentInputLayout,
-  ContentInput
 } from "./styles";
 import Button from "@atom/Button";
 import BackIcon from "@asset/image/icon_back.png";
 import Heading from "@atom/Heading";
-import Input from "@atom/Input";
 import WritingBoardForm from "@organisms/WritingBoardForm";
 import WritingNeedPosition from "@organisms/WritingNeedPosition";
 
@@ -56,7 +53,10 @@ const WritingUpload: StoryFn = () => {
         userName="홍길동"
         userPosition="프론트"
         iconSize="38px"
-        writedDate="0000년 00월 00일"/>
+        writedDate="0000년 00월 00일"
+        size="20px"
+        color="#000000"
+        fontWeight="700"/>
       <WritingNeedPosition NeedPosition={NeedPosition}/>
       <Button
         type="button"
