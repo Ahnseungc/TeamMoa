@@ -12,11 +12,14 @@ export const Header = styled.div`
     padding-bottom: 10px;
 `;
 
-export const PositionLayout = styled.div`
-    padding: 20px 0 5px 12px;
+export const HeaderTextLayout = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
 `;
 
-export const DeadlineLayout = styled.div`
+export const InfoInputLayout = styled.div`
     padding: 20px 0 5px 12px;
 `;
 

@@ -2,8 +2,8 @@ import { StoryFn } from "@storybook/react";
 import {
   DetailContentLayout,
   Header,
-  PositionLayout,
-  DeadlineLayout,
+  InfoInputLayout,
+  HeaderTextLayout,
   WebSiteLayout,
 } from "./styles";
 import Button from "@atom/Button";
@@ -23,14 +23,16 @@ const DetailContent: StoryFn = () => {
           disabled={false} 
           // onClick 지금 어떻게 넣어둬야 할지 몰라서 일단 이렇게 해뒀습니다..!
           onClick={() => "ㅇ"}/>
-        <Heading fontSize="20px" fontWeight="600" color="rgba(0,0,0,1)">
-          글쓰기
-        </Heading>
+        <HeaderTextLayout>
+          <Heading fontSize="20px" fontWeight="600" color="rgba(0,0,0,1)">
+            글쓰기
+          </Heading>
+        </HeaderTextLayout>
       </Header>
-      <PositionLayout>
+      <InfoInputLayout>
         <PositionAddForm positionCount={1}/>
-      </PositionLayout>
-      <DeadlineLayout>
+      </InfoInputLayout>
+      <InfoInputLayout>
         <WriteInput
           titleText="프로젝트 마감일"
           id=""
@@ -41,7 +43,7 @@ const DetailContent: StoryFn = () => {
           disabled={false}
           value=""
           error=""/>
-      </DeadlineLayout>
+      </InfoInputLayout>
       <WebSiteLayout>
         <WriteInput
           titleText="공모전 웹사이트"
