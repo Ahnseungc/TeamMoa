@@ -48,6 +48,7 @@ const WritingUpload: StoryFn = () => {
           disabled={false} 
           onClick={() => "ㅇ"}/>
       </Header>
+      {/* 이거 WritingBoardForm 속성 다 넣으래서 이렇게 해뒀습니다..ㅠㅠ */}
       <WritingBoardForm
         src="/"
         userName="홍길동"
@@ -56,7 +57,14 @@ const WritingUpload: StoryFn = () => {
         writedDate="0000년 00월 00일"
         size="20px"
         color="#000000"
-        fontWeight="700"/>
+        fontWeight="700"
+        fontSize=""
+        headingSize="" 
+        headingColor="" 
+        headingWeight=""
+        textColor=""
+        textSize="" 
+        children=""/>
       <WritingNeedPosition NeedPosition={NeedPosition}/>
       <Button
         type="button"
