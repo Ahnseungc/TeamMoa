@@ -6,7 +6,6 @@ export const WritingUploadLayout = styled.div`
 `;
 
 export const Header = styled.div`
-    border-bottom: 1px solid black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
