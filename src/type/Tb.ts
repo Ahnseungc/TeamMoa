@@ -21,7 +21,7 @@ export interface ButtonType {
     | "middlebutton"
     | "smallbutton";
   disabled: boolean;
-  content: string;
+  content?: string;
   icon?: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -86,4 +86,21 @@ export interface PositionAddFormProps {
 
 export interface ApplyAnnounceHeadingProps {
   title: string;
+}
+
+export interface SelectStackProps {
+  src: string;
+  position: string;
+  stack: Array<string>;
+}
+
+export interface StackSelectFormProps {
+  StackList: Array<SelectStackProps>;
+}
+
+export interface ContentCheckFormProps {
+  name: string;
+  temp: number;
+  callNumber: string;
+  kakaoId: string;
 }
