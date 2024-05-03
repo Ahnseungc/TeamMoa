@@ -97,3 +97,10 @@ export interface SelectStackProps {
 export interface StackSelectFormProps {
   StackList: Array<SelectStackProps>;
 }
+
+export interface ContentCheckFormProps {
+  name: string;
+  temp: number;
+  callNumber: string;
+  kakaoId: string;
+}
