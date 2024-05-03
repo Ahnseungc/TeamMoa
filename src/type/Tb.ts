@@ -93,3 +93,7 @@ export interface SelectStackProps {
   position: string;
   stack: Array<string>;
 }
+
+export interface StackSelectFormProps {
+  StackList: Array<SelectStackProps>;
+}
