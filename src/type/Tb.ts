@@ -87,3 +87,9 @@ export interface PositionAddFormProps {
 export interface ApplyAnnounceHeadingProps {
   title: string;
 }
+
+export interface SelectStackProps {
+  src: string;
+  position: string;
+  stack: Array<string>;
+}
