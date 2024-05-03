@@ -4,6 +4,7 @@ export const StackSelectFormLayout = styled.div`
   width: 345px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 `;
 
 export const StackListLayout = styled.div`

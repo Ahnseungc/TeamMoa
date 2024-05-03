@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const ContentCheckFormLayout = styled.div`
   width: 390px;
-  /* padding: 10px 13.38px 23px 10px; */
-  height: 200px;
+  padding: 20px;
+  border-bottom: 1px solid black;
 `;
 
 export const Header = styled.div`
