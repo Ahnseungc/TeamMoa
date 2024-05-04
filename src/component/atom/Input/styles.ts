@@ -6,18 +6,18 @@ export interface SignupInputType {
 }
 
 export const textStyles = css`
-  width: 334px;
-  height: 36px;
-  background: #f5f5f5;
-  border-radius: 9.19px;
-  border: none;
-  padding: 0 0 0 13px;
+  width: 339px;
+  height: 35px;
+  border-width: 0 0 1px;
+  border-color: rgba(189, 189, 189, 1);
   font-size: 16px;
   font-weight: 500;
+
   &::placeholder {
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 500;
-    color: #363636;
+    line-height: 28.92px;
+    color: rgba(99, 99, 99, 1);
   }
 `;
 
