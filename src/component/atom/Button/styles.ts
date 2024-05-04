@@ -1,15 +1,21 @@
 import styled, { css } from "styled-components";
 
 export interface ButtonLayoutType {
-  Buttontype: "text" | "icon" | "largebutton" | "addposition" | "middlebutton" | "smallbutton";
+  Buttontype:
+    | "text"
+    | "icon"
+    | "largebutton"
+    | "addposition"
+    | "middlebutton"
+    | "smallbutton";
 }
 
 export const textButtonStyles = css`
-  font-size: 20px;
+  font-size: 17.84px;
   font-weight: bold;
   color: black;
   border: none;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 `;
 
 export const iconButtonStyles = css`
@@ -22,7 +28,7 @@ export const iconButtonStyles = css`
 export const largebuttonStyles = css`
   width: 374px;
   height: 73px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   font-size: 20px;
   border: none;
   color: black;
@@ -31,7 +37,7 @@ export const largebuttonStyles = css`
 export const addpositionStyles = css`
   width: 100%;
   height: 26px;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   font-size: 13px;
   border: none;
   border-radius: 5px;
@@ -41,7 +47,7 @@ export const addpositionStyles = css`
 export const middlebuttonStyles = css`
   width: 189px;
   height: 82px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   font-size: 20px;
   border: none;
   color: black;
@@ -50,7 +56,7 @@ export const middlebuttonStyles = css`
 export const smallbuttonStyles = css`
   width: 104px;
   height: 28px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   font-size: 15px;
   border: none;
   color: black;
