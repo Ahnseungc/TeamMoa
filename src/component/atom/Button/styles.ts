@@ -7,7 +7,8 @@ export interface ButtonLayoutType {
     | "largebutton"
     | "addposition"
     | "middlebutton"
-    | "smallbutton";
+    | "smallbutton"
+    | "largebuttonactive";
 }
 
 export const textButtonStyles = css`
@@ -75,6 +76,18 @@ export const ImageLayout = styled.img`
   height: 15px;
 `;
 
+export const largebuttonactiveStyles = css`
+  width: 330px;
+  height: 40px;
+  background-color: rgba(217, 74, 86, 1);
+  color: white;
+  border: 1px solid rgba(176, 176, 176, 1);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.4px;
+`;
+
 export const ButtonLayout = styled.button<ButtonLayoutType>`
   ${(props) => {
     switch (props.Buttontype) {
@@ -84,6 +97,8 @@ export const ButtonLayout = styled.button<ButtonLayoutType>`
         return iconButtonStyles;
       case "largebutton":
         return largebuttonStyles;
+      case "largebuttonactive":
+        return largebuttonactiveStyles;
       case "addposition":
         return addpositionStyles;
       case "middlebutton":
