@@ -3,7 +3,7 @@ import { StoryFn } from "@storybook/react";
 import SignUpSchoolSettingName from "./index";
 
 export default {
-  title: "Template/SignUpSettingName",
+  title: "Template/SignUp/SignUpSettingName",
   component: SignUpSchoolSettingName,
 };
 

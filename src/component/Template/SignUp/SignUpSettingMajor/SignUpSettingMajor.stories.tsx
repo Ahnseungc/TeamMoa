@@ -3,7 +3,7 @@ import { StoryFn } from "@storybook/react";
 import SignUpSettingMajor from "./index";
 
 export default {
-  title: "Template/SignUpSettingMajor",
+  title: "Template/SignUp/SignUpSettingMajor",
   component: SignUpSettingMajor,
 };
 

@@ -19,7 +19,8 @@ export interface ButtonType {
     | "largebutton"
     | "addposition"
     | "middlebutton"
-    | "smallbutton";
+    | "smallbutton"
+    | "largebuttonactive";
   disabled: boolean;
   content?: string;
   icon?: string;
