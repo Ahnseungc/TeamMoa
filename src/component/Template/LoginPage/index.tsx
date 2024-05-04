@@ -1,57 +1,12 @@
-import {
-  LoginPageLayout,
-  MainLogo,
-  LoginPageHeader,
-  LoginPageLoginForm,
-} from "./styles";
-import Button from "@atom/Button";
-import Input from "@atom/Input";
+import { LoginPageLayout, KaKaoLogin } from "./styles";
 
 const LoginPage = () => {
   return (
     <LoginPageLayout>
-      <LoginPageHeader>
-        <MainLogo src="/" alt="로고" />
-      </LoginPageHeader>
-      <LoginPageLoginForm>
-        <Input
-          type="text"
-          id=""
-          placeholder="아이디"
-          readonly={false}
-          inputtype="text"
-          disabled={false}
-          value={""}
-          error={""}
-        />
-        <Input
-          type="password"
-          placeholder={"비밀번호를 입력하세요"}
-          readonly={false}
-          disabled={false}
-          value={""}
-          error={""}
-          id={""}
-          inputtype={"text"}
-        />
-
-        <Button
-          type="button"
-          buttontype="middlebutton"
-          disabled={false}
-          onClick={() => null}
-          content="로그인"
-        />
-        <div>
-          <Button
-            type="button"
-            buttontype="text"
-            disabled={false}
-            onClick={() => null}
-            content="회원 가입"
-          />
-        </div>
-      </LoginPageLoginForm>
+      <KaKaoLogin
+        src="https://s3-alpha-sig.figma.com/img/3c54/26cd/843bba902e62ee798afaf9796e982d10?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EHXalpXh9mbdUUagT863ctuJX41EWU49irbsLSNNav8KXiWJb9sVZHb3iZMB-m2CHfzD7z4Hjnfcj1onzh~5UoCJqY60SfvWOUfWn6xDv16pcTsz-SSMmdY7DBeiya3W3~Roji6eGuHAVTI9PjPyWU2Rk5AdCIbrgHBfb27ro7NxtR8LMZMiso38UXeePh5qD2P9gChPNwNHS63fA6cWByw5Pys9Yq8kuDBZ~K~AggjKWYUZJUiC3PE1LmmQexWNNa7GwpJCijPkiFSLjI4Dxtxz8so0RE~~ZH2KwUfw5U8u-RR-AFgrF9N08FaL3Jm2njg80-icBDPGZ1uvdY~V-g__"
+        alt="/"
+      />
     </LoginPageLayout>
   );
 };
