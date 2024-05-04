@@ -26,12 +26,20 @@ export const iconButtonStyles = css`
 `;
 
 export const largebuttonStyles = css`
-  width: 374px;
-  height: 73px;
-  background-color: #d9d9d9;
-  font-size: 20px;
-  border: none;
-  color: black;
+  width: 330px;
+  height: 40px;
+  background-color: rgba(252, 252, 254, 1);
+  color: rgba(176, 176, 176, 1);
+  border: 1px solid rgba(176, 176, 176, 1);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.4px;
+
+  &:active {
+    background-color: rgba(217, 74, 86, 1);
+    color: white;
+  }
 `;
 
 export const addpositionStyles = css`
