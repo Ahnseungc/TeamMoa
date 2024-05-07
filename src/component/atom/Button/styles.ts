@@ -8,7 +8,9 @@ export interface ButtonLayoutType {
     | "addposition"
     | "middlebutton"
     | "smallbutton"
-    | "largebuttonactive";
+    | "largebuttonactive"
+    | "posistionbutton"
+    | "posistioncompletebutton";
 }
 
 export const textButtonStyles = css`
@@ -88,6 +90,32 @@ export const largebuttonactiveStyles = css`
   line-height: 18.4px;
 `;
 
+export const posistionbuttonStyles = css`
+  width: 46px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgba(183, 223, 185, 1);
+  color: rgba(76, 175, 80, 1);
+  border: none;
+  font-size: 12px;
+`;
+
+export const posistioncompletebuttonStyles = css`
+  width: 57px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgba(176, 176, 176, 1);
+  color: rgba(99, 99, 99, 1);
+  border: none;
+  font-size: 12px;
+`;
+
 export const ButtonLayout = styled.button<ButtonLayoutType>`
   ${(props) => {
     switch (props.Buttontype) {
@@ -105,6 +133,12 @@ export const ButtonLayout = styled.button<ButtonLayoutType>`
         return middlebuttonStyles;
       case "smallbutton":
         return smallbuttonStyles;
+      case "posistionbutton":
+        return posistionbuttonStyles;
+
+      case "posistioncompletebutton":
+        return posistioncompletebuttonStyles;
+
       default:
         return textButtonStyles;
     }

@@ -1,7 +1,6 @@
 import { StoryFn } from "@storybook/react";
 import { ButtonType } from "@type/Tb";
 import Button from "./index";
-
 import BackIcon from "@asset/image/icon_back.png";
 import CancelIcon from "@asset/image/icon_cancel.png";
 
@@ -66,4 +65,20 @@ CancelBtn.args = {
   type: "button",
   buttontype: "icon",
   icon: CancelIcon,
+};
+
+export const PosistionBtn = Template.bind({});
+
+PosistionBtn.args = {
+  type: "button",
+  buttontype: "posistionbutton",
+  content: "모집중",
+};
+
+export const PosistionCompleteBtn = Template.bind({});
+
+PosistionCompleteBtn.args = {
+  type: "button",
+  buttontype: "posistioncompletebutton",
+  content: "모집완료",
 };

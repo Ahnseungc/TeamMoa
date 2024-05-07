@@ -14,5 +14,14 @@ const Template: StoryFn<PosistionType> = (args: any) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  text: "React",
+  name: "React",
+  PosistionType: "default",
+};
+
+export const Position = Template.bind({});
+
+Position.args = {
+  name: "React",
+  PosistionType: "HomePosistion",
+  count: 2,
 };
