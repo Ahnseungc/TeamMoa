@@ -8,4 +8,11 @@ export const HomemainLayout = styled.div`
 export const HomeBannerHeader = styled.header`
   width: 100%;
   height: 48px;
+  display: flex;
+  align-items: center;
+  padding-left: 160px;
+
+  & > button {
+    margin-left: 123px;
+  }
 `;

@@ -3,6 +3,7 @@ import { ButtonType } from "@type/Tb";
 import Button from "./index";
 import BackIcon from "@asset/image/icon_back.png";
 import CancelIcon from "@asset/image/icon_cancel.png";
+import SearchIcon from "@asset/image/icon_search.png";
 
 export default {
   title: "Atom/Button",
@@ -65,6 +66,14 @@ CancelBtn.args = {
   type: "button",
   buttontype: "icon",
   icon: CancelIcon,
+};
+
+export const SearchBtn = Template.bind({});
+
+SearchBtn.args = {
+  type: "button",
+  buttontype: "icon",
+  icon: SearchIcon,
 };
 
 export const PosistionBtn = Template.bind({});

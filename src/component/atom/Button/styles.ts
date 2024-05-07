@@ -74,8 +74,8 @@ export const smallbuttonStyles = css`
 `;
 
 export const ImageLayout = styled.img`
-  width: 15px;
-  height: 15px;
+  width: 24px;
+  height: 24px;
 `;
 
 export const largebuttonactiveStyles = css`
