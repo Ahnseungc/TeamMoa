@@ -20,7 +20,9 @@ export interface ButtonType {
     | "addposition"
     | "middlebutton"
     | "smallbutton"
-    | "largebuttonactive";
+    | "largebuttonactive"
+    | "posistionbutton"
+    | "posistioncompletebutton";
   disabled: boolean;
   content?: string;
   icon?: string;
@@ -29,10 +31,6 @@ export interface ButtonType {
 export interface TextAreaType {
   Areatype: "default" | "bordernone";
   placeholder: string;
-}
-
-export interface PosistionType {
-  text: string;
 }
 
 export interface BannerType {
@@ -104,4 +102,32 @@ export interface ContentCheckFormProps {
   temp: number;
   callNumber: string;
   kakaoId: string;
+}
+
+export interface HomeBannerProps {
+  isactive: boolean;
+  onclick: () => void;
+}
+export interface PosistionArrayType {
+  name: string;
+  count: number;
+}
+export interface PosistionType {
+  count: number;
+  name: string;
+  PosistionType: "default" | "HomePosistion";
+}
+
+export interface HomeMainProps {
+  name: string;
+  position: string;
+  title: string;
+  date: string;
+  iscruiting: boolean;
+  subtitle: string;
+  needposistion: Array<PosistionArrayType>;
+}
+
+export interface HomeBoardData {
+  BoardData: Array<HomeMainProps>;
 }

@@ -5,32 +5,31 @@ export interface BannerType {
 }
 
 export const defaultStyle = css`
-  background-color: rgba(217, 217, 217, 0.2);
-
+  border-bottom: 1px solid rgba(206, 213, 220, 1);
   & h3 {
-    color: rgba(89, 84, 84, 0.5);
-    font-size: 20px;
-    font-weight: 700;
+    color: rgba(104, 118, 132, 1);
+    font-size: 16px;
+    font-weight: 400;
   }
 `;
 
 export const isActivedStyle = css`
-  background-color: rgba(102, 112, 128, 1);
-
+  border-bottom: 1px solid rgba(217, 74, 86, 1);
   & h3 {
-    color: rgba(255, 255, 255, 1);
-    font-size: 20px;
+    color: rgba(217, 74, 86, 1);
+    font-size: 16px;
     font-weight: 700;
   }
 `;
 
 export const BannerLayout = styled.button<BannerType>`
   width: 186px;
-  height: 53px;
+  height: 44px;
   display: flex;
-  border: none;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
   ${(props) => {
     switch (props.isActived) {
       case true:

@@ -16,7 +16,13 @@ const NeedPosistionForm: FC<EachPosition> = ({
       </Text>
       <FrameWorkLayout>
         {needFramework.map((FrameWork) => {
-          return <PosistionIcon text={FrameWork} />;
+          return (
+            <PosistionIcon
+              count={needCount}
+              name={FrameWork}
+              PosistionType="HomePosistion"
+            />
+          );
         })}
       </FrameWorkLayout>
     </NeedPositionLayout>

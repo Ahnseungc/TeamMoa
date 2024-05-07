@@ -1,18 +1,44 @@
 import styled from "styled-components";
 
 export const HomeBoardFormLayout = styled.article`
-  width: 390px;
-  padding: 10px 13.38px 23px 10px;
-  height: 144px;
+  width: 375px;
+  height: 154px;
   border-bottom: 1px solid rgba(217, 217, 217, 1);
   display: flex;
   justify-content: space-between;
 `;
 
 export const HomeBoardFormContentLayout = styled.div`
-  width: 283px;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+`;
+
+export const HomeBoardFormContentHeader = styled.header`
+  display: flex;
+  width: 375px;
+  padding: 10px 0 0 20px;
+  height: 47px;
+`;
+
+export const HomeBoardHeaderTiteName = styled.div`
+  height: 47px;
+  margin-right: 67px;
+`;
+
+export const HomeBoardHeaderBody = styled.div`
+  width: 335px;
+  padding: 10px 20px 0 20px;
+  height: 50px;
+`;
+
+export const HomeBannerFooter = styled.footer`
+  display: flex;
+  padding: 7px 20px 17px 20px;
+
+  width: max-content;
+  & div:not(:last-child) {
+    margin-right: 3px;
+  }
 `;
