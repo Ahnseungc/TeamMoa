@@ -131,3 +131,29 @@ export interface HomeMainProps {
 export interface HomeBoardData {
   BoardData: Array<HomeMainProps>;
 }
+
+export interface PostInfoProps {
+  title: string;
+  subtitle: string;
+  iscruiting: boolean;
+  needposistion: Array<PosistionArrayType>;
+}
+
+export interface PostInfoData {
+  PostInfo: Array<PostInfoProps>;
+}
+
+export interface UserStackData {
+  userstack: Array<string>;
+}
+
+export interface ProjectInfoProps {
+  projectinfo: Array<number>;
+}
+
+export interface UserInfoProps {
+  name: string;
+  major: string;
+  studentnumber: number;
+  temp: number;
+}
