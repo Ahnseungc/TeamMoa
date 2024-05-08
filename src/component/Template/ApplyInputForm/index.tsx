@@ -22,7 +22,6 @@ const ApplyInputForm: StoryFn = () => {
           buttontype="icon" 
           icon={BackIcon} 
           disabled={false} 
-          // onClick 지금 어떻게 넣어둬야 할지 몰라서 일단 이렇게 해뒀습니다..!
           onClick={() => "ㅇ"}/>
         <HeaderTextLayout>
           <Heading fontSize={"20px"} fontWeight={"600"} color={"rgba(0,0,0,1)"}>
@@ -35,9 +34,10 @@ const ApplyInputForm: StoryFn = () => {
         name={"홍길동"}
         temp={90}
         callNumber={"010-0000-0000"}
-        kakaoId={"asdf1234"}/>
+        kakaoId={"asdf1234"}
+        applyStatus={true}/>
       <StackSelectForm 
-        StackList={[
+        stackList={[
           {
             src: "/",
             position: "프론트",
@@ -53,7 +53,8 @@ const ApplyInputForm: StoryFn = () => {
             position: "디자인",
             stack: ["Figma"],
           },
-      ]}/>
+        ]}
+        applyStatus={true}/>
       <ContentInputLayout>
         <ContentInput
           contentTitle={"지원자 포트폴리오"}

@@ -94,7 +94,8 @@ export interface SelectStackProps {
 }
 
 export interface StackSelectFormProps {
-  StackList: Array<SelectStackProps>;
+  stackList: Array<SelectStackProps>;
+  applyStatus: boolean;
 }
 
 export interface ContentCheckFormProps {
@@ -102,6 +103,7 @@ export interface ContentCheckFormProps {
   temp: number;
   callNumber: string;
   kakaoId: string;
+  applyStatus: boolean;
 }
 
 export interface HomeBannerProps {

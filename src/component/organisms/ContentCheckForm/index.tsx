@@ -10,45 +10,50 @@ const ContentCheckForm: StoryFn<ContentCheckFormProps> = ({
   temp,
   callNumber,
   kakaoId,
+  applyStatus,
 }) => {
   return (
     <ContentCheckFormLayout>
-      <Header>
-        <Heading fontSize={"20"} fontWeight={"700"} color={"black"}>
-          지원정보확인
-        </Heading>
-        <Button 
-          type={"button"} 
-          buttontype={"smallbutton"} 
-          disabled={false}
-          onClick={() => "d"}
-          content="회원정보 수정"/>
-      </Header>
-      <InfoLayout>
-        <Text fontSize={"20"} fontWeight={"700"} color={"#595454"}>
-          {`${name}(${temp})`}
-        </Text>
-      </InfoLayout>
-      <InfoLayout>
-        <Text fontSize={"20"} fontWeight={"700"} color={"black"}>
-          휴대폰
-        </Text>
-        <DetailInfo>
+      <div>
+        <Header>
+          <Heading fontSize={"20"} fontWeight={"700"} color={"black"}>
+            지원정보확인
+          </Heading>
+          {applyStatus && (
+            <Button 
+            type={"button"} 
+            buttontype={"smallbutton"} 
+            disabled={false}
+            onClick={() => "d"}
+            content="회원정보 수정"/>
+          )}
+        </Header>
+        <InfoLayout>
           <Text fontSize={"20"} fontWeight={"700"} color={"#595454"}>
-            {`${callNumber}`}
+            {`${name}(${temp})`}
           </Text>
-        </DetailInfo>
-      </InfoLayout>
-      <InfoLayout>
-        <Text fontSize={"20"} fontWeight={"700"} color={"black"}>
-          카톡아이디
-        </Text>
-        <DetailInfo>
-          <Text fontSize={"20"} fontWeight={"700"} color={"#595454"}>
-          {`${kakaoId}`}
+        </InfoLayout>
+        <InfoLayout>
+          <Text fontSize={"20"} fontWeight={"700"} color={"black"}>
+            휴대폰
           </Text>
-        </DetailInfo>
-      </InfoLayout>
+          <DetailInfo>
+            <Text fontSize={"20"} fontWeight={"700"} color={"#595454"}>
+              {`${callNumber}`}
+            </Text>
+          </DetailInfo>
+        </InfoLayout>
+        <InfoLayout>
+          <Text fontSize={"20"} fontWeight={"700"} color={"black"}>
+            카톡아이디
+          </Text>
+          <DetailInfo>
+            <Text fontSize={"20"} fontWeight={"700"} color={"#595454"}>
+            {`${kakaoId}`}
+            </Text>
+          </DetailInfo>
+        </InfoLayout>
+      </div>
     </ContentCheckFormLayout>
   );
 };

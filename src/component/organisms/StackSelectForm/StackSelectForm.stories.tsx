@@ -14,7 +14,7 @@ const Template: StoryFn<StackSelectFormProps> = (args: any) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  StackList: [
+  stackList: [
     {
       src: "/",
       position: "프론트",
@@ -31,4 +31,5 @@ Default.args = {
       stack: ["Figma"],
     },
   ],
+  applyStatus: true,
 };

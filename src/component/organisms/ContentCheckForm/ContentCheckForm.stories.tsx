@@ -16,4 +16,5 @@ Default.args = {
   temp: 90,
   callNumber: "010-0000-0000",
   kakaoId: "asdf1234",
+  applyStatus: true,
 };
