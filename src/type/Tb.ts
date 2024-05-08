@@ -94,7 +94,8 @@ export interface SelectStackProps {
 }
 
 export interface StackSelectFormProps {
-  StackList: Array<SelectStackProps>;
+  stackList: Array<SelectStackProps>;
+  applyStatus: boolean;
 }
 
 export interface ContentCheckFormProps {
@@ -102,6 +103,7 @@ export interface ContentCheckFormProps {
   temp: number;
   callNumber: string;
   kakaoId: string;
+  applyStatus: boolean;
 }
 
 export interface HomeBannerProps {
@@ -130,4 +132,30 @@ export interface HomeMainProps {
 
 export interface HomeBoardData {
   BoardData: Array<HomeMainProps>;
+}
+
+export interface PostInfoProps {
+  title: string;
+  subtitle: string;
+  iscruiting: boolean;
+  needposistion: Array<PosistionArrayType>;
+}
+
+export interface PostInfoData {
+  PostInfo: Array<PostInfoProps>;
+}
+
+export interface UserStackData {
+  userstack: Array<string>;
+}
+
+export interface ProjectInfoProps {
+  projectinfo: Array<number>;
+}
+
+export interface UserInfoProps {
+  name: string;
+  major: string;
+  studentnumber: number;
+  temp: number;
 }

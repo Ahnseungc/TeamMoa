@@ -8,14 +8,15 @@ import {
 import SelectStack from "@molecules/SelectStack";
 
 const StackSelectForm: StoryFn<StackSelectFormProps> = ({
-  StackList,
+  stackList,
+  applyStatus,
 }) => {
   return (
     <StackSelectFormLayout>
-      <Heading fontSize="20px" fontWeight="600" color="rgba(0,0,0,1)">
-        지원스택 선택
+      <Heading fontSize={"20"} fontWeight={"600"} color={"rgba(0,0,0,1)"}>
+        {applyStatus ? "지원스택 선택" : "지원스택"}
       </Heading>
-      {StackList.map((item) => {
+      {stackList.map((item) => {
         return (
           <StackListLayout>
             <SelectStack
