@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const SignUpHeaderLayout = styled.header`
   display: flex;
+  margin: 0;
   align-items: center;
-
-  & span {
-    margin-left: 112px;
-  }
+  justify-content: start;
+  width: 100%;
 `;
