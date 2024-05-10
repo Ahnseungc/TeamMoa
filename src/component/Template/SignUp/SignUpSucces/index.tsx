@@ -8,11 +8,13 @@ import Heading from "@atom/Heading";
 import Button from "@atom/Button";
 import SignUpHeader from "@organisms/SignUp/SignUpHeader";
 import Text from "@atom/Text";
+import { FC } from "react";
+import { SignUpPageProps } from "@type/Tb";
 
-const SignUpSuccess = () => {
+const SignUpSuccess: FC<SignUpPageProps> = ({ pageIndex, setIndex }) => {
   return (
     <SignUpSuccessLayout>
-      <SignUpHeader />
+      <SignUpHeader pageIndex={pageIndex} setIndex={setIndex} />
       <SignUpSuccessLayoutText>
         <Heading fontSize="24px" fontWeight="600" color="rgba(0,0,0,1)">
           회원가입이 성공적으로

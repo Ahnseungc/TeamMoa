@@ -10,11 +10,13 @@ import Button from "@atom/Button";
 import Input from "@atom/Input";
 import Text from "@atom/Text";
 import SignUpHeader from "@organisms/SignUp/SignUpHeader";
+import { FC } from "react";
+import { SignUpPageProps } from "@type/Tb";
 
-const SignUpSettingMajor = () => {
+const SignUpSettingMajor: FC<SignUpPageProps> = ({ setIndex, pageIndex }) => {
   return (
     <SignUpSettingSchoolNameLayout>
-      <SignUpHeader />
+      <SignUpHeader setIndex={setIndex} pageIndex={pageIndex} />
       <SignUpSettingSchoolNameText>
         <Heading fontSize="24px" fontWeight="600" color="rgba(0,0,0,1)">
           학번과 학과를
@@ -64,7 +66,7 @@ const SignUpSettingMajor = () => {
           type="button"
           buttontype="largebutton"
           disabled={false}
-          onClick={() => null}
+          onClick={() => setIndex(4)}
         />
       </SignUpSettingSchoolNameLabelForm>
     </SignUpSettingSchoolNameLayout>

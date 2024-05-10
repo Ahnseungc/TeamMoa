@@ -10,11 +10,16 @@ import Button from "@atom/Button";
 import Input from "@atom/Input";
 import Text from "@atom/Text";
 import SignUpHeader from "@organisms/SignUp/SignUpHeader";
+import { FC } from "react";
+import { SignUpPageProps } from "@type/Tb";
 
-const SignUpSettingSchoolName = () => {
+const SignUpSettingSchoolName: FC<SignUpPageProps> = ({
+  pageIndex,
+  setIndex,
+}) => {
   return (
     <SignUpSettingSchoolNameLayout>
-      <SignUpHeader />
+      <SignUpHeader setIndex={setIndex} pageIndex={pageIndex} />
       <SignUpSettingSchoolNameText>
         <Heading fontSize="24px" fontWeight="600" color="rgba(0,0,0,1)">
           현재 다니고 있는{" "}
@@ -54,7 +59,7 @@ const SignUpSettingSchoolName = () => {
           type="button"
           buttontype="largebutton"
           disabled={false}
-          onClick={() => null}
+          onClick={() => setIndex(pageIndex + 1)}
         />
       </SignUpSettingSchoolNameLabelForm>
     </SignUpSettingSchoolNameLayout>

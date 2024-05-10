@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export interface InputType {
   placeholder: string;
@@ -158,4 +158,13 @@ export interface UserInfoProps {
   major: string;
   studentnumber: number;
   temp: number;
+}
+
+export interface LoginProps {
+  onclick: () => void;
+}
+
+export interface SignUpPageProps {
+  setIndex: Dispatch<SetStateAction<number>>;
+  pageIndex: number;
 }
