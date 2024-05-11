@@ -31,10 +31,3 @@ const SignUpPage = () => {
 };
 
 export default SignUpPage;
-
-const IndexPage = [
-  { id: 1, name: "userName" },
-  { id: 2, name: "schoolName" },
-  { id: 3, name: "schoolMajor" },
-  { id: 4, name: "Success" },
-];

@@ -29,13 +29,13 @@ export const HomeBoardHeaderTiteName = styled.div`
 
 export const HomeBoardHeaderBody = styled.div`
   width: 335px;
-  padding: 10px 20px 0 20px;
+  padding: 10px 0 0 10px;
   height: 50px;
 `;
 
 export const HomeBannerFooter = styled.footer`
   display: flex;
-  padding: 7px 20px 17px 20px;
+  padding: 17px 20px 17px 0;
 
   width: max-content;
   & div:not(:last-child) {
