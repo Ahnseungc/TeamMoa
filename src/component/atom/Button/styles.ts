@@ -46,13 +46,8 @@ export const largebuttonStyles = css`
 `;
 
 export const addpositionStyles = css`
-  width: 100%;
-  height: 26px;
-  background-color: #ebebeb;
-  font-size: 13px;
-  border: none;
-  border-radius: 5px;
-  color: #363636;
+  width: 56px;
+  height: 56px;
 `;
 
 export const middlebuttonStyles = css`
