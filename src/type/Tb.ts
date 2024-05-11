@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export interface InputType {
   placeholder: string;
@@ -27,6 +27,7 @@ export interface ButtonType {
   content?: string;
   icon?: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+  size?: string;
 }
 export interface TextAreaType {
   Areatype: "default" | "bordernone";
@@ -132,6 +133,8 @@ export interface HomeMainProps {
 
 export interface HomeBoardData {
   BoardData: Array<HomeMainProps>;
+  setIsActive?: Dispatch<SetStateAction<boolean>>;
+  isActive?: boolean;
 }
 
 export interface PostInfoProps {
@@ -158,4 +161,13 @@ export interface UserInfoProps {
   major: string;
   studentnumber: number;
   temp: number;
+}
+
+export interface LoginProps {
+  onclick: () => void;
+}
+
+export interface SignUpPageProps {
+  setIndex: Dispatch<SetStateAction<number>>;
+  pageIndex: number;
 }

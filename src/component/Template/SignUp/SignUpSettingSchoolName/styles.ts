@@ -5,6 +5,7 @@ export const SignUpSettingSchoolNameLayout = styled.div`
   height: 812px;
   display: flex;
   flex-direction: column;
+  padding-left: 18px;
 
   & > button:first-child {
     margin: 17px 16px 0 0;
@@ -38,6 +39,9 @@ export const SignUpSettingSchoolNameLabel = styled.div`
   flex-direction: column;
   height: 68px;
   justify-content: space-between;
+  & label {
+    margin: 0;
+  }
 `;
 
 export const SighUpSchoolSettingHeader = styled.header`

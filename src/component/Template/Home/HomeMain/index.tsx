@@ -6,7 +6,7 @@ import { HomeBoardData } from "@type/Tb";
 import Button from "@atom/Button";
 import MainIcon from "@atom/MainIcon";
 
-const HomeMain: FC<HomeBoardData> = ({ BoardData }) => {
+const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
   return (
     <HomemainLayout>
       <HomeBannerHeader>
@@ -19,7 +19,7 @@ const HomeMain: FC<HomeBoardData> = ({ BoardData }) => {
           onClick={() => null}
         />
       </HomeBannerHeader>
-      <HomeBanner isactive={false} onclick={() => null} />
+      <HomeBanner isactive={isActive} onclick={() => setIsActive(!isActive)} />
       {BoardData.map((data) => {
         return (
           <HomeBoardForm

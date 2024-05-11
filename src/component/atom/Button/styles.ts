@@ -46,13 +46,8 @@ export const largebuttonStyles = css`
 `;
 
 export const addpositionStyles = css`
-  width: 100%;
-  height: 26px;
-  background-color: #ebebeb;
-  font-size: 13px;
-  border: none;
-  border-radius: 5px;
-  color: #363636;
+  width: 56px;
+  height: 56px;
 `;
 
 export const middlebuttonStyles = css`
@@ -71,11 +66,6 @@ export const smallbuttonStyles = css`
   font-size: 15px;
   border: none;
   color: black;
-`;
-
-export const ImageLayout = styled.img`
-  width: 24px;
-  height: 24px;
 `;
 
 export const largebuttonactiveStyles = css`
@@ -116,6 +106,11 @@ export const posistioncompletebuttonStyles = css`
   font-size: 12px;
 `;
 
+export const ImageLayout = styled.img<{ sizes: string }>`
+  width: ${(props) => (props.sizes ? props.sizes : "24px")};
+  height: ${(props) => (props.sizes ? props.sizes : "24px")};
+`;
+
 export const ButtonLayout = styled.button<ButtonLayoutType>`
   ${(props) => {
     switch (props.Buttontype) {
@@ -135,7 +130,6 @@ export const ButtonLayout = styled.button<ButtonLayoutType>`
         return smallbuttonStyles;
       case "posistionbutton":
         return posistionbuttonStyles;
-
       case "posistioncompletebutton":
         return posistioncompletebuttonStyles;
 

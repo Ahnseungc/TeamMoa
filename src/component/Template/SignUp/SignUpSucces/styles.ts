@@ -13,15 +13,13 @@ export const SignUpSuccessLayoutText = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-left: 18px;
 `;
 
-export const SighUpSchoolSettingHeader = styled.header`
-  display: flex;
-  align-items: center;
-
-  & span {
-    margin-left: 112px;
-  }
+export const SignUpSuccessTextHeader = styled.div`
+  margin: 0;
+  padding: 0;
+  padding-left: 18px;
 `;
 
 export const SignUpSucessImg = styled.img`
@@ -34,6 +32,7 @@ export const SignUpSuccessBody = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   margin-top: 61px;
 
   & span {

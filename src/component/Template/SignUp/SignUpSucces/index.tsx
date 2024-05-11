@@ -3,24 +3,31 @@ import {
   SignUpSuccessLayoutText,
   SignUpSucessImg,
   SignUpSuccessBody,
+  SignUpSuccessTextHeader,
 } from "./styles";
 import Heading from "@atom/Heading";
 import Button from "@atom/Button";
 import SignUpHeader from "@organisms/SignUp/SignUpHeader";
 import Text from "@atom/Text";
+import { FC } from "react";
+import { SignUpPageProps } from "@type/Tb";
+import { useNavigate } from "react-router-dom";
 
-const SignUpSuccess = () => {
+const SignUpSuccess: FC<SignUpPageProps> = ({ pageIndex, setIndex }) => {
+  const navigate = useNavigate();
   return (
     <SignUpSuccessLayout>
-      <SignUpHeader />
-      <SignUpSuccessLayoutText>
-        <Heading fontSize="24px" fontWeight="600" color="rgba(0,0,0,1)">
-          회원가입이 성공적으로
-        </Heading>
-        <Heading fontSize="24px" fontWeight="600" color="rgba(0,0,0,1)">
-          완료되었습니다!
-        </Heading>
-      </SignUpSuccessLayoutText>
+      <SignUpSuccessTextHeader>
+        <SignUpHeader pageIndex={pageIndex} setIndex={setIndex} />
+        <SignUpSuccessLayoutText>
+          <Heading fontSize="24px" fontWeight="600" color="rgba(0,0,0,1)">
+            회원가입이 성공적으로
+          </Heading>
+          <Heading fontSize="24px" fontWeight="600" color="rgba(0,0,0,1)">
+            완료되었습니다!
+          </Heading>
+        </SignUpSuccessLayoutText>
+      </SignUpSuccessTextHeader>
       <SignUpSuccessBody>
         <SignUpSucessImg />
         <Text fontSize="20px" fontWeight="400" color="rgba(0, 0, 0, 1)">
@@ -32,7 +39,9 @@ const SignUpSuccess = () => {
           type="button"
           buttontype="largebuttonactive"
           disabled={false}
-          onClick={() => null}
+          onClick={() => {
+            navigate("/home");
+          }}
         />
       </SignUpSuccessBody>
     </SignUpSuccessLayout>
