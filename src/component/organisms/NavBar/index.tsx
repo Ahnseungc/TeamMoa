@@ -3,8 +3,11 @@ import Bell from "@asset/image/NavIcon/bell.png";
 import Home from "@asset/image/NavIcon/home.png";
 import User from "@asset/image/NavIcon/user.png";
 import { NavBarLayout } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+  const navigate = useNavigate();
+
   return (
     <NavBarLayout>
       <Button
@@ -12,7 +15,7 @@ const NavBar = () => {
         buttontype={"icon"}
         disabled={false}
         icon={Home}
-        onClick={() => null}
+        onClick={() => navigate("/home")}
       />
       <Button
         type={"button"}
@@ -27,7 +30,7 @@ const NavBar = () => {
         buttontype={"icon"}
         disabled={false}
         icon={User}
-        onClick={() => null}
+        onClick={() => navigate("/userinfo")}
       />
     </NavBarLayout>
   );

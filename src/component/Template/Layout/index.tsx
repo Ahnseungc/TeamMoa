@@ -4,9 +4,10 @@ import AddText from "@asset/image/icon_AddText.png";
 import NavBar from "@organisms/NavBar";
 import { FC } from "react";
 import { DefaultLayout } from "./styles";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Layout: FC = () => {
+  const navigate = useNavigate();
   return (
     <DefaultLayout>
       <Outlet />
@@ -16,7 +17,7 @@ const Layout: FC = () => {
         disabled={false}
         icon={AddText}
         size="56px"
-        onClick={() => null}
+        onClick={() => navigate("/writecontent")}
       />
       <NavBar />
     </DefaultLayout>
