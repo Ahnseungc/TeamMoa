@@ -132,6 +132,8 @@ export interface HomeMainProps {
 
 export interface HomeBoardData {
   BoardData: Array<HomeMainProps>;
+  setIsActive?: Dispatch<SetStateAction<boolean>>;
+  isActive?: boolean;
 }
 
 export interface PostInfoProps {

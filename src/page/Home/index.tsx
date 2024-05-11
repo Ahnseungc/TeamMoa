@@ -1,4 +1,5 @@
 import HomeMain from "@templates/Home/HomeMain";
+import { useState } from "react";
 
 const dummy = [
   {
@@ -119,7 +120,11 @@ const dummy = [
 ];
 
 const Home = () => {
-  return <HomeMain BoardData={dummy} />;
+  const [isActive, setIsActive] = useState<boolean>(false);
+
+  return (
+    <HomeMain BoardData={dummy} isActive={isActive} setIsActive={setIsActive} />
+  );
 };
 
 export default Home;
