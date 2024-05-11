@@ -13,6 +13,7 @@ const Layout: FC = () => {
         buttontype={"icon"}
         disabled={false}
         icon={AddText}
+        size="56px"
         onClick={() => null}
       />
       <NavBar />

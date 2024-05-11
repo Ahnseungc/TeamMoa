@@ -27,6 +27,7 @@ export interface ButtonType {
   content?: string;
   icon?: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+  size?: string;
 }
 export interface TextAreaType {
   Areatype: "default" | "bordernone";

@@ -68,11 +68,6 @@ export const smallbuttonStyles = css`
   color: black;
 `;
 
-export const ImageLayout = styled.img`
-  width: 24px;
-  height: 24px;
-`;
-
 export const largebuttonactiveStyles = css`
   width: 330px;
   height: 40px;
@@ -109,6 +104,11 @@ export const posistioncompletebuttonStyles = css`
   color: rgba(99, 99, 99, 1);
   border: none;
   font-size: 12px;
+`;
+
+export const ImageLayout = styled.img<{ sizes: string }>`
+  width: ${(props) => (props.sizes ? props.sizes : "24px")};
+  height: ${(props) => (props.sizes ? props.sizes : "24px")};
 `;
 
 export const ButtonLayout = styled.button<ButtonLayoutType>`
