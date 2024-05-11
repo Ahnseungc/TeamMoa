@@ -130,7 +130,6 @@ export const ButtonLayout = styled.button<ButtonLayoutType>`
         return smallbuttonStyles;
       case "posistionbutton":
         return posistionbuttonStyles;
-
       case "posistioncompletebutton":
         return posistioncompletebuttonStyles;
 

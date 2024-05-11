@@ -1,15 +1,13 @@
 import Button from "@atom/Button";
-import { FC } from "react";
+
 import AddText from "@asset/image/icon_AddText.png";
+import NavBar from "@organisms/NavBar";
+import { FC } from "react";
+import { DefaultLayout } from "./styles";
 
-interface LayoutProps {
-  children: JSX.Element;
-}
-
-const Layout: FC<LayoutProps> = ({ children }) => {
+const Layout: FC = () => {
   return (
-    <div>
-      {children}
+    <DefaultLayout>
       <Button
         type={"button"}
         buttontype={"icon"}
@@ -17,7 +15,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         icon={AddText}
         onClick={() => null}
       />
-    </div>
+      <NavBar />
+    </DefaultLayout>
   );
 };
 

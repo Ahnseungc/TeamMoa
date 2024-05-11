@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy } from "react";
+import Layout from "@templates/Layout";
 
 const LoginPage = lazy(() => import("@page/Login"));
 const SignUpPage = lazy(() => import("@page/SignUp"));
@@ -10,7 +11,9 @@ const Router = () => {
     <Routes>
       <Route path="/" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
-      <Route path="/home" element={<HomePage />} />
+      <Route element={<Layout />}>
+        <Route path="/home" element={<HomePage />} />
+      </Route>
     </Routes>
   );
 };
