@@ -11,4 +11,6 @@ export const LoginMainPageLayout = styled.div`
 
 export const KaKaoLogin = styled.img`
   margin-top: 191px;
+  width: 203.06px;
+  height: 50px;
 `;

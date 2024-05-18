@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MoveHeading, MoveTexting, MoveInputing } from "@atom/\bAnimations";
 
 export const SignUpSchoolSettingNameLayout = styled.div`
   width: 100vw;
@@ -18,6 +19,16 @@ export const SignUpSchoolSettingText = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  & > h3:first-child {
+    opacity: 0;
+    animation: ${MoveHeading} 0.8s ease-in-out forwards;
+  }
+
+  & > h3:last-child {
+    opacity: 0;
+    animation: ${MoveTexting} 0.6s 0.5s ease-in-out forwards;
+  }
 `;
 
 export const SignUpSchoolSettingLabelForm = styled.form`
@@ -40,4 +51,10 @@ export const SignUpSchoolSettingLabel = styled.div`
   flex-direction: column;
   height: 68px;
   justify-content: space-between;
+
+  & input {
+    opacity: 0;
+    animation: ${MoveInputing} 0.8s 0.8s ease-in-out forwards;
+    outline: none;
+  }
 `;

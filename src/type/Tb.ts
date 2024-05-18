@@ -59,6 +59,7 @@ export interface TextProps {
   fontWeight: string;
   color: string;
   children: ReactNode;
+  animation?: string;
 }
 
 export interface WritingBoardFormProps extends WritingUserFormProps, TextProps {
