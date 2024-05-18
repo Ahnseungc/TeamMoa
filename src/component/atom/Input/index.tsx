@@ -10,6 +10,7 @@ const SignUpInput: FunctionComponent<InputType> = ({
   type,
   inputtype,
   id,
+  onChange,
   value,
 }) => {
   return (
@@ -21,7 +22,8 @@ const SignUpInput: FunctionComponent<InputType> = ({
       disabled={disabled}
       error={error}
       Inputtype={inputtype}
-      // value={value}
+      onChange={onChange}
+      value={value}
     />
   );
 };

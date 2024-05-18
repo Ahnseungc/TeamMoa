@@ -1,4 +1,10 @@
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import {
+  ChangeEvent,
+  ChangeEventHandler,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+} from "react";
 
 export interface InputType {
   placeholder: string;
@@ -7,6 +13,7 @@ export interface InputType {
   value: string;
   error: string;
   id: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   type: "text" | "password";
   inputtype: "text" | "password" | "website" | "textheader";
 }
@@ -171,4 +178,6 @@ export interface LoginProps {
 export interface SignUpPageProps {
   setIndex: Dispatch<SetStateAction<number>>;
   pageIndex: number;
+  name?: string;
+  onchange?: ChangeEventHandler<HTMLInputElement>;
 }
