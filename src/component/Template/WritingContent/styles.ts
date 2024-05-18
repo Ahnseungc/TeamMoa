@@ -7,11 +7,11 @@ export const WritingContentLayout = styled.div`
 `;
 
 export const Header = styled.div`
-background-color: antiquewhite;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    padding: 12px 0 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
 `;
 
 export const ContentInputLayout = styled.div`
@@ -25,7 +25,7 @@ export const ContentInput = styled.textarea`
     outline: none;
     border: none;
     width: 339px;
-    height: 200px;
+    height: 600px;
     margin-top: 20px;
     font-size: 16px;
     font-weight: 400;

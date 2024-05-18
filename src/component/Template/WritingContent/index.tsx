@@ -1,3 +1,4 @@
+import { ChangeEvent, useState } from "react";
 import { StoryFn } from "@storybook/react";
 import {
   WritingContentLayout,
@@ -9,10 +10,15 @@ import Button from "@atom/Button";
 import CancelIcon from "@asset/image/icon_cancel.png";
 import Heading from "@atom/Heading";
 import Input from "@atom/Input";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const WritingContent: StoryFn = () => {
-  // const navigate = useNavigate();
+  const [title, setTitle] = useState<string>("");
+  const Navigate = useNavigate();
+
+  const onChangeTitle = (e: ChangeEvent<HTMLInputElement>) => {
+    setTitle(e.target.value);
+  };
 
   return (
     <WritingContentLayout>
@@ -22,25 +28,26 @@ const WritingContent: StoryFn = () => {
           buttontype="icon"
           icon={CancelIcon}
           disabled={false}
-          onClick={() => 'navigate("/writeupload")'}/>
+          onClick={() => Navigate("/home")}/>
         <Heading fontSize="20px" fontWeight="400" color="#636363">
           글쓰기
         </Heading>
         <Button
           type="button"
-          buttontype="text"
+          buttontype="smallbutton"
           content="다음"
           disabled={false}
-          onClick={() => "ㅇ"}/>
+          onClick={() => Navigate(("/writeupload"))}/>
       </Header>
       <ContentInputLayout>
         <Input
           id=""
-          value=""
+          value={title}
           type="text"
           inputtype="textheader"
           readonly={false}
           disabled={false}
+          onChange={onChangeTitle}
           error=""
           placeholder="제목"/>
         <ContentInput placeholder="내용을 입력하세요"/>

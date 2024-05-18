@@ -60,12 +60,14 @@ export const middlebuttonStyles = css`
 `;
 
 export const smallbuttonStyles = css`
-  width: 104px;
-  height: 28px;
-  background-color: #d9d9d9;
-  font-size: 15px;
+  height: 26px;
+  padding: 0 12.57px;
+  background-color: rgba(217, 74, 86, 1);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 25px;
   border: none;
-  color: black;
+  color: white;
 `;
 
 export const largebuttonactiveStyles = css`
