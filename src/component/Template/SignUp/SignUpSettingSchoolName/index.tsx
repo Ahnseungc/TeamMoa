@@ -16,6 +16,8 @@ import { SignUpPageProps } from "@type/Tb";
 const SignUpSettingSchoolName: FC<SignUpPageProps> = ({
   pageIndex,
   setIndex,
+  school,
+  onchange,
 }) => {
   return (
     <SignUpSettingSchoolNameLayout>
@@ -43,11 +45,12 @@ const SignUpSettingSchoolName: FC<SignUpPageProps> = ({
             placeholder={"대학교 이름"}
             readonly={false}
             disabled={false}
-            value={""}
+            value={school}
             error={""}
             id="school"
             type={"text"}
             inputtype={"text"}
+            onChange={onchange}
           />
         </SignUpSettingSchoolNameLabel>
 
@@ -57,8 +60,8 @@ const SignUpSettingSchoolName: FC<SignUpPageProps> = ({
         <Button
           content="계속하기"
           type="button"
-          buttontype="largebutton"
-          disabled={false}
+          buttontype={school ? "largebuttonactive" : "largebutton"}
+          disabled={school ? false : true}
           onClick={() => setIndex(pageIndex + 1)}
         />
       </SignUpSettingSchoolNameLabelForm>

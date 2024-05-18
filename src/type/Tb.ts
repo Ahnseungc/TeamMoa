@@ -180,4 +180,11 @@ export interface SignUpPageProps {
   pageIndex: number;
   name?: string;
   onchange?: ChangeEventHandler<HTMLInputElement>;
+  school?: string;
+  major?: setMajorProps;
+}
+
+export interface setMajorProps {
+  StudentID: string;
+  DoubleMajor: string;
 }

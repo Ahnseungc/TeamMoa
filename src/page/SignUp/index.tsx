@@ -1,3 +1,4 @@
+import { setMajorProps } from "@type/Tb";
 import { ChangeEvent, useState } from "react";
 import { lazy } from "react";
 const SignUpSettingName = lazy(
@@ -14,9 +15,27 @@ const SignUpSuccess = lazy(() => import("@templates/SignUp/SignUpSucces"));
 const SignUpPage = () => {
   const [index, setIndex] = useState<number>(1);
   const [name, setName] = useState<string>("");
+  const [school, setSchool] = useState<string>("");
+  const [major, setMajor] = useState<setMajorProps>({
+    StudentID: "",
+    DoubleMajor: "",
+  });
 
   const onChangeName = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
+  };
+  const onChangeSchool = (e: ChangeEvent<HTMLInputElement>) => {
+    setSchool(e.target.value);
+  };
+
+  const onChangeMajor = (e: ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+    if (id === "StudentID" && /[^0-9]/.test(value)) {
+      return;
+    }
+    setMajor((prev) => {
+      return { ...prev, [id]: value };
+    });
   };
 
   return (
@@ -30,10 +49,20 @@ const SignUpPage = () => {
         />
       )}
       {index === 2 && (
-        <SignUpSettingSchoolName pageIndex={index} setIndex={setIndex} />
+        <SignUpSettingSchoolName
+          pageIndex={index}
+          setIndex={setIndex}
+          school={school}
+          onchange={onChangeSchool}
+        />
       )}
       {index === 3 && (
-        <SignUpSettingMajor pageIndex={index} setIndex={setIndex} />
+        <SignUpSettingMajor
+          pageIndex={index}
+          setIndex={setIndex}
+          major={major}
+          onchange={onChangeMajor}
+        />
       )}
       {index === 4 && <SignUpSuccess pageIndex={index} setIndex={setIndex} />}
     </>
