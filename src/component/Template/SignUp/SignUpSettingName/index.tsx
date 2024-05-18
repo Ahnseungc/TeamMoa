@@ -16,8 +16,11 @@ import CancelIcon from "@asset/image/icon_cancel.png";
 const SignUpSchoolSettingName: FC<SignUpPageProps> = ({
   setIndex,
   pageIndex,
+  name,
+  onchange,
 }) => {
   const Navigate = useNavigate();
+
   return (
     <SignUpSchoolSettingNameLayout>
       <Button
@@ -46,7 +49,8 @@ const SignUpSchoolSettingName: FC<SignUpPageProps> = ({
             placeholder={"홍길동"}
             readonly={false}
             disabled={false}
-            value={""}
+            value={name}
+            onChange={onchange}
             error={""}
             id="name"
             type={"text"}
@@ -57,8 +61,8 @@ const SignUpSchoolSettingName: FC<SignUpPageProps> = ({
         <Button
           content="계속하기"
           type="button"
-          buttontype="largebutton"
-          disabled={false}
+          buttontype={name ? "largebuttonactive" : "largebutton"}
+          disabled={name ? false : true}
           onClick={() => setIndex(pageIndex + 1)}
         />
       </SignUpSchoolSettingLabelForm>

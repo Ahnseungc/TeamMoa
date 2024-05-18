@@ -39,10 +39,10 @@ export const largebuttonStyles = css`
   font-weight: 600;
   line-height: 18.4px;
 
-  &:active {
+  /* &:active {
     background-color: rgba(217, 74, 86, 1);
     color: white;
-  }
+  } */
 `;
 
 export const addpositionStyles = css`
