@@ -57,15 +57,14 @@ const SignUpSchoolSettingName: FC<SignUpPageProps> = ({
             inputtype={"text"}
           />
         </SignUpSchoolSettingLabel>
-
-        <Button
-          content="계속하기"
-          type="button"
-          buttontype={name ? "largebuttonactive" : "largebutton"}
-          disabled={name ? false : true}
-          onClick={() => setIndex(pageIndex + 1)}
-        />
       </SignUpSchoolSettingLabelForm>
+      <Button
+        content="계속하기"
+        type="button"
+        buttontype={name ? "largebuttonactive" : "largebutton"}
+        disabled={name ? false : true}
+        onClick={() => setIndex(pageIndex + 1)}
+      />
     </SignUpSchoolSettingNameLayout>
   );
 };

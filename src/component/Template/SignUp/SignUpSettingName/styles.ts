@@ -7,8 +7,15 @@ export const SignUpSchoolSettingNameLayout = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 16px;
+  position: relative;
   & > button:first-child {
     margin: 17px 0 0 0;
+  }
+
+  & > button:last-child {
+    position: absolute;
+    top: 732px;
+    left: 24px;
   }
 `;
 
@@ -20,12 +27,12 @@ export const SignUpSchoolSettingText = styled.p`
   flex-direction: column;
   justify-content: space-between;
 
-  & > h3:first-child {
+  & h3:first-child {
     opacity: 0;
     animation: ${MoveHeading} 0.8s ease-in-out forwards;
   }
 
-  & > h3:last-child {
+  & h3:last-child {
     opacity: 0;
     animation: ${MoveTexting} 0.6s 0.5s ease-in-out forwards;
   }
@@ -39,9 +46,6 @@ export const SignUpSchoolSettingLabelForm = styled.form`
   align-items: center;
   padding-left: 2px;
 
-  & button {
-    margin-top: 367px;
-  }
   & label {
     margin: 0;
   }

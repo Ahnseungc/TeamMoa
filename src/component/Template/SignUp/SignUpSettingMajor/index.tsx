@@ -13,7 +13,12 @@ import SignUpHeader from "@organisms/SignUp/SignUpHeader";
 import { FC } from "react";
 import { SignUpPageProps } from "@type/Tb";
 
-const SignUpSettingMajor: FC<SignUpPageProps> = ({ setIndex, pageIndex }) => {
+const SignUpSettingMajor: FC<SignUpPageProps> = ({
+  setIndex,
+  pageIndex,
+  onchange,
+  major,
+}) => {
   return (
     <SignUpSettingSchoolNameLayout>
       <SignUpHeader setIndex={setIndex} pageIndex={pageIndex} />
@@ -36,7 +41,8 @@ const SignUpSettingMajor: FC<SignUpPageProps> = ({ setIndex, pageIndex }) => {
             placeholder={"학번(4글자)"}
             readonly={false}
             disabled={false}
-            value={""}
+            value={major.StudentID}
+            onChange={onchange}
             error={""}
             id="StudentID"
             type={"text"}
@@ -53,22 +59,22 @@ const SignUpSettingMajor: FC<SignUpPageProps> = ({ setIndex, pageIndex }) => {
             placeholder={"전공명 / 복수전공(부전공)"}
             readonly={false}
             disabled={false}
-            value={""}
+            value={major.DoubleMajor}
+            onChange={onchange}
             error={""}
             id="DoubleMajor"
             type={"text"}
             inputtype={"text"}
           />
         </SignUpSettingSchoolDoubleMajorLabel>
-
-        <Button
-          content="계속하기"
-          type="button"
-          buttontype="largebutton"
-          disabled={false}
-          onClick={() => setIndex(4)}
-        />
       </SignUpSettingSchoolNameLabelForm>
+      <Button
+        content="계속하기"
+        type="button"
+        buttontype={major.StudentID ? "largebuttonactive" : "largebutton"}
+        disabled={major.StudentID ? false : true}
+        onClick={() => setIndex(4)}
+      />
     </SignUpSettingSchoolNameLayout>
   );
 };
