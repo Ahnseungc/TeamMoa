@@ -5,6 +5,13 @@ export const SignUpSuccessLayout = styled.div`
   height: 812px;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  & button {
+    position: absolute;
+    top: 732px;
+    left: 24px;
+  }
 `;
 
 export const SignUpSuccessLayoutText = styled.p`
@@ -37,9 +44,5 @@ export const SignUpSuccessBody = styled.div`
 
   & span {
     margin-top: 33px;
-  }
-
-  & button {
-    margin-top: 157px;
   }
 `;

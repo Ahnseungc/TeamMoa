@@ -67,15 +67,14 @@ const SignUpSettingMajor: FC<SignUpPageProps> = ({
             inputtype={"text"}
           />
         </SignUpSettingSchoolDoubleMajorLabel>
-
-        <Button
-          content="계속하기"
-          type="button"
-          buttontype={major.StudentID ? "largebuttonactive" : "largebutton"}
-          disabled={major.StudentID ? false : true}
-          onClick={() => setIndex(4)}
-        />
       </SignUpSettingSchoolNameLabelForm>
+      <Button
+        content="계속하기"
+        type="button"
+        buttontype={major.StudentID ? "largebuttonactive" : "largebutton"}
+        disabled={major.StudentID ? false : true}
+        onClick={() => setIndex(4)}
+      />
     </SignUpSettingSchoolNameLayout>
   );
 };
