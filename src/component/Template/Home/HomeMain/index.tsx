@@ -19,7 +19,7 @@ const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
           onClick={() => null}
         />
       </HomeBannerHeader>
-      <HomeBanner isactive={isActive} onclick={() => setIsActive(!isActive)} />
+      <HomeBanner isactive={isActive} onclick={() => setIsActive(!isActive)} />      
       {BoardData.map((data) => {
         return (
           <HomeBoardForm

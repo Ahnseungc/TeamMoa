@@ -30,7 +30,7 @@ const NavBar = () => {
         buttontype={"icon"}
         disabled={false}
         icon={User}
-        onClick={() => navigate("/userinfo")}
+        onClick={() => navigate("/userinfo ")}
       />
     </NavBarLayout>
   );

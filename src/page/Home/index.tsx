@@ -121,6 +121,7 @@ const dummy = [
 
 const Home = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
+  
 
   return (
     <HomeMain BoardData={dummy} isActive={isActive} setIsActive={setIsActive} />
