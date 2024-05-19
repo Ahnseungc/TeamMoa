@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ApplyInputFormLayout = styled.div`
     width: 375px;
-    height: 812px;
     display: flex;
     flex-direction: column;
     padding: 12px 0 15px 0;
