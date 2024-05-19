@@ -9,6 +9,7 @@ import { WritingBoardFormProps } from "@type/Tb";
 import { FC } from "react";
 import Text from "@atom/Text";
 import Heading from "@atom/Heading";
+import Button from "@atom/Button";
 
 const WritingBoardForm: FC<WritingBoardFormProps> = ({
   src,
@@ -20,28 +21,33 @@ const WritingBoardForm: FC<WritingBoardFormProps> = ({
     <WritingBoardFormLayouts>
       <div>
         <WritingHeader>
-          <Heading fontSize="30px" fontWeight="700" color="rgba(0,0,0,1)">
+          <Heading fontSize="20px" fontWeight="700" color="rgba(0,0,0,1)">
             제목
           </Heading>
-          <div>?</div>
+          <Button
+            type="button"
+            buttontype="posistionbutton"
+            content="모집중"
+            disabled={false}
+            onClick={() => "d"}/>
         </WritingHeader>
         <ApplyUserForm
           src={src}
-          size="20px"
-          color="rgba(89, 84, 84, 1)"
+          size="11px"
+          color="rgba(0, 0, 0, 1)"
           userName={userName}
           userPosition={userPosition}
           iconSize="38"
-          fontWeight="700"
+          fontWeight="400"
         />
         <WritingParagraph>
-          <Text fontSize="30px" fontWeight="700" color="rgba(89, 84, 84, 1)">
+          <Text fontSize="16px" fontWeight="400" color="rgba(0,0,0,1)">
             글내용글내용글내용길게 쓰여진 글
           </Text>
         </WritingParagraph>
       </div>
       <WritingFooter>
-        <Text fontSize="16px" fontWeight="700" color="rgba(89, 84, 84, 1)">
+        <Text fontSize="15px" fontWeight="400" color="rgba(99, 99, 99, 1)">
           {`프로젝트 마감일자: ${writedDate}`}
         </Text>
       </WritingFooter>

@@ -5,18 +5,14 @@ export interface PosistionType {
 }
 
 export const defaultStyle = css`
-  width: 122px;
-  height: 32px;
-  border: 1px solid black;
-  border-radius: 16px;
-  background-color: rgba(217, 217, 217, 1);
   display: flex;
   justify-content: center;
   align-items: center;
 
   & h3 {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);;
   }
 `;
 

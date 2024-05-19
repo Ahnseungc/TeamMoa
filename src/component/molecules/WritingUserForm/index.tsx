@@ -15,7 +15,7 @@ const WritingUserForm: FC<WritingUserFormProps> = ({
 }) => {
   return (
     <WritingUserFormLayout>
-      <UserIcon src={src} size={iconSize} />
+      {/* <UserIcon src={src} size={iconSize} /> */}
       <WritingUserInfoLayout>
         <Text color={color} fontSize={size} fontWeight={fontWeight}>
           {`${userName}(${userPosition})`}

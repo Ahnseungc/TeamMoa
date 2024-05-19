@@ -34,7 +34,7 @@ const DetailContent: StoryFn = () => {
           buttontype="icon" 
           icon={BackIcon} 
           disabled={false} 
-          onClick={() => "/writecontent"}/>
+          onClick={() => Navigate("/writecontent")}/>
         <HeaderTextLayout>
           <Heading fontSize="20px" fontWeight="400" color="#636363">
             글쓰기

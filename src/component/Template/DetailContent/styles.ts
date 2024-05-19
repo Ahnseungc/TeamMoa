@@ -35,6 +35,5 @@ export const InfoInputLayout = styled.div`
 export const ButtonLayout = styled.div`
     position: fixed;
     margin-left: 6px;
-    /* padding-bottom: 30px; */
     bottom: 30px;
 `;

@@ -1,18 +1,14 @@
 import styled from "styled-components";
 
 export const WritingNeedPositionLayout = styled.div`
-  width: 390px;
-  height: 210px;
-  border-top: 0.75px solid rgba(189, 189, 189, 1);
-  padding-top: 16px;
-  padding-left: 15px;
+  width: 375px;
+  height: 154px;
+  padding: 14px 16px 0 16px;
 `;
 
 export const NeedPosistionList = styled.div`
-  margin-top: 11px;
-  width: 100%;
-  height: 121px;
+  width: max-content;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin: 15px 0 0 4px;
 `;

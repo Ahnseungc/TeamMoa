@@ -1,5 +1,11 @@
 import { StoryFn } from "@storybook/react";
-import { WritingUploadLayout, Header } from "./styles";
+import { 
+  WritingUploadLayout, 
+  Header, 
+  HeaderTextLayout, 
+  ButtonLayout,
+  Line
+} from "./styles";
 import Button from "@atom/Button";
 import BackIcon from "@asset/image/icon_back.png";
 import Heading from "@atom/Heading";
@@ -25,31 +31,23 @@ const WritingUpload: StoryFn = () => {
       needFramework: ["Figma"],
     },
   ];
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
 
   return (
     <WritingUploadLayout>
       <Header>
-        <Button
-          type="button"
-          buttontype="icon"
-          icon={BackIcon}
-          disabled={false}
-          // onClick 지금 어떻게 넣어둬야 할지 몰라서 일단 이렇게 해뒀습니다..!
-          onClick={() => "ㅇ"}
-        />
-        <Heading fontSize="20px" fontWeight="600" color="rgba(0,0,0,1)">
-          글쓰기
-        </Heading>
-        <Button
-          type="button"
-          buttontype="text"
-          content="완료"
-          disabled={false}
-          onClick={() => "ㅇ"}
-        />
+        <Button 
+          type="button" 
+          buttontype="icon" 
+          icon={BackIcon} 
+          disabled={false} 
+          onClick={() => Navigate("/writedetailcontent")}/>
+        <HeaderTextLayout>
+          <Heading fontSize="20px" fontWeight="400" color="#636363">
+            글쓰기
+          </Heading>
+        </HeaderTextLayout>
       </Header>
-      {/* 이거 WritingBoardForm 속성 다 넣으래서 이렇게 해뒀습니다..ㅠㅠ */}
       <WritingBoardForm
         src="/"
         userName="홍길동"
@@ -67,14 +65,18 @@ const WritingUpload: StoryFn = () => {
         textSize=""
         children=""
       />
+      <Line/>
       <WritingNeedPosition NeedPosition={NeedPosition} />
-      <Button
-        type="button"
-        buttontype="largebutton"
-        content="업로드"
-        disabled={false}
-        onClick={() => null}
-      />
+      <Line/>
+      <ButtonLayout>
+        <Button
+          type="button"
+          buttontype="largebuttonactive"
+          content="업로드"
+          disabled={false}
+          onClick={() => Navigate("/home")}
+        />
+      </ButtonLayout>
     </WritingUploadLayout>
   );
 };
