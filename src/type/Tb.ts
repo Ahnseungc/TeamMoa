@@ -188,3 +188,7 @@ export interface setMajorProps {
   StudentID: string;
   DoubleMajor: string;
 }
+
+export interface EvaluationHeaderProps {
+  content: string;
+}

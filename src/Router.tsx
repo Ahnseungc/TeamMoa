@@ -8,12 +8,14 @@ const HomePage = lazy(() => import("@page/Home"));
 const UserInfoPage = lazy(() => import("@page/UserInfo"));
 const WriteContentPage = lazy(() => import("@page/Write/WritingContent"));
 const WriteUploadPage = lazy(() => import("@page/Write/WritingUpload"));
+const AlarmPage = lazy(() => import("@page/Alarm"));
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/alarm" element={<AlarmPage />} />
       <Route element={<Layout />}>
         <Route path="/home" element={<HomePage />} />
         <Route path="/userinfo" element={<UserInfoPage />} />

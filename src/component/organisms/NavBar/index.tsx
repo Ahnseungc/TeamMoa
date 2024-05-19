@@ -22,7 +22,7 @@ const NavBar = () => {
         buttontype={"icon"}
         disabled={false}
         icon={Bell}
-        onClick={() => null}
+        onClick={() => navigate("/alarm")}
       />
 
       <Button
