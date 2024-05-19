@@ -17,4 +17,5 @@ Default.args = {
   src: "/",
   position: "프론트",
   stack: ["React", "PWA"],
+  count: 2,
 };

@@ -1,36 +1,28 @@
 import styled from "styled-components";
 
 export const SelectStackLayout = styled.div`
-  width: 332px;
-  height: 68px;
+  width: 335px;
+  height: 22px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #F2F4F6;
+`;
+
+export const PositionSelectLayout = styled.div<{isSelect: boolean}>`
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  display: flex;
+  align-items: last baseline;
   border-radius: 10px;
-  padding: 0 15px;
-`;
+  margin-right: 10px;
+  border: ${(props) => (props.isSelect) ? "3px solid rgba(217, 74, 86, 1)" : "3px solid rgba(102, 112, 128, 0.3)"};
 
-export const PositionImage = styled.img`
-  width: 39px;
-  height: 39px;
-  border-radius: 50%;
-  background-color: white;
-  margin-right: 15px;
-`;
-
-export const StackListLayout = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-export const StackItem = styled.div`
-  display: flex;
-  flex-direction: row; 
-  padding: 2px 20px;
-  justify-content: center;
-  border: 1px solid black;
-  border-radius: 12px;
-  background-color: #D9D9D9;
-  margin-right: 3px;
+  & div {
+    width: ${(props) => (props.isSelect) ? "10px" : "0"};
+    height: ${(props) => (props.isSelect) ? "10px" : "0"};
+    background-color: ${(props) => (props.isSelect) ? "rgba(217, 74, 86, 1)" : "none"};
+    border-radius: ${(props) => (props.isSelect) ? "10px" : "0"};
+    margin-right: 0.5px;
+  }
 `;

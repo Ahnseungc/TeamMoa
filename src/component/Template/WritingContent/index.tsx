@@ -37,7 +37,7 @@ const WritingContent: StoryFn = () => {
           buttontype="smallbutton"
           content="다음"
           disabled={false}
-          onClick={() => Navigate(("/writedetailcontent"))}/>
+          onClick={() => Navigate(("/writeupload"))}/>
       </Header>
       <ContentInputLayout>
         <Input
