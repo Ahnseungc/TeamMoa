@@ -21,13 +21,13 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
 
   return (
     <PositionAddFormLayout>
-      <Heading fontSize="20px" fontWeight="600" color="rgba(0,0,0,1)">
+      <Heading fontSize="20px" fontWeight="700" color="rgba(0,0,0,1)">
         필요 포지션
       </Heading>
       <PositionFormContentLayout>
         <FormTitle>
           {titleName.map((item) => (
-            <Text fontSize="15px" fontWeight="400" color="#363636">
+            <Text fontSize="16px" fontWeight="400" color="#363636">
               {item}
             </Text>
           ))}
@@ -38,7 +38,7 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
               iptype="text"
               btntype="button"
               buttontype="icon"
-              inputtype="text"
+              inputtype="website"
               disabled={false}
               readonly={false}
               id={item}
@@ -54,8 +54,8 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
       </PositionFormContentLayout>
       <Button
         type="button"
-        buttontype="addposition"
         content="추가하기"
+        buttontype={"largebutton"}
         disabled={false}
         onClick={onClickAdd}
       />

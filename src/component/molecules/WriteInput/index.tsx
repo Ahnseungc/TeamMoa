@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Input from "@atom/Input";
 import { InputType } from "@type/Tb";
-import { WriteInputLayout, WriteHeader, Line } from "./styles";
+import { WriteInputLayout, WriteHeader } from "./styles";
 import Heading from "@atom/Heading";
 
 export interface WriteInputType extends InputType {
@@ -18,15 +18,15 @@ const WriteInput: FC<WriteInputType> = ({
   placeholder,
   readonly,
   disabled,
+  onChange,
 }) => {
   return (
     <WriteInputLayout>
       <WriteHeader>
-        <Heading fontSize="20px" fontWeight="bold" color="black">
+        <Heading fontSize="20px" fontWeight="700" color="black">
           {titleText}
         </Heading>
       </WriteHeader>
-      <Line />
       <Input
         id={id}
         type={type}
@@ -35,6 +35,7 @@ const WriteInput: FC<WriteInputType> = ({
         inputtype={inputtype}
         placeholder={placeholder}
         value={value}
+        onChange={onChange}
         error={error}
       />
     </WriteInputLayout>

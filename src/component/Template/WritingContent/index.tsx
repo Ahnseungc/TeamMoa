@@ -1,3 +1,4 @@
+import { ChangeEvent, useState } from "react";
 import { StoryFn } from "@storybook/react";
 import {
   WritingContentLayout,
@@ -6,13 +7,18 @@ import {
   ContentInput,
 } from "./styles";
 import Button from "@atom/Button";
-import BackIcon from "@asset/image/icon_back.png";
+import CancelIcon from "@asset/image/icon_cancel.png";
 import Heading from "@atom/Heading";
 import Input from "@atom/Input";
 import { useNavigate } from "react-router-dom";
 
 const WritingContent: StoryFn = () => {
-  const navigate = useNavigate();
+  const [title, setTitle] = useState<string>("");
+  const Navigate = useNavigate();
+
+  const onChangeTitle = (e: ChangeEvent<HTMLInputElement>) => {
+    setTitle(e.target.value);
+  };
 
   return (
     <WritingContentLayout>
@@ -20,42 +26,32 @@ const WritingContent: StoryFn = () => {
         <Button
           type="button"
           buttontype="icon"
-          icon={BackIcon}
+          icon={CancelIcon}
           disabled={false}
-          // onClick 지금 어떻게 넣어둬야 할지 몰라서 일단 이렇게 해뒀습니다..!
-          onClick={() => "ㅇ"}
-        />
-        <Heading fontSize="20px" fontWeight="600" color="rgba(0,0,0,1)">
+          onClick={() => Navigate("/home")}/>
+        <Heading fontSize="20px" fontWeight="400" color="#636363">
           글쓰기
         </Heading>
         <Button
           type="button"
-          buttontype="text"
-          content="중간저장"
+          buttontype="smallbutton"
+          content="다음"
           disabled={false}
-          onClick={() => "ㅇ"}
-        />
+          onClick={() => Navigate(("/writedetailcontent"))}/>
       </Header>
       <ContentInputLayout>
         <Input
           id=""
-          value=""
+          value={title}
           type="text"
           inputtype="textheader"
           readonly={false}
           disabled={false}
+          onChange={onChangeTitle}
           error=""
-          placeholder="제목"
-        />
-        <ContentInput placeholder="내용을 입력하세요" />
+          placeholder="제목"/>
+        <ContentInput placeholder="내용을 입력하세요"/>
       </ContentInputLayout>
-      <Button
-        type="button"
-        buttontype="largebutton"
-        content="다음"
-        disabled={false}
-        onClick={() => navigate("/writeupload")}
-      />
     </WritingContentLayout>
   );
 };

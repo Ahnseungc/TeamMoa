@@ -8,9 +8,14 @@ export const WritingUploadLayout = styled.div`
 export const Header = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
+    padding: 12px 16px 0 16px;
+`;
+
+export const HeaderTextLayout = styled.div`
+    width: 100%;
+    margin-right: 30px;
+    text-align: center;
 `;
 
 export const ContentInputLayout = styled.div`
@@ -31,4 +36,14 @@ export const ContentInput = styled.input`
         font-size: 20px;
         font-weight: bold;
     }
+`;
+
+export const ButtonLayout = styled.div`
+    margin: 23px 0 0 22px;
+`;
+
+export const Line = styled.div`
+    width: 375px;
+    height: 1px;
+    background-color: rgba(236, 236, 236, 1);
 `;
