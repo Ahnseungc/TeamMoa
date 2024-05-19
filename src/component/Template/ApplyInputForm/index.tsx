@@ -5,7 +5,6 @@ import {
   ApplyInputFormLayout,
   HeaderTextLayout,
   ContentInputLayout,
-  ConsentLayout,
   Line,
 } from "./styles";
 import Button from "@atom/Button";
@@ -14,6 +13,7 @@ import ApplyAnnounceHeading from "@molecules/ApplyAnnounceHeading";
 import ContentInput from "@molecules/ContentInput";
 import ContentCheckForm from "@organisms/ContentCheckForm";
 import StackSelectForm from "@organisms/StackSelectForm";
+import ConsentText from "@molecules/ConsentText";
 
 const ApplyInputForm: StoryFn = () => {
   const Navigate = useNavigate();
@@ -74,9 +74,7 @@ const ApplyInputForm: StoryFn = () => {
           value={message}
           onchange={onChangeMsg}/>
       </ContentInputLayout>
-      <ConsentLayout>
-
-      </ConsentLayout>
+      <ConsentText/>
       <Button
         type={"button"}
         buttontype={"largebuttonactive"}

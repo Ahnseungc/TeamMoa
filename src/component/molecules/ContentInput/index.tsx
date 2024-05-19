@@ -11,7 +11,7 @@ const ContentInput: FC<ContentInputType> = ({
   onchange,
 }) => {
   return (
-    <ContentInputLayout>
+    <ContentInputLayout contentTitle={contentTitle}>
       <ContentHeader>
         <Heading color="black" fontSize="20px" fontWeight="bold">
           {contentTitle}

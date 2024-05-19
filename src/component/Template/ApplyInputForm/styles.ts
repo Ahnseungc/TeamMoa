@@ -7,7 +7,6 @@ export const ApplyInputFormLayout = styled.div`
     flex-direction: column;
     padding: 12px 0 15px 0;
     position: relative;
-    /* background-color: antiquewhite; */
 `;
 
 export const HeaderTextLayout = styled.div`
@@ -28,15 +27,15 @@ export const Line = styled.div`
 export const ContentInputLayout = styled.div`
     width: 100%;
 
-    & div:last-child > textarea {
+    & div:last-child {
+        height: 200px;
         display: flex;
         flex-direction: column;
-        /* height: 195px; */
-        background-color: antiquewhite;
         border-bottom: 1px solid rgba(217, 217, 217, 1);
     }
-`;
 
-export const ConsentLayout = styled.div`
-    
+    & div:last-child > textarea {
+        height: 100%;
+        border: none;
+    }
 `;

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const ContentInputLayout = styled.div`
+export const ContentInputLayout = styled.div<{contentTitle: string}>`
   width: 335px;
-  height: 115px;
+  height: 120px;
   padding: 20px 0 0 0;
 `;
 
@@ -21,7 +21,7 @@ export const ContentHeader = styled.div`
 
 export const ContentLayout = styled.textarea`
   width: 335px;
-  height: 30px;
+  height: 25px;
   padding: 0 10px 10px 10px;
   border: none;
   font-size: 16px;
