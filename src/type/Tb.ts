@@ -192,3 +192,11 @@ export interface setMajorProps {
 export interface EvaluationHeaderProps {
   content: string;
 }
+
+export interface EvaluationFormProps {
+  title: string;
+  postionName: string;
+  name: string;
+  schoolName: string;
+  schoolNum: string;
+}

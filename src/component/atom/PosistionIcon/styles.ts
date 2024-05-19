@@ -43,11 +43,11 @@ export const PosistionIconLayout = styled.div<PosistionType>`
   ${(props) => {
     switch (props.PosistionType) {
       case "default":
-        return defaultStyle;
+        return HomePosistionStyle;
       case "HomePosistion":
         return HomePosistionStyle;
       default:
-        return defaultStyle;
+        return HomePosistionStyle;
     }
   }}
 `;
