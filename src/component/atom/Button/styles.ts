@@ -83,11 +83,12 @@ export const largebuttonactiveStyles = css`
 `;
 
 export const posistionbuttonStyles = css`
-  width: 46px;
-  height: 26px;
+  /* width: 46px;
+  height: 26px; */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2px 6px;
   border-radius: 5px;
   background-color: rgba(183, 223, 185, 1);
   color: rgba(76, 175, 80, 1);
@@ -96,11 +97,12 @@ export const posistionbuttonStyles = css`
 `;
 
 export const posistioncompletebuttonStyles = css`
-  width: 57px;
-  height: 26px;
+  /* width: 57px; */
+  /* height: 26px; */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2px 6px;
   border-radius: 5px;
   background-color: rgba(176, 176, 176, 1);
   color: rgba(99, 99, 99, 1);

@@ -6,6 +6,7 @@ const LoginPage = lazy(() => import("@page/Login"));
 const SignUpPage = lazy(() => import("@page/SignUp"));
 const HomePage = lazy(() => import("@page/Home"));
 const UserInfoPage = lazy(() => import("@page/UserInfo"));
+const ApplyPage = lazy(() => import("@page/Apply"));
 const WriteContentPage = lazy(() => import("@page/Write/WritingContent"));
 const WriteDetailContentPage = lazy(() => import("@page/Write/WritingDetailContent"))
 const WriteUploadPage = lazy(() => import("@page/Write/WritingUpload"));
@@ -15,6 +16,7 @@ const Router = () => {
     <Routes>
       <Route path="/" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/apply" element={<ApplyPage />} />
       <Route element={<Layout />}>
         <Route path="/home" element={<HomePage />} />
         <Route path="/userinfo" element={<UserInfoPage />} />
