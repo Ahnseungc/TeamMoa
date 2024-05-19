@@ -1,7 +1,7 @@
-import Applicant from "@templates/Evaluation/Applicant";
+import Alarm from "@templates/Alarm";
 
-const Alarm = () => {
-  return <Applicant />;
+const AlarmPage = () => {
+  return <Alarm />;
 };
 
-export default Alarm;
+export default AlarmPage;
