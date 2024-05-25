@@ -1,41 +1,36 @@
-import { StoryFn } from "@storybook/react";
+import { FC } from "react";
+import { ApplyPageProps } from "@type/Tb";
 import {
   WritingContentLayout,
-  Header,
   HeaderTextLayout,
-  NoticeTextLayout,
   ContentText
 } from "./styles";
 import Button from "@atom/Button";
-import BackIcon from "@asset/image/icon_back.png";
 import Heading from "@atom/Heading";
 
-const NoticeGuideForm: StoryFn = () => {
+const NoticeGuideForm: FC<ApplyPageProps> = ({
+  setIndex, 
+  pageIndex,
+}) => {
   return (
     <WritingContentLayout>
-      <Header>
-        <Button 
-          type="button" 
-          buttontype="icon" 
-          icon={BackIcon} 
-          disabled={false} 
-          // onClick 지금 어떻게 넣어둬야 할지 몰라서 일단 이렇게 해뒀습니다..!
-          onClick={() => "ㅇ"}/>
-        <HeaderTextLayout>
-          <Heading fontSize="20px" fontWeight="600" color="rgba(0,0,0,1)">
-            한림대학교
-          </Heading>
-        </HeaderTextLayout>
-      </Header>
-      <NoticeTextLayout>
-        <ContentText>지원하기 전 확인하세요!</ContentText>
-      </NoticeTextLayout>
+      <HeaderTextLayout>
+        <Heading fontSize="20px" fontWeight="400" color="rgba(99, 99, 99, 1)">
+          지원하기
+        </Heading>
+      </HeaderTextLayout>
+      <ContentText> 
+        {`지원하시기 전에 포지션 상세 내용을
+          꼼꼼히 확인해 주세요.
+          지원 절차는 몇 분 정도 소요될 수 있습니다.
+          계속 하시려면 아래 버튼을 눌러주세요.`}
+      </ContentText>
       <Button
         type="button"
-        buttontype="largebutton"
-        content="지원하기"
+        buttontype="largebuttonactive"
+        content="네, 확인했어요!"
         disabled={false}
-        onClick={() => "ㅇ"}/>
+        onClick={() => setIndex(pageIndex + 1)}/>
     </WritingContentLayout>
   );
 };

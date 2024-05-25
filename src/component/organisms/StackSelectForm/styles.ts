@@ -1,16 +1,13 @@
 import styled from "styled-components";
 
 export const StackSelectFormLayout = styled.div`
-  width: 345px;
+  width: 375px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-`;
+  padding: 15px 20px 20px 20px;
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
 
-export const StackListLayout = styled.div`
-  margin: 3px 0;
-
-  &:first-of-type {
-    margin-top: 10px;
+  & div {
+    margin-top: 15px;
   }
 `;

@@ -38,17 +38,19 @@ export const websiteStyles = css`
 `;
 
 export const TextHeadStyles = css`
-  border-width: 0 0 1px;
-  width: 345px;
+  border: none;
+  border-bottom: 1px solid #D9D9D9;
+  width: 339px;
   height: 36px;
-  padding: 0 0 0 12px;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 400;
   background-color: white;
+  outline: none;
+  color: #636363;
 
   &::placeholder {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 400;
   }
 `;
 

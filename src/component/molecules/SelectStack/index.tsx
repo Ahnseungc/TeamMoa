@@ -1,32 +1,30 @@
-import { SelectStackLayout, PositionImage, StackListLayout, StackItem } from "./styles";
+import { useState } from "react";
+import { SelectStackLayout, PositionSelectLayout } from "./styles";
 import { StoryFn } from "@storybook/react";
 import { SelectStackProps } from "@type/Tb";
-import Text from "@atom/Text";
+import NeedPosistionForm from "@molecules/NeedPositionForm";
 
 const SelectStack: StoryFn<SelectStackProps> = ({
-  src,
   position,
   stack,
+  count,
 }) => {
+  const [isSelect, setIsSelect] = useState(false);
+
+  const onClickPosition = () => {
+    setIsSelect(!isSelect);
+  }
   return (
     <SelectStackLayout>
-      <PositionImage src={src}/>
-      <div>
-        <Text fontSize={"16"} fontWeight={"400"} color={"#7D7D7D"}>
-          {position}
-        </Text>
-        <StackListLayout>
-          {stack.map((item) => {
-            return (
-              <StackItem>
-                <Text fontSize={"15"} fontWeight={"700"} color={"black"}>
-                  {item}
-                </Text>
-              </StackItem>
-            )
-          })}
-        </StackListLayout>
-      </div>
+      <PositionSelectLayout 
+        isSelect={isSelect}
+        onClick={onClickPosition}>
+        <div/>
+      </PositionSelectLayout>
+      <NeedPosistionForm 
+        needTitle={position}
+        needCount={count}
+        needFramework={stack}/>
     </SelectStackLayout>
   );
 };

@@ -60,12 +60,14 @@ export const middlebuttonStyles = css`
 `;
 
 export const smallbuttonStyles = css`
-  width: 104px;
-  height: 28px;
-  background-color: #d9d9d9;
-  font-size: 15px;
+  height: 26px;
+  padding: 0 12.57px;
+  background-color: rgba(217, 74, 86, 1);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 25px;
   border: none;
-  color: black;
+  color: white;
 `;
 
 export const largebuttonactiveStyles = css`
@@ -81,11 +83,12 @@ export const largebuttonactiveStyles = css`
 `;
 
 export const posistionbuttonStyles = css`
-  width: 46px;
-  height: 26px;
+  /* width: 46px;
+  height: 26px; */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2px 6px;
   border-radius: 5px;
   background-color: rgba(183, 223, 185, 1);
   color: rgba(76, 175, 80, 1);
@@ -94,11 +97,12 @@ export const posistionbuttonStyles = css`
 `;
 
 export const posistioncompletebuttonStyles = css`
-  width: 57px;
-  height: 26px;
+  /* width: 57px; */
+  /* height: 26px; */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2px 6px;
   border-radius: 5px;
   background-color: rgba(176, 176, 176, 1);
   color: rgba(99, 99, 99, 1);

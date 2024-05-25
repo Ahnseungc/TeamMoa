@@ -1,10 +1,12 @@
+import { useState, ChangeEvent } from "react";
 import { StoryFn } from "@storybook/react";
+import { useNavigate } from "react-router-dom";
 import {
   DetailContentLayout,
   Header,
   InfoInputLayout,
   HeaderTextLayout,
-  WebSiteLayout,
+  ButtonLayout
 } from "./styles";
 import Button from "@atom/Button";
 import BackIcon from "@asset/image/icon_back.png";
@@ -13,6 +15,17 @@ import PositionAddForm from "@organisms/PositionAddForm";
 import WriteInput from "@molecules/WriteInput";
 
 const DetailContent: StoryFn = () => {
+  const [date, setDate] = useState<string>("");
+  const [website, setWebsite] = useState<string>("");
+  const Navigate = useNavigate();
+
+  const onChangeDate = (e: ChangeEvent<HTMLInputElement>) => {
+    setDate(e.target.value);
+  };
+  const onChangeWebsite = (e: ChangeEvent<HTMLInputElement>) => {
+    setWebsite(e.target.value);
+  };
+
   return (
     <DetailContentLayout>
       <Header>
@@ -21,10 +34,9 @@ const DetailContent: StoryFn = () => {
           buttontype="icon" 
           icon={BackIcon} 
           disabled={false} 
-          // onClick 지금 어떻게 넣어둬야 할지 몰라서 일단 이렇게 해뒀습니다..!
-          onClick={() => "ㅇ"}/>
+          onClick={() => Navigate("/writecontent")}/>
         <HeaderTextLayout>
-          <Heading fontSize="20px" fontWeight="600" color="rgba(0,0,0,1)">
+          <Heading fontSize="20px" fontWeight="400" color="#636363">
             글쓰기
           </Heading>
         </HeaderTextLayout>
@@ -34,34 +46,38 @@ const DetailContent: StoryFn = () => {
       </InfoInputLayout>
       <InfoInputLayout>
         <WriteInput
-          titleText="프로젝트 마감일"
-          id=""
-          type="text"
-          inputtype="website"
-          placeholder="0000년 00월 00일"
-          readonly={false}
-          disabled={false}
-          value=""
-          error=""/>
+            titleText="프로젝트 마감일"
+            id=""
+            type="text"
+            inputtype="textheader"
+            placeholder="마감일"
+            readonly={false}
+            disabled={false}
+            value={date}
+            onChange={onChangeDate}
+            error=""/>
       </InfoInputLayout>
-      <WebSiteLayout>
+      <InfoInputLayout>
         <WriteInput
           titleText="공모전 웹사이트"
           id=""
           type="text"
-          inputtype="website"
-          placeholder="웹사이트 삽입 텍스트"
+          inputtype="textheader"
+          placeholder="웹사이트 주소"
           readonly={false}
           disabled={false}
-          value=""
+          value={website}
+          onChange={onChangeWebsite}
           error=""/>
-      </WebSiteLayout>
-      <Button
-        type="button"
-        buttontype="largebutton"
-        content="다음"
-        disabled={false}
-        onClick={() => "ㅇ"}/>
+      </InfoInputLayout>
+      <ButtonLayout>
+        <Button
+          type="button"
+          buttontype="largebuttonactive"
+          content="계속하기"
+          disabled={false}
+          onClick={() => Navigate("/writeupload")}/>
+      </ButtonLayout>
     </DetailContentLayout>
   );
 };

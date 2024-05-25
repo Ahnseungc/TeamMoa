@@ -88,6 +88,13 @@ export interface WritingNeedPositionProps {
   NeedPosition: Array<EachPosition>;
 }
 
+export interface ContentInputType {
+  contentTitle: string;
+  placeholder: string;
+  value: string;
+  onchange?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
+}
+
 export interface PositionAddFormProps {
   positionCount: number;
 }
@@ -97,9 +104,9 @@ export interface ApplyAnnounceHeadingProps {
 }
 
 export interface SelectStackProps {
-  src: string;
   position: string;
   stack: Array<string>;
+  count: number;
 }
 
 export interface StackSelectFormProps {
@@ -209,4 +216,9 @@ export interface AlarmInfoFormProps {
 
 export interface AlarmData {
   AlarmDatas: Array<AlarmInfoFormProps>;
+}
+
+export interface ApplyPageProps {
+  setIndex: Dispatch<SetStateAction<number>>;
+  pageIndex: number;
 }
