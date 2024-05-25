@@ -49,6 +49,7 @@ export const SignUpSettingSchoolNameLabel = styled.div`
   flex-direction: column;
   height: 68px;
   justify-content: space-between;
+  width: 339px;
 
   & label {
     margin: 0;
@@ -75,6 +76,7 @@ export const SignUpSettingSchoolDoubleMajorLabel = styled.div`
   height: 68px;
   justify-content: space-between;
   margin-top: 28px;
+  width: 339px;
 
   & label {
     margin: 0;

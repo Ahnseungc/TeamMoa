@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { MoveHeading, MoveTexting, MoveInputing } from "@atom/\bAnimations";
 
 export const SignUpSchoolSettingNameLayout = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 375px;
+  height: 812px;
   display: flex;
   flex-direction: column;
   padding-left: 16px;
@@ -55,10 +55,12 @@ export const SignUpSchoolSettingLabel = styled.div`
   flex-direction: column;
   height: 68px;
   justify-content: space-between;
+  position: relative;
+  width: 339px;
 
   & input {
     opacity: 0;
-    animation: ${MoveInputing} 0.8s 0.8s ease-in-out forwards;
     outline: none;
+    animation: ${MoveInputing} 0.8s 0.8s ease-in-out forwards;
   }
 `;

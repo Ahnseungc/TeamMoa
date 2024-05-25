@@ -2,6 +2,7 @@ import {
   ChangeEvent,
   ChangeEventHandler,
   Dispatch,
+  ForwardedRef,
   ReactNode,
   SetStateAction,
 } from "react";
@@ -16,6 +17,7 @@ export interface InputType {
   onChange?: ChangeEventHandler<HTMLInputElement>;
   type: "text" | "password";
   inputtype: "text" | "password" | "website" | "textheader";
+  ref?: ForwardedRef<HTMLInputElement>;
 }
 
 export interface ButtonType {

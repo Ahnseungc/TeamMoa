@@ -28,12 +28,12 @@ export const MoveInputing = keyframes`
   0% {
     opacity: 0;
     color: #DBDBDB;
-    transform: translateX(360px);
+    width: 0;
   }
 
   100% {
     opacity: 1;
     color: #0f0f0f;
-    transform: translateX(0px);
+    width: 339px;
   }
 `;
