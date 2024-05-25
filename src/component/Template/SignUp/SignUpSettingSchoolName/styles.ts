@@ -70,6 +70,7 @@ export const SignUpSettingSchoolNameLabel = styled.div`
   flex-direction: column;
   height: 68px;
   justify-content: space-between;
+  width: 339px;
   & label {
     margin: 0;
   }

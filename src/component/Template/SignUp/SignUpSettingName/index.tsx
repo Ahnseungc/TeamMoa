@@ -45,6 +45,7 @@ const SignUpSchoolSettingName: FC<SignUpPageProps> = ({
               먼저 닉네임이 필요해요 :)
             </Text>
           </label>
+
           <Input
             placeholder={"홍길동"}
             readonly={false}
