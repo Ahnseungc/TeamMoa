@@ -3,7 +3,11 @@ import { AlarmInfoFormLayout, AlarmInfoContents, AlarmIcon } from "./styles";
 import { AlarmInfoFormProps } from "@type/Tb";
 import Heading from "@atom/Heading";
 import Text from "@atom/Text";
+<<<<<<< HEAD
 import AlarmPersonIcon from "@asset/icon_AlarmPerson.png";
+=======
+import AlarmPersonIcon from "@asset/image/icon_AlarmPerson.png";
+>>>>>>> develop
 
 const AlarmInfoForm: FC<AlarmInfoFormProps> = ({ title, content, icon }) => {
   return (
