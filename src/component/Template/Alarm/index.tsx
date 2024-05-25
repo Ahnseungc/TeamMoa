@@ -1,7 +1,10 @@
 import Heading from "@atom/Heading";
 import { AlarmHeader } from "./styles";
+import AlarmInfoList from "@organisms/AlarmInfoList";
+import { FC } from "react";
+import { AlarmData } from "@type/Tb";
 
-const Alarm = () => {
+const Alarm: FC<AlarmData> = ({ AlarmDatas }) => {
   return (
     <div>
       <AlarmHeader>
@@ -13,6 +16,9 @@ const Alarm = () => {
           알림
         </Heading>
       </AlarmHeader>
+      <div>
+        <AlarmInfoList AlarmDatas={AlarmDatas} />
+      </div>
     </div>
   );
 };

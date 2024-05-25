@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavBarLayout = styled.nav`
-  width: 375px;
+  width: 100vw;
   height: 83px;
   display: flex;
   position: fixed;

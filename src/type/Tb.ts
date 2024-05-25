@@ -200,3 +200,13 @@ export interface EvaluationFormProps {
   schoolName: string;
   schoolNum: string;
 }
+
+export interface AlarmInfoFormProps {
+  title: string;
+  content: string;
+  icon: string;
+}
+
+export interface AlarmData {
+  AlarmDatas: Array<AlarmInfoFormProps>;
+}
