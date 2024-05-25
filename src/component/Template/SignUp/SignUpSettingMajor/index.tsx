@@ -38,7 +38,7 @@ const SignUpSettingMajor: FC<SignUpPageProps> = ({
             </Text>
           </label>
           <Input
-            placeholder={"학번(4글자)"}
+            placeholder={"학번(8글자)"}
             readonly={false}
             disabled={false}
             value={major.StudentID}
@@ -47,6 +47,7 @@ const SignUpSettingMajor: FC<SignUpPageProps> = ({
             id="StudentID"
             type={"text"}
             inputtype={"text"}
+            maxlength={8}
           />
         </SignUpSettingSchoolNameLabel>
         <SignUpSettingSchoolDoubleMajorLabel>
@@ -68,13 +69,15 @@ const SignUpSettingMajor: FC<SignUpPageProps> = ({
           />
         </SignUpSettingSchoolDoubleMajorLabel>
       </SignUpSettingSchoolNameLabelForm>
-      <Button
-        content="계속하기"
-        type="button"
-        buttontype={major.StudentID ? "largebuttonactive" : "largebutton"}
-        disabled={major.StudentID ? false : true}
-        onClick={() => setIndex(4)}
-      />
+      <div>
+        <Button
+          content="계속하기"
+          type="button"
+          buttontype={major.StudentID ? "largebuttonactive" : "largebutton"}
+          disabled={major.StudentID ? false : true}
+          onClick={() => setIndex(4)}
+        />
+      </div>
     </SignUpSettingSchoolNameLayout>
   );
 };

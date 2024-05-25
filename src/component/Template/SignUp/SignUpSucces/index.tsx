@@ -17,8 +17,8 @@ const SignUpSuccess: FC<SignUpPageProps> = ({ pageIndex, setIndex }) => {
   const navigate = useNavigate();
   return (
     <SignUpSuccessLayout>
+      <SignUpHeader pageIndex={pageIndex} setIndex={setIndex} />
       <SignUpSuccessTextHeader>
-        <SignUpHeader pageIndex={pageIndex} setIndex={setIndex} />
         <SignUpSuccessLayoutText>
           <Heading fontSize="24px" fontWeight="600" color="rgba(0,0,0,1)">
             회원가입이 성공적으로
@@ -31,18 +31,20 @@ const SignUpSuccess: FC<SignUpPageProps> = ({ pageIndex, setIndex }) => {
       <SignUpSuccessBody>
         <SignUpSucessImg />
         <Text fontSize="20px" fontWeight="400" color="rgba(0, 0, 0, 1)">
-          이제부터 팀원을 모집해봐요.
+          이제부터 팀원을 모집해보러 가볼까요?
         </Text>
       </SignUpSuccessBody>
-      <Button
-        content="홈으로"
-        type="button"
-        buttontype="largebuttonactive"
-        disabled={false}
-        onClick={() => {
-          navigate("/home");
-        }}
-      />
+      <div>
+        <Button
+          content="홈으로"
+          type="button"
+          buttontype="largebuttonactive"
+          disabled={false}
+          onClick={() => {
+            navigate("/home");
+          }}
+        />
+      </div>
     </SignUpSuccessLayout>
   );
 };

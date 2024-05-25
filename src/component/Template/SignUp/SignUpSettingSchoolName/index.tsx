@@ -3,7 +3,6 @@ import {
   SignUpSettingSchoolNameText,
   SignUpSettingSchoolNameLabelForm,
   SignUpSettingSchoolNameLabel,
-  SighUpSchoolSettingHeader,
 } from "./styles";
 import Heading from "@atom/Heading";
 import Button from "@atom/Button";
@@ -54,16 +53,20 @@ const SignUpSettingSchoolName: FC<SignUpPageProps> = ({
           />
         </SignUpSettingSchoolNameLabel>
       </SignUpSettingSchoolNameLabelForm>
+
       <Text fontSize="12px" fontWeight="400" color="rgba(99, 99, 99, 1)">
         다음이 마지막 단계 입니다!
       </Text>
-      <Button
-        content="계속하기"
-        type="button"
-        buttontype={school ? "largebuttonactive" : "largebutton"}
-        disabled={school ? false : true}
-        onClick={() => setIndex(pageIndex + 1)}
-      />
+
+      <div>
+        <Button
+          content="계속하기"
+          type="button"
+          buttontype={school ? "largebuttonactive" : "largebutton"}
+          disabled={school ? false : true}
+          onClick={() => setIndex(pageIndex + 1)}
+        />
+      </div>
     </SignUpSettingSchoolNameLayout>
   );
 };

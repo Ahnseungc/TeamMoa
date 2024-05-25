@@ -8,7 +8,7 @@ import Heading from "@atom/Heading";
 import Button from "@atom/Button";
 import Input from "@atom/Input";
 import Text from "@atom/Text";
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { SignUpPageProps } from "@type/Tb";
 import { useNavigate } from "react-router-dom";
 import CancelIcon from "@asset/image/icon_cancel.png";
@@ -59,13 +59,15 @@ const SignUpSchoolSettingName: FC<SignUpPageProps> = ({
           />
         </SignUpSchoolSettingLabel>
       </SignUpSchoolSettingLabelForm>
-      <Button
-        content="계속하기"
-        type="button"
-        buttontype={name ? "largebuttonactive" : "largebutton"}
-        disabled={name ? false : true}
-        onClick={() => setIndex(pageIndex + 1)}
-      />
+      <div>
+        <Button
+          content="계속하기"
+          type="button"
+          buttontype={name ? "largebuttonactive" : "largebutton"}
+          disabled={name ? false : true}
+          onClick={() => setIndex(pageIndex + 1)}
+        />
+      </div>
     </SignUpSchoolSettingNameLayout>
   );
 };

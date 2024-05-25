@@ -12,6 +12,7 @@ const SignUpInput: FunctionComponent<InputType> = ({
   id,
   onChange,
   value,
+  maxlength,
 }) => {
   return (
     <InputLayout
@@ -24,6 +25,7 @@ const SignUpInput: FunctionComponent<InputType> = ({
       Inputtype={inputtype}
       onChange={onChange}
       value={value}
+      maxLength={maxlength}
     />
   );
 };

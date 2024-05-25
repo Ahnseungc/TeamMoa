@@ -18,6 +18,7 @@ export interface InputType {
   type: "text" | "password";
   inputtype: "text" | "password" | "website" | "textheader";
   ref?: ForwardedRef<HTMLInputElement>;
+  maxlength?: number;
 }
 
 export interface ButtonType {

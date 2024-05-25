@@ -13,10 +13,10 @@ export const SignUpSettingSchoolNameLayout = styled.div`
     margin: 17px 16px 0 0;
   }
 
-  & > button:last-child {
-    position: absolute;
-    top: 732px;
-    left: 24px;
+  & > div:last-child {
+    margin: 0;
+    margin-top: 266px;
+    margin-left: 6px;
   }
 `;
 

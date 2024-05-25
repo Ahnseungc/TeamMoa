@@ -8,14 +8,15 @@ export const SignUpSchoolSettingNameLayout = styled.div`
   flex-direction: column;
   padding-left: 16px;
   position: relative;
+
   & > button:first-child {
     margin: 17px 0 0 0;
   }
 
-  & > button:last-child {
-    position: absolute;
-    top: 732px;
-    left: 24px;
+  & > div:last-child {
+    margin: 0;
+    margin-top: 367px;
+    margin-left: 6px;
   }
 `;
 

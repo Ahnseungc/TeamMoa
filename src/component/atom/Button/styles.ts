@@ -29,8 +29,8 @@ export const iconButtonStyles = css`
 `;
 
 export const largebuttonStyles = css`
-  width: 330px;
-  height: 40px;
+  width: 327px;
+  height: 50px;
   background-color: rgba(252, 252, 254, 1);
   color: rgba(176, 176, 176, 1);
   border: 1px solid rgba(176, 176, 176, 1);
@@ -71,8 +71,8 @@ export const smallbuttonStyles = css`
 `;
 
 export const largebuttonactiveStyles = css`
-  width: 330px;
-  height: 40px;
+  width: 327px;
+  height: 50px;
   background-color: rgba(217, 74, 86, 1);
   color: white;
   border: 1px solid rgba(176, 176, 176, 1);

@@ -7,10 +7,8 @@ export const SignUpSuccessLayout = styled.div`
   flex-direction: column;
   position: relative;
 
-  & button {
-    position: absolute;
-    top: 732px;
-    left: 24px;
+  & div:last-child {
+    margin-top: 157px;
   }
 `;
 
