@@ -83,8 +83,8 @@ export const largebuttonactiveStyles = css`
 `;
 
 export const posistionbuttonStyles = css`
-  /* width: 46px;
-  height: 26px; */
+  width: 46px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,8 +97,8 @@ export const posistionbuttonStyles = css`
 `;
 
 export const posistioncompletebuttonStyles = css`
-  /* width: 57px; */
-  /* height: 26px; */
+  width: 57px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;

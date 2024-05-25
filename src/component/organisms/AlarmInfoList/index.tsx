@@ -6,7 +6,7 @@ const AlarmInfoList = ({ AlarmDatas }) => {
       <AlarmInfoForm
         title={AlarmData.title}
         content={AlarmData.content}
-        icon={AlarmData.icon}
+        status={AlarmData.status}
       />
     );
   });
