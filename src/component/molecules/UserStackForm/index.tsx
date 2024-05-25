@@ -1,29 +1,39 @@
-import { 
-  UserStackFormLayout, 
-  StackListLayout, 
-  ButtonLayout, 
-} from "./styles";
+import { UserStackFormLayout, StackListLayout, ButtonLayout } from "./styles";
 import { UserStackData } from "@type/Tb";
-import { StoryFn } from "@storybook/react";
+
 import Heading from "@atom/Heading";
 import Text from "@atom/Text";
 import PosistionIcon from "@atom/PosistionIcon";
+import { FC } from "react";
 
-const UserStackForm: StoryFn<UserStackData> = ({
-  userstack
-}) => {
+const UserStackForm: FC<UserStackData> = ({ userstack }) => {
   return (
     <UserStackFormLayout>
       <div>
-        <Heading fontSize={"20"} fontWeight={"700"} color={"#595454"}>
+        <Heading
+          fontSize={"20"}
+          fontWeight={"600"}
+          color={"rgba(99, 99, 99, 1)"}
+        >
           내 스택
         </Heading>
         <StackListLayout>
           {userstack.map((stack) => (
-            <PosistionIcon name={stack} PosistionType={"default"} count={1}/>
+            <PosistionIcon
+              name={stack}
+              PosistionType={"MyPagePosistion"}
+              count={1}
+            />
           ))}
           <ButtonLayout>
-            <Text fontSize={"20"} fontWeight={"700"} color={"black"}> + </Text>
+            <Text
+              fontSize={"12px"}
+              fontWeight={"400"}
+              color={"rgba(104, 118, 132, 1)"}
+            >
+              {" "}
+              +{" "}
+            </Text>
           </ButtonLayout>
         </StackListLayout>
       </div>

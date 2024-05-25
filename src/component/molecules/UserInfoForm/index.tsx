@@ -6,26 +6,39 @@ import UserIcon from "@atom/UserIcon";
 
 const UserInfoForm: StoryFn<UserInfoProps> = ({
   name,
-  major,
+  schoolName,
   studentnumber,
   temp,
 }) => {
   return (
     <UserInfoFormLayout>
-      <div>
-        <UserIcon size={"94"} src="/"/>
-        <UserInfoLayout>
-          <Text fontSize={"20"} fontWeight={"700"} color={"black"}>
+      <UserIcon size={"94"} src="/" />
+      <UserInfoLayout>
+        <div>
+          <Text fontSize={"16px"} fontWeight={"700"} color={"black"}>
+            이름
+          </Text>
+          <Text fontSize={"16px"} fontWeight={"400"} color={"black"}>
             {name}
           </Text>
-          <Text fontSize={"20"} fontWeight={"700"} color={"black"}>
-            {`${major}(${studentnumber})`}
+        </div>
+        <div>
+          <Text fontSize={"16px"} fontWeight={"700"} color={"black"}>
+            학교
           </Text>
-        </UserInfoLayout>
-        <Text fontSize={"20"} fontWeight={"700"} color={"black"}>
-          {temp}
-        </Text>
-      </div>
+          <Text fontSize={"16px"} fontWeight={"400"} color={"black"}>
+            {schoolName}
+          </Text>
+        </div>
+        <div>
+          <Text fontSize={"16px"} fontWeight={"700"} color={"black"}>
+            학과(학번)
+          </Text>
+          <Text fontSize={"16px"} fontWeight={"400"} color={"black"}>
+            {studentnumber}
+          </Text>
+        </div>
+      </UserInfoLayout>
     </UserInfoFormLayout>
   );
 };

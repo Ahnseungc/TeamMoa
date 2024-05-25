@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const HomeBoardFormLayout = styled.article`
-  width: 375px;
+  width: 100vw;
   height: 154px;
   border-bottom: 1px solid rgba(217, 217, 217, 1);
   display: flex;
   justify-content: space-between;
+
+  padding: 11px 20px 0 20px;
 `;
 
 export const HomeBoardFormContentLayout = styled.div`
@@ -17,25 +19,34 @@ export const HomeBoardFormContentLayout = styled.div`
 
 export const HomeBoardFormContentHeader = styled.header`
   display: flex;
-  width: 375px;
-  padding: 10px 0 0 20px;
+  width: 100%;
+  justify-content: space-between;
   height: 47px;
+  & button {
+    margin: 0;
+  }
 `;
 
 export const HomeBoardHeaderTiteName = styled.div`
   height: 47px;
   margin-right: 67px;
+  margin: 0;
+
+  & div span:first-child {
+    margin-right: 5px;
+  }
 `;
 
 export const HomeBoardHeaderBody = styled.div`
   width: 335px;
-  padding: 10px 0 0 10px;
+  margin: 0;
   height: 50px;
 `;
 
 export const HomeBannerFooter = styled.footer`
   display: flex;
-  padding: 17px 20px 17px 0;
+
+  margin: 0;
 
   width: max-content;
   & div:not(:last-child) {
