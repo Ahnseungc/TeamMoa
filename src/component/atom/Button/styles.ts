@@ -1,53 +1,118 @@
 import styled, { css } from "styled-components";
-import { ButtonType } from "../../../type/Tb";
 
 export interface ButtonLayoutType {
-  Buttontype: "text" | "largebutton" | "addposition" | "middlebutton" | "smallbutton";
+  Buttontype:
+    | "text"
+    | "icon"
+    | "largebutton"
+    | "addposition"
+    | "middlebutton"
+    | "smallbutton"
+    | "largebuttonactive"
+    | "posistionbutton"
+    | "posistioncompletebutton";
 }
 
 export const textButtonStyles = css`
-  font-size: 20px;
+  font-size: 17.84px;
   font-weight: bold;
   color: black;
   border: none;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
+`;
+
+export const iconButtonStyles = css`
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: none;
 `;
 
 export const largebuttonStyles = css`
-  width: 374px;
-  height: 73px;
-  background-color: #D9D9D9;
-  font-size: 20px;
-  border: none;
-  color: black;
+  width: 330px;
+  height: 40px;
+  background-color: rgba(252, 252, 254, 1);
+  color: rgba(176, 176, 176, 1);
+  border: 1px solid rgba(176, 176, 176, 1);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.4px;
+
+  /* &:active {
+    background-color: rgba(217, 74, 86, 1);
+    color: white;
+  } */
 `;
 
 export const addpositionStyles = css`
-  width: 305px;
-  height: 26px;
-  background-color: #EBEBEB;
-  font-size: 13px;
-  border: none;
-  border-radius: 5px;
-  color: #363636;
+  width: 56px;
+  height: 56px;
 `;
 
 export const middlebuttonStyles = css`
   width: 189px;
   height: 82px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   font-size: 20px;
   border: none;
   color: black;
 `;
 
 export const smallbuttonStyles = css`
-  width: 104px;
-  height: 28px;
-  background-color: #D9D9D9;
-  font-size: 15px;
+  height: 26px;
+  padding: 0 12.57px;
+  background-color: rgba(217, 74, 86, 1);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 25px;
   border: none;
-  color: black;
+  color: white;
+`;
+
+export const largebuttonactiveStyles = css`
+  width: 330px;
+  height: 40px;
+  background-color: rgba(217, 74, 86, 1);
+  color: white;
+  border: 1px solid rgba(176, 176, 176, 1);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.4px;
+`;
+
+export const posistionbuttonStyles = css`
+  /* width: 46px;
+  height: 26px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background-color: rgba(183, 223, 185, 1);
+  color: rgba(76, 175, 80, 1);
+  border: none;
+  font-size: 12px;
+`;
+
+export const posistioncompletebuttonStyles = css`
+  /* width: 57px; */
+  /* height: 26px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background-color: rgba(176, 176, 176, 1);
+  color: rgba(99, 99, 99, 1);
+  border: none;
+  font-size: 12px;
+`;
+
+export const ImageLayout = styled.img<{ sizes: string }>`
+  width: ${(props) => (props.sizes ? props.sizes : "24px")};
+  height: ${(props) => (props.sizes ? props.sizes : "24px")};
 `;
 
 export const ButtonLayout = styled.button<ButtonLayoutType>`
@@ -55,14 +120,23 @@ export const ButtonLayout = styled.button<ButtonLayoutType>`
     switch (props.Buttontype) {
       case "text":
         return textButtonStyles;
+      case "icon":
+        return iconButtonStyles;
       case "largebutton":
         return largebuttonStyles;
+      case "largebuttonactive":
+        return largebuttonactiveStyles;
       case "addposition":
         return addpositionStyles;
       case "middlebutton":
         return middlebuttonStyles;
       case "smallbutton":
         return smallbuttonStyles;
+      case "posistionbutton":
+        return posistionbuttonStyles;
+      case "posistioncompletebutton":
+        return posistioncompletebuttonStyles;
+
       default:
         return textButtonStyles;
     }
