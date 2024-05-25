@@ -133,7 +133,7 @@ export interface PosistionArrayType {
 export interface PosistionType {
   count: number;
   name: string;
-  PosistionType: "default" | "HomePosistion";
+  PosistionType: "default" | "HomePosistion" | "MyPagePosistion";
 }
 
 export interface HomeMainProps {
@@ -161,6 +161,7 @@ export interface PostInfoProps {
 
 export interface PostInfoData {
   PostInfo: Array<PostInfoProps>;
+  BoardData: Array<HomeMainProps>;
 }
 
 export interface UserStackData {
@@ -176,6 +177,7 @@ export interface UserInfoProps {
   major: string;
   studentnumber: number;
   temp: number;
+  schoolName: string;
 }
 
 export interface LoginProps {
@@ -211,7 +213,8 @@ export interface EvaluationFormProps {
 export interface AlarmInfoFormProps {
   title: string;
   content: string;
-  icon: string;
+
+  status: string;
 }
 
 export interface AlarmData {

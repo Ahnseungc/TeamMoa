@@ -1,23 +1,21 @@
 import styled from "styled-components";
 
 export const ProjectInfoFormLayout = styled.div`
-  width: 375px;
-  height: 139px;
-  border-bottom: 0.75px solid rgba(189, 189, 189, 1);
+  width: 100vw;
+  height: 100px;
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
   display: flex;
   flex-direction: row;
+  justify-content: center;
 `;
 
 export const InfoLayout = styled.div`
   width: 85px;
+
+  height: 100xp;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  padding-top: 20px;
   align-items: center;
+  justify-content: center;
   text-align: center;
-
-  & > span {
-    margin-top: 20px;
-  }
 `;
