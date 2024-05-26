@@ -22,8 +22,6 @@ const Router = () => {
       <Route element={<Layout />}>
         <Route path="/home" element={<HomePage />} />
         <Route path="/userinfo" element={<UserInfoPage />} />
-        <Route path="/writecontent" element={<WriteContentPage />} />
-        <Route path="/writeupload" element={<WriteUploadPage />} />
         <Route path="/alarm" element={<AlarmPage />} />
       </Route>
       <Route path="/apply" element={<ApplyPage />} />

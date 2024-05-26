@@ -17,7 +17,10 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
   const [count, setCount] = useState(positionCount);
 
   const onClickAdd = () => setCount(count + 1);
-  const onClickDelete = () => setCount(count - 1);
+  const onClickDelete = () => {
+    if (count !== 1) 
+      setCount(count - 1);
+  }
 
   return (
     <PositionAddFormLayout>

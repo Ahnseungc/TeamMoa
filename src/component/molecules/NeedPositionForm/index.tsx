@@ -1,4 +1,3 @@
-import PosistionIcon from "@atom/PosistionIcon";
 import { NeedPositionLayout, FrameWorkLayout, PositionTitleLayout } from "./style";
 import Text from "@atom/Text";
 import { EachPosition } from "@type/Tb";
@@ -19,11 +18,9 @@ const NeedPosistionForm: FC<EachPosition> = ({
       <FrameWorkLayout>
         {needFramework.map((FrameWork) => {
           return (
-            <PosistionIcon
-              count={needCount}
-              name={FrameWork}
-              PosistionType="default"
-            />
+            <Text fontSize="15px" fontWeight="400" color="rgba(0, 0, 0, 1)">
+              {FrameWork}
+            </Text>
           );
         })}
       </FrameWorkLayout>
