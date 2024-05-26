@@ -15,6 +15,18 @@ export const FormTitle = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin: 16px 0 8px 36px;
+
+  & span:first-child {
+    margin-left: 10px;
+  }
+
+  & span:nth-child(2) {
+    margin-left: 40px;
+  }
+
+  & span:last-child {
+    margin-left: 105px;
+  }
 `;
 
 export const PositionFormContentLayout = styled.div`
