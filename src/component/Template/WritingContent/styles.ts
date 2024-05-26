@@ -12,6 +12,14 @@ export const Header = styled.div`
     align-items: center;
     justify-content: space-between;
     padding-top: 12px;
+
+    & button:first-child {
+        margin-right: 110px;
+    }
+
+    & button:last-child {
+        margin-left: 100px;
+    }
 `;
 
 export const ContentInputLayout = styled.div`
