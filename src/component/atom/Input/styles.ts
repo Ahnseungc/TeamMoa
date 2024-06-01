@@ -39,7 +39,7 @@ export const websiteStyles = css`
 
 export const TextHeadStyles = css`
   border: none;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
   width: 339px;
   height: 36px;
   font-size: 20px;

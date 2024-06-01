@@ -31,7 +31,7 @@ const SignUpSuccess: FC<SignUpPageProps> = ({ pageIndex, setIndex }) => {
       <SignUpSuccessBody>
         <SignUpSucessImg />
         <Text fontSize="20px" fontWeight="400" color="rgba(0, 0, 0, 1)">
-          이제부터 팀원을 모집해보러 가볼까요?
+          이제부터 팀원을 모집하러 가볼까요?
         </Text>
       </SignUpSuccessBody>
       <div>
