@@ -15,8 +15,8 @@ export interface ButtonLayoutType {
 
 export const textButtonStyles = css`
   font-size: 17.84px;
-  font-weight: bold;
-  color: black;
+  font-weight: 400;
+  color: rgba(104, 118, 132, 1);
   border: none;
   background-color: #ffffff;
 `;
