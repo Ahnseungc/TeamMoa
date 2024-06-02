@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const UserProfileLayout = styled.div`
-  width: 100vw;
+  width: 375px;
   height: 812px;
 `;
 

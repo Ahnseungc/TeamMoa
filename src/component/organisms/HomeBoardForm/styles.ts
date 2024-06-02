@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeBoardFormLayout = styled.article`
-  width: 100vw;
+  width: 375px;
   height: 154px;
   border-bottom: 1px solid rgba(217, 217, 217, 1);
   display: flex;

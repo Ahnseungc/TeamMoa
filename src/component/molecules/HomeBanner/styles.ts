@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeBannerLayout = styled.div`
-  width: 375px;
+  width: 100%;
   height: 45px;
   display: flex;
 `;
