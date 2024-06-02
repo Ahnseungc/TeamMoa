@@ -1,7 +1,7 @@
 import { HomemainLayout, HomeBannerHeader } from "./styles";
 import HomeBoardForm from "@organisms/HomeBoardForm";
 import HomeBanner from "@molecules/HomeBanner";
-import { FC } from "react";
+import { FC, lazy } from "react";
 import { HomeBoardData } from "@type/Tb";
 import Button from "@atom/Button";
 import MainIcon from "@atom/MainIcon";

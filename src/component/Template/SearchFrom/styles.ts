@@ -13,14 +13,14 @@ export const Header = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
     & button:last-child {
-        margin-bottom: 10px;
         margin-left: 15px;
     }
 `;
 
-export const InputLayout = styled.textarea`
+export const InputLayout = styled.input`
     outline: none;
     border: none;
     width: 250px;
@@ -28,7 +28,7 @@ export const InputLayout = styled.textarea`
     font-weight: 400;
     background-color: white;
     resize: none;
-    margin: 1px 0 0 15px;
+    margin-left: 15px;
     
     &::placeholder {
         font-size: 16px;
@@ -41,7 +41,7 @@ export const SearchResultLayout = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding-top: 20px;
     flex-grow: 1; 
 `;
 
@@ -49,4 +49,5 @@ export const SearchIcon = styled.img`
     width: 78px;
     height: 78px;
     margin-bottom: 16px;
+    margin-top: 220px;
 `;

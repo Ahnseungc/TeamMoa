@@ -155,6 +155,10 @@ export interface HomeBoardData {
   isActive?: boolean;
 }
 
+export interface SearchFormData {
+  BoardData?: Array<HomeMainProps>;
+}
+
 export interface PostInfoProps {
   title: string;
   subtitle: string;
@@ -227,4 +231,8 @@ export interface AlarmData {
 export interface ApplyPageProps {
   setIndex: Dispatch<SetStateAction<number>>;
   pageIndex: number;
+}
+
+export interface SearchFormProps {
+  BoardData: Array<HomeMainProps>;
 }
