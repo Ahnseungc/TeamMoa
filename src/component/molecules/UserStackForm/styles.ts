@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const UserStackFormLayout = styled.div`
-  width: 100vw;
+  width: 375px;
   height: 100px;
   border-bottom: 1px solid rgba(236, 236, 236, 1);
   padding-top: 13px;
