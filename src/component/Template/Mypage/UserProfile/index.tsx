@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { StoryFn } from "@storybook/react";
 import { UserProfileLayout, Header, WriteHeader } from "./styles";
 import Heading from "@atom/Heading";
@@ -7,8 +8,11 @@ import UserStackForm from "@molecules/UserStackForm";
 import ProjectInfoForm from "@molecules/ProjectInfoForm";
 import UserInfoForm from "@molecules/UserInfoForm";
 import HomeBoardForm from "@organisms/HomeBoardForm";
+import Applicant from "@templates/Evaluation/Applicant";
 
 const UserProfile: StoryFn<PostInfoData> = ({ PostInfo, BoardData }) => {
+  const [evaluation, setEvaluation] = useState<boolean>(false);
+
   return (
     <UserProfileLayout>
       <Header>
@@ -66,7 +70,7 @@ const UserProfile: StoryFn<PostInfoData> = ({ PostInfo, BoardData }) => {
         );
       })}
     </UserProfileLayout>
-  );
+   )
 };
 
 export default UserProfile;

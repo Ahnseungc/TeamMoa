@@ -1,11 +1,14 @@
+import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import Heading from "@atom/Heading";
 import Button from "@atom/Button";
 import { EvaluationHeaderLayout } from "./styles";
 import CancelIcon from "@asset/image/icon_cancel.png";
 import { EvaluationHeaderProps } from "@type/Tb";
-import { FC } from "react";
 
 const EvaluationHeader: FC<EvaluationHeaderProps> = ({ content }) => {
+  const navigate = useNavigate();
+
   return (
     <EvaluationHeaderLayout>
       <Button
@@ -13,7 +16,7 @@ const EvaluationHeader: FC<EvaluationHeaderProps> = ({ content }) => {
         buttontype="icon"
         icon={CancelIcon}
         disabled={false}
-        onClick={() => null}
+        onClick={() => navigate("/userinfo")}
       />
       <Heading
         fontSize={"20px"}
