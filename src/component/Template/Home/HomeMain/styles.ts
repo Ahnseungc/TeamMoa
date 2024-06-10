@@ -18,3 +18,16 @@ export const HomeBannerHeader = styled.header`
     margin-left: 123px;
   }
 `;
+
+export const WritingGuideLayout = styled.div`
+  margin: 112.39px 0 231px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const WritingGuideImg = styled.img`
+  width: 303px;
+  height: 228.211px;
+`;

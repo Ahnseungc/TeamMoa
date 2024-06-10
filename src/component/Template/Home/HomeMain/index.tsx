@@ -1,11 +1,17 @@
-import { HomemainLayout, HomeBannerHeader } from "./styles";
+import { 
+  HomemainLayout, 
+  HomeBannerHeader,
+  WritingGuideLayout,
+  WritingGuideImg } from "./styles";
 import HomeBoardForm from "@organisms/HomeBoardForm";
 import HomeBanner from "@molecules/HomeBanner";
-import { FC, lazy } from "react";
+import { FC } from "react";
 import { HomeBoardData } from "@type/Tb";
 import Button from "@atom/Button";
 import MainIcon from "@atom/MainIcon";
 import { useNavigate } from "react-router-dom";
+import WritingImg from "@asset/image/img_WritingImage.png";
+import Text from "@atom/Text";
 
 const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
   const Navigate = useNavigate();
@@ -23,19 +29,28 @@ const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
         />
       </HomeBannerHeader>
       <HomeBanner isactive={isActive} onclick={() => setIsActive(!isActive)} />
-      {BoardData.map((data) => {
-        return (
-          <HomeBoardForm
-            name={data.name}
-            position={data.position}
-            title={data.title}
-            date={data.date}
-            iscruiting={data.iscruiting}
-            subtitle={data.subtitle}
-            needposistion={data.needposistion}
-          />
-        );
-      })}
+      {BoardData.length ? (
+        BoardData.map((data) => {
+          return (
+            <HomeBoardForm
+              name={data.name}
+              position={data.position}
+              title={data.title}
+              date={data.date}
+              iscruiting={data.iscruiting}
+              subtitle={data.subtitle}
+              needposistion={data.needposistion}
+            />
+          );
+        })
+      ) : (
+        <WritingGuideLayout>
+          <WritingGuideImg src={WritingImg}/>
+          <Text fontSize={"16px"} fontWeight={"700"} color={"#B0B0B0"}>
+            글을 맨 첫번째로 작성해보세요
+          </Text>
+        </WritingGuideLayout>
+      )}
     </HomemainLayout>
   );
 };
