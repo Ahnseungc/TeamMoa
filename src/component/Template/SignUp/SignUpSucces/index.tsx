@@ -12,7 +12,7 @@ import Text from "@atom/Text";
 import { FC } from "react";
 import { SignUpPageProps } from "@type/Tb";
 import { useNavigate } from "react-router-dom";
-import SuccesSignUpImg from "@asset/image/icon_SuccessSignUp.png";
+import SuccesSignUpImg from "@asset/image/img_successSignUp.png";
 
 const SignUpSuccess: FC<SignUpPageProps> = ({ pageIndex, setIndex }) => {
   const navigate = useNavigate();
