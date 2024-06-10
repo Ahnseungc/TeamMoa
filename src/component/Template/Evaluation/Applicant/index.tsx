@@ -1,9 +1,10 @@
 import EvaluationHeader from "@molecules/EvaluationHeader";
 import EvaluationForm from "@organisms/EvaluationForm";
+import { ApplicantLayout } from "./styles";
 
 export const Applicant = () => {
   return (
-    <div>
+    <ApplicantLayout>
       <EvaluationHeader content="지금까지 만난 팀원" />
       <EvaluationForm
         title={"김성우 교수님의 HCI 팀원 찾습니다"}
@@ -12,7 +13,7 @@ export const Applicant = () => {
         schoolName={"한림대"}
         schoolNum={"20183632"}
       />
-    </div>
+    </ApplicantLayout>
   );
 };
 
