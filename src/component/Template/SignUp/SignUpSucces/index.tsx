@@ -12,6 +12,7 @@ import Text from "@atom/Text";
 import { FC } from "react";
 import { SignUpPageProps } from "@type/Tb";
 import { useNavigate } from "react-router-dom";
+import SuccesSignUpImg from "@asset/image/icon_SuccessSignUp.png";
 
 const SignUpSuccess: FC<SignUpPageProps> = ({ pageIndex, setIndex }) => {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const SignUpSuccess: FC<SignUpPageProps> = ({ pageIndex, setIndex }) => {
         </SignUpSuccessLayoutText>
       </SignUpSuccessTextHeader>
       <SignUpSuccessBody>
-        <SignUpSucessImg />
+        <SignUpSucessImg src={SuccesSignUpImg}/>
         <Text fontSize="20px" fontWeight="400" color="rgba(0, 0, 0, 1)">
           이제부터 팀원을 모집해보러 가볼까요?
         </Text>

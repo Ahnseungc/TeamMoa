@@ -10,6 +10,10 @@ export const SignUpSuccessLayout = styled.div`
   & div:last-child {
     margin-top: 157px;
   }
+
+  & header {
+    margin-left: 18px;
+  }
 `;
 
 export const SignUpSuccessLayoutText = styled.p`
@@ -18,7 +22,6 @@ export const SignUpSuccessLayoutText = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-left: 18px;
 `;
 
 export const SignUpSuccessTextHeader = styled.div`
@@ -28,9 +31,8 @@ export const SignUpSuccessTextHeader = styled.div`
 `;
 
 export const SignUpSucessImg = styled.img`
-  width: 265px;
+  width: 235px;
   height: 265px;
-  background-color: aliceblue;
 `;
 
 export const SignUpSuccessBody = styled.div`
@@ -41,6 +43,6 @@ export const SignUpSuccessBody = styled.div`
   margin-top: 61px;
 
   & span {
-    margin-top: 33px;
+    margin-top: 47px;
   }
 `;
