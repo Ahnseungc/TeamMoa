@@ -7,12 +7,16 @@ export const LoginMainPageLayout = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+`;
 
-  & h3 {
-    padding-top: 83px;
-    line-height: 40px;
-    margin-right: 160px;
-  }
+export const IntroText = styled.p`
+  color: rgba(0, 0, 0, 1);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 40px; 
+  letter-spacing: -0.48px;
+  padding-top: 83px;
+  margin-right: 160px;
 `;
 
 export const MainLogo = styled.img`
