@@ -9,7 +9,7 @@ const ProjectInfoForm: StoryFn<ProjectInfoProps> = ({ projectinfo }) => {
   const menuTitle = ["지원현황", "최근 본 내역", "지원서 열람", "지금까지 만난 팀원"];
 
   const movePage = (name: string) => {
-    if (name === "지금까지 만난 팀원") navigate("/evaluation");
+    if (name === "지금까지 만난 팀원") navigate("/membercheck");
   }
 
   return (

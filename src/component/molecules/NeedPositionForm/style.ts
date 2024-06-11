@@ -20,7 +20,7 @@ export const PositionTitleLayout = styled.div`
 `;
 
 export const FrameWorkLayout = styled.div`
-  width: 230px;
+  width: 220px;
   margin-right: 0;
   
   & > span:not(:last-child) {

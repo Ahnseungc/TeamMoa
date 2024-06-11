@@ -1,9 +1,10 @@
+import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import { EvaluationFormLayout, EvaluationFormLine } from "./styles";
 import Heading from "@atom/Heading";
 import PosistionIcon from "@atom/PosistionIcon";
 import Text from "@atom/Text";
 import { EvaluationFormProps } from "@type/Tb";
-import { FC } from "react";
 
 const EvaluationForm: FC<EvaluationFormProps> = ({
   title,
@@ -12,8 +13,10 @@ const EvaluationForm: FC<EvaluationFormProps> = ({
   schoolName,
   schoolNum,
 }) => {
+  const Navigate = useNavigate();
+
   return (
-    <EvaluationFormLayout>
+    <EvaluationFormLayout  onClick={() => Navigate("/evaluation")}>
       <EvaluationFormLine>
         <th>
           <Heading

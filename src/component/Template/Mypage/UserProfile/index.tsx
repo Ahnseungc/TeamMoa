@@ -11,8 +11,6 @@ import HomeBoardForm from "@organisms/HomeBoardForm";
 import Applicant from "@templates/Evaluation/Applicant";
 
 const UserProfile: StoryFn<PostInfoData> = ({ PostInfo, BoardData }) => {
-  const [evaluation, setEvaluation] = useState<boolean>(false);
-
   return (
     <UserProfileLayout>
       <Header>

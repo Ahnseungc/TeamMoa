@@ -14,7 +14,8 @@ const WriteDetailContentPage = lazy(
 const WriteUploadPage = lazy(() => import("@page/Write/WritingUpload"));
 const AlarmPage = lazy(() => import("@page/Alarm"));
 const SearchForm = lazy(() => import("@templates/SearchFrom"));
-const EvaluationPage = lazy(() => import("@templates/Evaluation/Applicant"));
+const MemberCheckPage = lazy(() => import("@templates/Evaluation/Applicant"));
+const EvaluationForm = lazy(() => import("@templates/Evaluation/MembeEvaluation"));
 
 const Router = () => {
   return (
@@ -31,7 +32,8 @@ const Router = () => {
       <Route path="/writedetailcontent" element={<WriteDetailContentPage />} />
       <Route path="/writeupload" element={<WriteUploadPage />} />
       <Route path="/search" element={<SearchForm />} />
-      <Route path="/evaluation" element={<EvaluationPage />} />
+      <Route path="/membercheck" element={<MemberCheckPage />} />
+      <Route path="/evaluation" element={<EvaluationForm />} />
     </Routes>
   );
 };
