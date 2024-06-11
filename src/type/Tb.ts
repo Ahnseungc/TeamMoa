@@ -220,7 +220,6 @@ export interface EvaluationFormProps {
 export interface AlarmInfoFormProps {
   title: string;
   content: string;
-
   status: string;
 }
 
@@ -235,4 +234,15 @@ export interface ApplyPageProps {
 
 export interface SearchFormProps {
   BoardData: Array<HomeMainProps>;
+}
+
+export interface MemberEvaluationFormProps {
+  title: string;
+  postionName: string;
+  name: string;
+  framework: Array<string>;
+}
+
+export interface EvaluationItemProps {
+  category: string;
 }
