@@ -6,6 +6,7 @@ import { HomeBoardData } from "@type/Tb";
 import Button from "@atom/Button";
 import MainIcon from "@atom/MainIcon";
 import { useNavigate } from "react-router-dom";
+import HomeNoneWrite from "@organisms/HomeNoneWrite";
 
 const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
   const Navigate = useNavigate();
@@ -23,19 +24,23 @@ const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
         />
       </HomeBannerHeader>
       <HomeBanner isactive={isActive} onclick={() => setIsActive(!isActive)} />
-      {BoardData.map((data) => {
-        return (
-          <HomeBoardForm
-            name={data.name}
-            position={data.position}
-            title={data.title}
-            date={data.date}
-            iscruiting={data.iscruiting}
-            subtitle={data.subtitle}
-            needposistion={data.needposistion}
-          />
-        );
-      })}
+      {BoardData.length === 0 ? (
+        <HomeNoneWrite />
+      ) : (
+        BoardData.map((data) => {
+          return (
+            <HomeBoardForm
+              name={data.name}
+              position={data.position}
+              title={data.title}
+              date={data.date}
+              iscruiting={data.iscruiting}
+              subtitle={data.subtitle}
+              needposistion={data.needposistion}
+            />
+          );
+        })
+      )}
     </HomemainLayout>
   );
 };

@@ -1,6 +1,7 @@
 import { setMajorProps } from "@type/Tb";
 import { ChangeEvent, useState } from "react";
 import { lazy } from "react";
+import { Axios } from "src/apis/api/axiosFetch";
 const SignUpSettingName = lazy(
   () => import("@templates/SignUp/SignUpSettingName")
 );
@@ -31,11 +32,20 @@ const SignUpPage = () => {
   const onChangeMajor = (e: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     if (id === "StudentID" && /[^0-9]/.test(value)) {
-      return;
+      return value;
     }
     setMajor((prev) => {
       return { ...prev, [id]: value };
     });
+  };
+  const onSubmit = async () => {
+    const res = await Axios.post("http://3.106.143.87:3000/api/user", {
+      NickName: name,
+      SchoolName: school,
+      SchoolMajor: major.DoubleMajor,
+      SchoolNumber: Number(major.StudentID),
+    });
+    console.log(res);
   };
 
   return (
@@ -62,6 +72,7 @@ const SignUpPage = () => {
           setIndex={setIndex}
           major={major}
           onchange={onChangeMajor}
+          onSubmit={onSubmit}
         />
       )}
       {index === 4 && <SignUpSuccess pageIndex={index} setIndex={setIndex} />}

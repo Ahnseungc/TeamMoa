@@ -11,13 +11,14 @@ import Input from "@atom/Input";
 import Text from "@atom/Text";
 import SignUpHeader from "@organisms/SignUp/SignUpHeader";
 import { FC } from "react";
-import { SignUpPageProps } from "@type/Tb";
+import { SignUpSuccessProps } from "@type/Tb";
 
-const SignUpSettingMajor: FC<SignUpPageProps> = ({
+const SignUpSettingMajor: FC<SignUpSuccessProps> = ({
   setIndex,
   pageIndex,
   onchange,
   major,
+  onSubmit,
 }) => {
   return (
     <SignUpSettingSchoolNameLayout>
@@ -75,7 +76,7 @@ const SignUpSettingMajor: FC<SignUpPageProps> = ({
           type="button"
           buttontype={major.StudentID ? "largebuttonactive" : "largebutton"}
           disabled={major.StudentID ? false : true}
-          onClick={() => setIndex(4)}
+          onClick={() => onSubmit()}
         />
       </div>
     </SignUpSettingSchoolNameLayout>

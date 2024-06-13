@@ -4,6 +4,9 @@ export const HomemainLayout = styled.div`
   width: 375px;
   height: 100vh;
   padding-top: 12px;
+  & .homeBannerNone {
+    margin-top: 113px;
+  }
 `;
 
 export const HomeBannerHeader = styled.header`

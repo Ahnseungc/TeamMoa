@@ -199,6 +199,9 @@ export interface SignUpPageProps {
   school?: string;
   major?: setMajorProps;
 }
+export interface SignUpSuccessProps extends SignUpPageProps {
+  onSubmit: () => void;
+}
 
 export interface setMajorProps {
   StudentID: string;
