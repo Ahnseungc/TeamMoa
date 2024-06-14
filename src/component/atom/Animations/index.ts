@@ -14,7 +14,7 @@ export const MoveHeading = keyframes`
 
 export const MoveModal = keyframes`  
   0% {
-    opacity: 0;
+    opacity: 0;    
     transform: translateY(50px);
   }
 
