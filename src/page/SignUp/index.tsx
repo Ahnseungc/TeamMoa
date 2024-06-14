@@ -21,7 +21,6 @@ const SignUpPage = () => {
   const [school, setSchool] = useState<string>("");
   const userAtomValue = useRecoilValue(userAtom);
 
-  console.log(userAtomValue);
   const [major, setMajor] = useState<setMajorProps>({
     StudentID: "",
     DoubleMajor: "",
@@ -50,9 +49,10 @@ const SignUpPage = () => {
         SchoolName: school,
         SchoolMajor: major.DoubleMajor,
         SchoolNumber: Number(major.StudentID),
-        kakaoId: "",
-        username: "",
-        email: "",
+        kakaoId: userAtomValue.id,
+        username: userAtomValue.name,
+        email: userAtomValue.email,
+        img: userAtomValue.img,
       });
 
       res.status === 201 && setIndex(4);
