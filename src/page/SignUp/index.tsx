@@ -2,6 +2,8 @@ import { setMajorProps } from "@type/Tb";
 import { ChangeEvent, useState } from "react";
 import { lazy } from "react";
 import { Axios } from "src/apis/api/axiosFetch";
+import { useRecoilValue } from "recoil";
+import { userAtom } from "src/atom";
 const SignUpSettingName = lazy(
   () => import("@templates/SignUp/SignUpSettingName")
 );
@@ -17,6 +19,9 @@ const SignUpPage = () => {
   const [index, setIndex] = useState<number>(1);
   const [name, setName] = useState<string>("");
   const [school, setSchool] = useState<string>("");
+  const userAtomValue = useRecoilValue(userAtom);
+
+  console.log(userAtomValue);
   const [major, setMajor] = useState<setMajorProps>({
     StudentID: "",
     DoubleMajor: "",
@@ -39,13 +44,21 @@ const SignUpPage = () => {
     });
   };
   const onSubmit = async () => {
-    const res = await Axios.post("http://3.106.143.87:3000/api/user", {
-      NickName: name,
-      SchoolName: school,
-      SchoolMajor: major.DoubleMajor,
-      SchoolNumber: Number(major.StudentID),
-    });
-    console.log(res);
+    try {
+      const res = await Axios.post("http://localhost:3000/api/user", {
+        NickName: name,
+        SchoolName: school,
+        SchoolMajor: major.DoubleMajor,
+        SchoolNumber: Number(major.StudentID),
+        kakaoId: "",
+        username: "",
+        email: "",
+      });
+
+      res.status === 201 && setIndex(4);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

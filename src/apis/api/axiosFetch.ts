@@ -6,7 +6,7 @@ export const Axios = {
       const response = await axios.post(url, body);
       return response;
     } catch (e) {
-      return false;
+      console.log(e);
     }
   },
 };
