@@ -32,7 +32,8 @@ export interface ButtonType {
     | "smallbutton"
     | "largebuttonactive"
     | "posistionbutton"
-    | "posistioncompletebutton";
+    | "posistioncompletebutton"
+    | "largebuttondisable";
   disabled: boolean;
   content?: string;
   icon?: string;

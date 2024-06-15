@@ -10,7 +10,8 @@ export interface ButtonLayoutType {
     | "smallbutton"
     | "largebuttonactive"
     | "posistionbutton"
-    | "posistioncompletebutton";
+    | "posistioncompletebutton"
+    | "largebuttondisable";
 }
 
 export const textButtonStyles = css`
@@ -82,6 +83,18 @@ export const largebuttonactiveStyles = css`
   line-height: 18.4px;
 `;
 
+export const largebuttondisableStyle = css`
+  width: 330px;
+  height: 40px;
+  background-color: rgba(176, 176, 176, 1);
+  color: white;
+  border: 1px solid rgba(176, 176, 176, 1);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.4px;
+`;
+
 export const posistionbuttonStyles = css`
   width: 46px;
   height: 26px;
@@ -136,6 +149,8 @@ export const ButtonLayout = styled.button<ButtonLayoutType>`
         return posistionbuttonStyles;
       case "posistioncompletebutton":
         return posistioncompletebuttonStyles;
+      case "largebuttondisable":
+        return largebuttondisableStyle;
 
       default:
         return textButtonStyles;
