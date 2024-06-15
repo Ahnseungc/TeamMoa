@@ -6,7 +6,9 @@ export const DefaultLayout = styled.div`
 
   & > button {
     position: fixed;
-    right: calc((100vw - 300px) / 2);
-    bottom: 125px;
+    left: 19.063rem;
+    bottom: 6.438rem;
+    width: max-content;
+    height: max-content;
   }
 `;

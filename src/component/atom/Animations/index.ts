@@ -49,3 +49,12 @@ export const MoveInputing = keyframes`
     width: 339px;
   }
 `;
+
+export const CircleLoading = keyframes`
+   from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
