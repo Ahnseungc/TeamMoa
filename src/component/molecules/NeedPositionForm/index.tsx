@@ -1,4 +1,8 @@
-import { NeedPositionLayout, FrameWorkLayout, PositionTitleLayout } from "./style";
+import {
+  NeedPositionLayout,
+  FrameWorkLayout,
+  PositionTitleLayout,
+} from "./style";
 import Text from "@atom/Text";
 import { EachPosition } from "@type/Tb";
 import { FC } from "react";

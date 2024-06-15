@@ -16,20 +16,21 @@ const ContentInput: FC<ContentInputType> = ({
         <Heading color="black" fontSize="20px" fontWeight="bold">
           {contentTitle}
         </Heading>
-        {(contentTitle === "전달메시지") && (
+        {contentTitle === "전달메시지" && (
           <Button
             type="button"
-            buttontype="posistionbutton"
+            buttontype="gptButton"
             disabled={false}
             onClick={() => ""}
             content="chatGPT로 글쓰기"
           />
         )}
       </ContentHeader>
-      <ContentLayout 
+      <ContentLayout
         value={value}
         onChange={onchange}
-        placeholder={placeholder}/>
+        placeholder={placeholder}
+      />
     </ContentInputLayout>
   );
 };

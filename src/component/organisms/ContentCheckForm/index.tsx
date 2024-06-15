@@ -1,5 +1,10 @@
 import { StoryFn } from "@storybook/react";
-import { ContentCheckFormLayout, Header, InfoLayout, DetailInfo } from "./styles";
+import {
+  ContentCheckFormLayout,
+  Header,
+  InfoLayout,
+  DetailInfo,
+} from "./styles";
 import { ContentCheckFormProps } from "@type/Tb";
 import Button from "@atom/Button";
 import Heading from "@atom/Heading";
@@ -20,12 +25,13 @@ const ContentCheckForm: StoryFn<ContentCheckFormProps> = ({
             지원정보확인
           </Heading>
           {applyStatus && (
-            <Button 
-              type={"button"} 
-              buttontype={"posistioncompletebutton"} 
+            <Button
+              type={"button"}
+              buttontype={"userInfoButto"}
               disabled={false}
               onClick={() => "d"}
-              content="회원정보 수정"/>
+              content="회원정보 수정"
+            />
           )}
         </Header>
         <InfoLayout>

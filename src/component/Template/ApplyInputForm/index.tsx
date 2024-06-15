@@ -35,14 +35,15 @@ const ApplyInputForm: StoryFn = () => {
           지원하기
         </Heading>
       </HeaderTextLayout>
-      <ApplyAnnounceHeading title="HCI 팀원 구합니다."/>
-      <ContentCheckForm 
+      <ApplyAnnounceHeading title="HCI 팀원 구합니다." />
+      <ContentCheckForm
         name={"홍길동"}
         temp={90}
         callNumber={"010-0000-0000"}
         kakaoId={"asdf1234"}
-        applyStatus={true}/>
-      <StackSelectForm 
+        applyStatus={true}
+      />
+      <StackSelectForm
         stackList={[
           {
             position: "프론트",
@@ -60,27 +61,33 @@ const ApplyInputForm: StoryFn = () => {
             count: 1,
           },
         ]}
-        applyStatus={true}/>
+        applyStatus={true}
+      />
       <ContentInputLayout>
         <ContentInput
           contentTitle={"지원자 포트폴리오"}
           placeholder={"깃허브링크, 노션링크 다양한 경로를 입력해주세요."}
           value={portfolio}
-          onchange={onChangePortfolio}/>
-        <Line/>
+          onchange={onChangePortfolio}
+        />
+        <Line />
         <ContentInput
           contentTitle={"전달메시지"}
-          placeholder={"자신을 어필할 수 있도록 지원 포지션에 맞게 스택을 어필해보세요."}
+          placeholder={
+            "자신을 어필할 수 있도록 지원 포지션에 맞게 스택을 어필해보세요."
+          }
           value={message}
-          onchange={onChangeMsg}/>
+          onchange={onChangeMsg}
+        />
       </ContentInputLayout>
-      <ConsentText/>
+      <ConsentText />
       <Button
         type={"button"}
         buttontype={"largebuttonactive"}
         content={"지원하기"}
         disabled={false}
-        onClick={() => Navigate("/home")}/>
+        onClick={() => Navigate("/home")}
+      />
     </ApplyInputFormLayout>
   );
 };

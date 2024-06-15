@@ -4,27 +4,22 @@ import { StoryFn } from "@storybook/react";
 import { SelectStackProps } from "@type/Tb";
 import NeedPosistionForm from "@molecules/NeedPositionForm";
 
-const SelectStack: StoryFn<SelectStackProps> = ({
-  position,
-  stack,
-  count,
-}) => {
+const SelectStack: StoryFn<SelectStackProps> = ({ position, stack, count }) => {
   const [isSelect, setIsSelect] = useState(false);
 
   const onClickPosition = () => {
     setIsSelect(!isSelect);
-  }
+  };
   return (
     <SelectStackLayout>
-      <PositionSelectLayout 
-        isSelect={isSelect}
-        onClick={onClickPosition}>
-        <div/>
+      <PositionSelectLayout isSelect={isSelect} onClick={onClickPosition}>
+        <div />
       </PositionSelectLayout>
-      <NeedPosistionForm 
+      <NeedPosistionForm
         needTitle={position}
         needCount={count}
-        needFramework={stack}/>
+        needFramework={stack}
+      />
     </SelectStackLayout>
   );
 };

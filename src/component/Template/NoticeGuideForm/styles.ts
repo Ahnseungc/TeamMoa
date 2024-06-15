@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WritingContentLayout = styled.div`
-  width: 375px;
+  width: 100vw;
   height: 812px;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@ export const WritingContentLayout = styled.div`
 export const HeaderTextLayout = styled.div`
   display: flex;
   justify-content: center;
+  width: 100%;
 `;
 
 export const ContentText = styled.p`
