@@ -147,6 +147,7 @@ export interface HomeMainProps {
   iscruiting: boolean;
   subtitle: string;
   needposistion: Array<PosistionArrayType>;
+  onclick?: () => void;
 }
 
 export interface HomeBoardData {

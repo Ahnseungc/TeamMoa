@@ -15,6 +15,7 @@ const AlarmPage = lazy(() => import("@page/Alarm"));
 const SearchForm = lazy(() => import("@templates/SearchFrom"));
 const KakaoLoading = lazy(() => import("@page/Auth/kakao"));
 const LoginPage = lazy(() => import("@page/Login"));
+const PostingPage = lazy(() => import("@page/Posting"));
 
 const Router = () => {
   return (
@@ -27,6 +28,7 @@ const Router = () => {
         <Route path="/alarm" element={<AlarmPage />} />
       </Route>
       <Route path="/apply" element={<ApplyPage />} />
+      <Route path="/posting" element={<PostingPage />} />
       <Route path="/writecontent" element={<WriteContentPage />} />
       <Route path="/writedetailcontent" element={<WriteDetailContentPage />} />
       <Route path="/writeupload" element={<WriteUploadPage />} />

@@ -21,9 +21,10 @@ const HomeBoardForm: FC<HomeMainProps> = ({
   iscruiting,
   subtitle,
   needposistion,
+  onclick,
 }) => {
   return (
-    <HomeBoardFormLayout>
+    <HomeBoardFormLayout onClick={onclick}>
       <HomeBoardFormContentLayout>
         <HomeBoardFormContentHeader>
           <HomeBoardHeaderTiteName>

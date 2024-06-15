@@ -30,6 +30,7 @@ const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
         BoardData.map((data) => {
           return (
             <HomeBoardForm
+              onclick={() => Navigate("/posting")}
               name={data.name}
               position={data.position}
               title={data.title}

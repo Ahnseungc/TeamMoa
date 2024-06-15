@@ -71,8 +71,8 @@ export const smallbuttonStyles = css`
 `;
 
 export const largebuttonactiveStyles = css`
-  width: 327px;
-  height: 50px;
+  width: 330px;
+  height: 40px;
   background-color: rgba(217, 74, 86, 1);
   color: white;
   border: 1px solid rgba(176, 176, 176, 1);
