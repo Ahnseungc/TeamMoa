@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomemainLayout = styled.div`
-  width: 375px;
+  width: 100vw;
   height: 100vh;
   padding-top: 12px;
   & .homeBannerNone {
@@ -10,7 +10,7 @@ export const HomemainLayout = styled.div`
 `;
 
 export const HomeBannerHeader = styled.header`
-  width: 375px;
+  width: 100vw;
   height: 48px;
   display: flex;
   align-items: center;
