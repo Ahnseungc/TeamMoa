@@ -27,7 +27,7 @@ export const textButtonStyles = css`
 export const iconButtonStyles = css`
   width: 24px;
   height: 24px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   border: none;
 `;
 

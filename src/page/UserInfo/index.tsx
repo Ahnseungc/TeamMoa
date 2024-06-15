@@ -119,7 +119,7 @@ const dummy = [
 ];
 
 const UserInfoPage = () => {
-  return <UserInfo PostInfo={[]} BoardData={dummy} />;
+  return <UserInfo PostInfo={[]} BoardData={[]} />;
 };
 
 export default UserInfoPage;

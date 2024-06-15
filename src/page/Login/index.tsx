@@ -9,11 +9,7 @@ const LoginPage = () => {
   const LoginHandler = () => {
     window.location.href = KaKaoLoginLink;
   };
-  return (
-    // <Link to={"http://localhost:3000/auth/kakao"}>
-    <LoginTemplate onclick={() => LoginHandler()} />
-    // </Link>
-  );
+  return <LoginTemplate onclick={() => LoginHandler()} />;
 };
 
 export default LoginPage;
