@@ -27,6 +27,7 @@ const Kakao = () => {
       )
       .then((res: any) => {
         const { access_token } = res.data;
+
         setUser({
           accessToken: access_token,
         });

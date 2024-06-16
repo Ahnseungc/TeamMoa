@@ -21,7 +21,7 @@ const NeedPosistionForm: FC<EachPosition> = ({
           </Text>
         ) : (
           <Text fontSize="12px" fontWeight="400" color="rgba(104, 118, 132, 1)">
-            {`${NeedPosistionName}`}
+            {NeedPosistionName}
           </Text>
         )}
       </PositionTitleLayout>

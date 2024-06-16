@@ -8,6 +8,7 @@ const StackSelectForm: StoryFn<StackSelectFormProps> = ({
   stackList,
   applyStatus,
 }) => {
+  console.log(stackList);
   return (
     <StackSelectFormLayout>
       <Heading fontSize={"20"} fontWeight={"700"} color={"rgba(0,0,0,1)"}>
@@ -15,11 +16,12 @@ const StackSelectForm: StoryFn<StackSelectFormProps> = ({
       </Heading>
       <div style={{ marginTop: "15px" }}>
         {stackList.map((item) => {
+          console.log(item);
           return (
             <SelectStack
-              position={item.position}
-              stack={item.stack}
-              count={item.count}
+              position={item?.NeedPosistionName}
+              stack={item?.NeedPosistionSkill}
+              count={item.NeedPosistionNumber}
             />
           );
         })}

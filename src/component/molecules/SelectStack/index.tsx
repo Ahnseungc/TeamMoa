@@ -16,9 +16,9 @@ const SelectStack: StoryFn<SelectStackProps> = ({ position, stack, count }) => {
         <div />
       </PositionSelectLayout>
       <NeedPosistionForm
-        needTitle={position}
-        needCount={count}
-        needFramework={stack}
+        NeedPosistionName={position}
+        NeedPosistionNumber={count}
+        NeedPosistionSkill={stack}
       />
     </SelectStackLayout>
   );

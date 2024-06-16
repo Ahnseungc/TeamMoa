@@ -26,7 +26,6 @@ const Posting = () => {
     fetcher
   );
 
-  console.log(data);
   if (isLoading) return <Spinner />;
 
   const timer = setTimeout(() => {
@@ -48,6 +47,7 @@ const Posting = () => {
           </PostingHeader>
           <WritingBoardForm
             src="/"
+            IsRecruiting={data[0]?.IsRecruiting}
             Title={data[0]?.Title}
             Detail={data[0]?.Detail}
             userName={data[0]?.Writer}
@@ -75,7 +75,7 @@ const Posting = () => {
             buttontype={"largebuttonactive"}
             content={"지원하기"}
             disabled={false}
-            onClick={() => Navigate("/apply")}
+            onClick={() => Navigate("/apply", { state: { id: 1, name: name } })}
           />
         </>
       ) : (

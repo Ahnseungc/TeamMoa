@@ -21,7 +21,7 @@ export const InfoLayout = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 0 20px 15px 20px;
 
   & span:nth-child(1) {
@@ -29,11 +29,12 @@ export const InfoLayout = styled.div`
   }
 
   & span:nth-child(2) {
-    margin-right: 150px;
+    margin-right: 0;
   }
 `;
 
 export const DetailInfo = styled.div`
-  width: max-content;
-  margin-right: 100px;
+  /* width: 103; */
+  /* margin-right: 15px; */
+  margin-left: 0;
 `;

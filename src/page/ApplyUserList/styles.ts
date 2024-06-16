@@ -52,3 +52,27 @@ export const Line = styled.div`
   height: 1px;
   background-color: rgba(236, 236, 236, 1);
 `;
+
+export const Box = styled.div`
+  width: 100vw;
+  height: 137px;
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+  padding-top: 14px;
+  padding-left: 24px;
+
+  & > div {
+    width: 100vw;
+  }
+
+  & .button {
+    width: 82px;
+    height: 22px;
+    border-radius: 11px;
+    padding: 0px, 13px, 0px, 13px;
+    background-color: rgba(236, 236, 236, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+  }
+`;

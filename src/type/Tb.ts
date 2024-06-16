@@ -92,7 +92,7 @@ export interface WritingBoardFormProps extends WritingUserFormProps, TextProps {
 export interface EachPosition {
   NeedPosistionSkill?: string[];
   NeedPosistionName?: string;
-  NeedPosistionNumber?: string;
+  NeedPosistionNumber?: string | undefined | number;
   needTitle?: string;
   needCount?: number;
   needFramework?: Array<string>;
@@ -129,7 +129,7 @@ export interface SelectStackProps {
 }
 
 export interface StackSelectFormProps {
-  stackList: Array<SelectStackProps>;
+  stackList: any;
   applyStatus: boolean;
 }
 

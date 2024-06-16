@@ -28,13 +28,23 @@ const WritingBoardForm: FC<WritingBoardFormProps> = ({
           <Heading fontSize="20px" fontWeight="700" color="rgba(0,0,0,1)">
             {Title}
           </Heading>
-          <Button
-            type="button"
-            buttontype="posistionbutton"
-            content="모집중"
-            disabled={false}
-            onClick={() => "d"}
-          />
+          {IsRecruiting ? (
+            <Button
+              type="button"
+              buttontype="posistionbutton"
+              content="모집중"
+              disabled={false}
+              onClick={() => "d"}
+            />
+          ) : (
+            <Button
+              type="button"
+              buttontype="posistioncompletebutton"
+              content="모집완료"
+              disabled={false}
+              onClick={() => "d"}
+            />
+          )}
         </WritingHeader>
         <ApplyUserForm
           src={src}

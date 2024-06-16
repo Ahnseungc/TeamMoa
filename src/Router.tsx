@@ -12,6 +12,7 @@ const KakaoLoading = lazy(() => import("@page/Auth/kakao"));
 const LoginPage = lazy(() => import("@page/Login"));
 const PostingPage = lazy(() => import("@page/Posting"));
 const WriteApply = lazy(() => import("@page/WriteApply"));
+const ApplyUserList = lazy(() => import("@page/ApplyUserList"));
 
 const Router = () => {
   return (
@@ -29,6 +30,7 @@ const Router = () => {
       <Route path="/search" element={<SearchForm />} />
       <Route path="/auth/kakao" element={<KakaoLoading />} />
       <Route path="/WriteApply" element={<WriteApply />} />
+      <Route path="/applyuserlist" element={<ApplyUserList />} />
     </Routes>
   );
 };

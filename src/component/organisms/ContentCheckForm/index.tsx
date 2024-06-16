@@ -35,17 +35,23 @@ const ContentCheckForm: StoryFn<ContentCheckFormProps> = ({
           )}
         </Header>
         <InfoLayout>
-          <Text fontSize={"16"} fontWeight={"700"} color={"black"}>
-            이름(팀플온도)
-          </Text>
-          <Text fontSize={"16"} fontWeight={"400"} color={"black"}>
-            {`${name}(${temp})`}
-          </Text>
+          <span style={{ width: "103px", marginRight: "15px" }}>
+            <Text fontSize={"16"} fontWeight={"700"} color={"black"}>
+              이름(팀플온도)
+            </Text>
+          </span>
+          <span style={{ marginLeft: "0" }}>
+            <Text fontSize={"16"} fontWeight={"400"} color={"black"}>
+              {`${name} ${temp}점`}
+            </Text>
+          </span>
         </InfoLayout>
         <InfoLayout>
-          <Text fontSize={"16"} fontWeight={"700"} color={"black"}>
-            휴대폰
-          </Text>
+          <span style={{ width: "103px", marginRight: "15px" }}>
+            <Text fontSize={"16"} fontWeight={"700"} color={"black"}>
+              휴대폰
+            </Text>
+          </span>
           <DetailInfo>
             <Text fontSize={"16"} fontWeight={"400"} color={"black"}>
               {`${callNumber}`}
@@ -53,12 +59,16 @@ const ContentCheckForm: StoryFn<ContentCheckFormProps> = ({
           </DetailInfo>
         </InfoLayout>
         <InfoLayout>
-          <Text fontSize={"16"} fontWeight={"700"} color={"black"}>
-            카카오톡 아이디
-          </Text>
-          <Text fontSize={"16"} fontWeight={"400"} color={"black"}>
-            {`${kakaoId}`}
-          </Text>
+          <span style={{ width: "103px", marginRight: "15px" }}>
+            <Text fontSize={"16"} fontWeight={"700"} color={"black"}>
+              카카오톡 아이디
+            </Text>
+          </span>
+          <span style={{ marginLeft: "0" }}>
+            <Text fontSize={"16"} fontWeight={"400"} color={"black"}>
+              {`${kakaoId}`}
+            </Text>
+          </span>
         </InfoLayout>
       </div>
     </ContentCheckFormLayout>

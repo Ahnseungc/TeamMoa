@@ -27,6 +27,7 @@ export const WritingHeader = styled.header`
   & button {
     position: fixed;
     left: 20rem;
+    top: 5rem;
   }
 `;
 
