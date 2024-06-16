@@ -35,7 +35,8 @@ export interface ButtonType {
     | "posistioncompletebutton"
     | "largebuttondisable"
     | "userInfoButto"
-    | "gptButton";
+    | "gptButton"
+    | "largeAddbutton";
   disabled: boolean;
   content?: string;
   icon?: string;

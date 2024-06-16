@@ -11,10 +11,10 @@ const Home = () => {
   const userInfo = useRecoilState(userAtom);
 
   const { data, isLoading, error } = useSWR(
-    () =>
-      userInfo ? `http://localhost:3000/api/posts?id=${userInfo[0].id}` : null,
+    () => (userInfo ? `http://localhost:3000/api/postsAll` : null),
     fetcher
   );
+  console.log(data);
 
   if (isLoading) return <Spinner />;
   if (error) return <div>..로딩중</div>;

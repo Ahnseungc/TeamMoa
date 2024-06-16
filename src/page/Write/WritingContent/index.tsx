@@ -5,6 +5,7 @@ import { useRecoilValue } from "recoil";
 import { userAtom } from "src/atom";
 import { Axios } from "src/apis/api/axiosFetch";
 import { useNavigate } from "react-router-dom";
+import uuid from "react-uuid";
 
 const WritingDetailContent = lazy(() => import("@templates/DetailContent"));
 const WritingUpload = lazy(() => import("@templates/WritingUpload"));
@@ -47,7 +48,6 @@ const WritePage = () => {
   });
 
   const NewNeedPosistion = groupByNumber(wirteForm.NeedPosistion);
-  console.log(NewNeedPosistion);
 
   const onChangeWriteForm = (e: any) => {
     const { id, value } = e.target;
@@ -69,8 +69,8 @@ const WritePage = () => {
         ExpireDate: wirteForm.ExpireDate,
         Writer: userInfo.name,
         UserList: [wirteForm.id],
+        writeid: uuid(),
       });
-
       res.status === 201 && Navigate("/home");
       console.log(res);
     } catch (err) {

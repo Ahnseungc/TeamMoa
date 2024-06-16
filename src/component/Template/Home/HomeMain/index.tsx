@@ -11,7 +11,6 @@ import HomeNoneWrite from "@organisms/HomeNoneWrite";
 const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
   const Navigate = useNavigate();
 
-  console.log(BoardData);
   return (
     <HomemainLayout>
       <HomeBannerHeader>

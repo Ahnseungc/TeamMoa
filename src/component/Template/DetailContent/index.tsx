@@ -7,12 +7,15 @@ import {
   InfoInputLayout,
   HeaderTextLayout,
   ButtonLayout,
+  WritingHead,
+  TagLayout,
 } from "./styles";
 import Button from "@atom/Button";
 import BackIcon from "@asset/image/icon_back.png";
 import Heading from "@atom/Heading";
 import PositionAddForm from "@organisms/PositionAddForm";
 import WriteInput from "@molecules/WriteInput";
+import Text from "@atom/Text";
 
 const DetailContent: StoryFn = ({
   setIndex,
@@ -72,6 +75,33 @@ const DetailContent: StoryFn = ({
           error=""
         />
       </InfoInputLayout>
+      <div>
+        <WritingHead>
+          <Heading fontSize="20px" fontWeight="700" color="black">
+            업로드 태그
+          </Heading>
+        </WritingHead>
+        <TagLayout>
+          <button>
+            <Text
+              fontSize={"11px"}
+              fontWeight={"400"}
+              color={"rgba(137, 138, 141, 1)"}
+            >
+              공모전
+            </Text>
+          </button>
+          <button>
+            <Text
+              fontSize={"11px"}
+              fontWeight={"400"}
+              color={"rgba(137, 138, 141, 1)"}
+            >
+              한림대학교
+            </Text>
+          </button>
+        </TagLayout>
+      </div>
       <ButtonLayout>
         <Button
           type="button"

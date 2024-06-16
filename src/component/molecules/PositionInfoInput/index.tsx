@@ -54,7 +54,8 @@ const PositionInfoInput: FC<PositionInfoInputType> = ({
         style={{
           width: "92px",
           height: "26px",
-          marginLeft: "3px",
+          marginLeft: "0",
+          marginRight: "0",
         }}
       />
       <InputLayout
@@ -69,7 +70,8 @@ const PositionInfoInput: FC<PositionInfoInputType> = ({
         style={{
           width: "159px",
           height: "26px",
-          margin: "0 5px",
+          marginLeft: "10px",
+          marginRight: "0",
         }}
       />
       <InputLayout
@@ -84,6 +86,8 @@ const PositionInfoInput: FC<PositionInfoInputType> = ({
         style={{
           width: "25px",
           height: "26px",
+          marginLeft: "8px",
+          marginRight: "0",
         }}
       />
     </PositionInfoInputLayout>

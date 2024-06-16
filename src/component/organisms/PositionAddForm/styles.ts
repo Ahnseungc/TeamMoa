@@ -1,36 +1,39 @@
 import styled from "styled-components";
 
 export const PositionAddFormLayout = styled.div`
-  width: 345px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
 
   & h3:first-child {
-    padding: 0 12px;
+    padding-left: 21px;
   }
 `;
 
 export const FormTitle = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 16px 0 8px 36px;
+
+  margin: 11px 0 8px 45px;
 
   & span:first-child {
-    margin-left: 10px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   & span:nth-child(2) {
-    margin-left: 40px;
+    margin-left: 46px;
+    margin-right: 0;
   }
 
   & span:last-child {
-    margin-left: 105px;
+    margin-left: 109px;
+    margin-right: 0;
   }
 `;
 
 export const PositionFormContentLayout = styled.div`
-  border-top: 0.75px solid #BDBDBD;
+  border-top: 0.75px solid #bdbdbd;
   margin: 10px 0;
   padding-top: 10px;
   display: flex;

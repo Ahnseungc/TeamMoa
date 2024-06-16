@@ -43,46 +43,6 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({
     });
   };
 
-  //   ApplyCount
-  // :
-
-  // Detail
-  // :
-  // "글"
-  // ExpireDate
-  // :
-  // "2024-04-03"
-  // Id
-  // :
-  // "askleml1"
-  // IsRecruiting
-  // :
-  // true
-  // NeedPosistion
-  // :
-  // []
-  // Title
-  // :
-  // "제목"
-  // UploadTag
-  // :
-  // (2) ['뭘까', '뭘까']
-  // UserList
-  // :
-  // []
-  // createdAt
-  // :
-  // "2024-06-12T10:36:40.940Z"
-  // updatedAt
-  // :
-  // "2024-06-12T10:36:40.940Z"
-  // __v
-  // :
-  // 0
-  // _id
-  // :
-  // "66697a387a039f87d8feeb4d
-
   const onClickAdd = () => {
     const newNeedPosition = {
       NeedPosistionName: "",
@@ -136,7 +96,7 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({
       <Button
         type="button"
         content="추가하기"
-        buttontype={"largebutton"}
+        buttontype={"largeAddbutton"}
         disabled={false}
         onClick={onClickAdd}
       />

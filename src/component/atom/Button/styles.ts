@@ -13,7 +13,8 @@ export interface ButtonLayoutType {
     | "posistioncompletebutton"
     | "largebuttondisable"
     | "userInfoButto"
-    | "gptButton";
+    | "gptButton"
+    | "largeAddbutton";
 }
 
 export const textButtonStyles = css`
@@ -46,6 +47,17 @@ export const largebuttonStyles = css`
     background-color: rgba(217, 74, 86, 1);
     color: white;
   } */
+`;
+export const largebuttonAddStyles = css`
+  width: 329px;
+  height: 35px;
+  background-color: rgba(252, 252, 254, 1);
+  color: rgba(176, 176, 176, 1);
+  border: 1px solid rgba(176, 176, 176, 1);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.4px;
 `;
 
 export const addpositionStyles = css`
@@ -185,6 +197,8 @@ export const ButtonLayout = styled.button<ButtonLayoutType>`
         return userInfoButtoStyles;
       case "gptButton":
         return gptButtonStyles;
+      case "largeAddbutton":
+        return largebuttonAddStyles;
 
       default:
         return textButtonStyles;
