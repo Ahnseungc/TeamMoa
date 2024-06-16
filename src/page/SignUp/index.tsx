@@ -28,7 +28,7 @@ const SignUpPage = () => {
   const { data, isLoading, error } = useSWR(
     () =>
       userAtomValue
-        ? `http://localhost:3000/api/user?kakaoId=${userAtomValue.id}`
+        ? `http://3.106.143.87:3000//api/user?kakaoId=${userAtomValue.id}`
         : null,
     fetcher
   );
@@ -60,7 +60,7 @@ const SignUpPage = () => {
   };
   const onSubmit = async () => {
     try {
-      const res = await Axios.post("http://localhost:3000/api/user", {
+      const res = await Axios.post("http://3.106.143.87:3000/api/user", {
         NickName: name,
         SchoolName: school,
         SchoolMajor: major.DoubleMajor,

@@ -14,13 +14,15 @@ const UserInfoPage = () => {
 
   const { data, isLoading, error } = useSWR(
     () =>
-      userinfo ? `http://localhost:3000/api/user?kakaoId=${userinfo.id}` : null,
+      userinfo
+        ? `http://3.106.143.87:3000/api/user?kakaoId=${userinfo.id}`
+        : null,
     fetcher
   );
 
   const { data: postData } = useSWR(
     () =>
-      userinfo ? `http://localhost:3000/api/posts?id=${userinfo.id}` : null,
+      userinfo ? `http://3.106.143.87:3000/api/posts?id=${userinfo.id}` : null,
     fetcher
   );
 
@@ -28,7 +30,7 @@ const UserInfoPage = () => {
     try {
       try {
         const response = await axios.put(
-          `http://localhost:3000/updateuser?kakaoId=${userinfo.id}`,
+          `http://3.106.143.87:3000/updateuser?kakaoId=${userinfo.id}`,
           {}
         );
         console.log("User updated:", response.data);

@@ -24,7 +24,7 @@ const WritingUpload: StoryFn = () => {
     isLoading,
     error,
   } = useSWR(
-    () => `http://localhost:3000/api/postsDetail?writeid=${name}`,
+    () => `http://3.106.143.87:3000/api/postsDetail?writeid=${name}`,
     fetcher
   );
 

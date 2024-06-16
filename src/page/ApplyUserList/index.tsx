@@ -18,7 +18,7 @@ const ApplyUserList = () => {
   const navigate = useNavigate();
 
   const { data, isLoading, error } = useSWR(
-    () => (userInfo ? `http://localhost:3000/api/postsAll` : null),
+    () => (userInfo ? `http://3.106.143.87:3000/api/postsAll` : null),
     fetcher
   );
 
