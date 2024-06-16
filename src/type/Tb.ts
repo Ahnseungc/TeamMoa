@@ -86,6 +86,7 @@ export interface WritingBoardFormProps extends WritingUserFormProps, TextProps {
   Title?: string;
   Detail?: string;
   IsRecruiting?: boolean;
+  WebSiteUri?: string;
 }
 
 export interface EachPosition {
@@ -166,7 +167,7 @@ export interface HomeMainProps {
   Writer?: string;
   Detail?: string;
   Title?: string;
-  uploadTag?: Array<string>;
+  UploadTag?: string;
   ExpireDate?: string;
   createdAt?: string;
   IsRecruiting?: boolean;
@@ -270,7 +271,7 @@ export interface WriteForm {
   NeedPosistion: Array<NeedPosistionType>;
   ApplyCount: number;
   IsRecruiting: boolean;
-  UploadTag: Array<string>;
+  UploadTag: string;
   ExpireDate: string;
   id: string;
   Writer: string;

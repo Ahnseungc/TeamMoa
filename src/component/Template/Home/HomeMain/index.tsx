@@ -11,6 +11,11 @@ import HomeNoneWrite from "@organisms/HomeNoneWrite";
 const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
   const Navigate = useNavigate();
 
+  const HallymData = BoardData?.filter(
+    (post) => post.UploadTag === "한림대학교"
+  );
+  const OtherData = BoardData?.filter((post) => post.UploadTag === "공모전");
+
   return (
     <HomemainLayout>
       <HomeBannerHeader>
@@ -26,8 +31,23 @@ const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
       <HomeBanner isactive={isActive} onclick={() => setIsActive(!isActive)} />
       {BoardData?.length === 0 ? (
         <HomeNoneWrite />
+      ) : isActive === true ? (
+        HallymData?.map((data) => {
+          return (
+            <HomeBoardForm
+              onclick={() => Navigate("/posting")}
+              name={data.Writer}
+              position="팀장"
+              title={data.Title}
+              date={data.createdAt}
+              iscruiting={data.IsRecruiting}
+              subtitle={data.Detail}
+              needposistion={data.NeedPosistion}
+            />
+          );
+        })
       ) : (
-        BoardData?.map((data) => {
+        OtherData?.map((data) => {
           return (
             <HomeBoardForm
               onclick={() => Navigate("/posting")}

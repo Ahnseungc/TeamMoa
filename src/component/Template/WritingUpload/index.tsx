@@ -18,6 +18,7 @@ const WritingUpload: StoryFn = ({
   NewNeedPosistion,
   onSubmit,
 }) => {
+  console.log(wirteForm);
   return (
     <WritingUploadLayout>
       <Header>
@@ -50,6 +51,7 @@ const WritingUpload: StoryFn = ({
         textColor=""
         textSize=""
         children=""
+        WebSiteUri={wirteForm.WebSiteUri}
         Title={wirteForm.Title}
         Detail={wirteForm.Detail}
         IsRecruiting={wirteForm.IsRecruiting}

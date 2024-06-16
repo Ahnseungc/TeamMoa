@@ -82,7 +82,17 @@ const DetailContent: StoryFn = ({
           </Heading>
         </WritingHead>
         <TagLayout>
-          <button>
+          <button
+            onClick={() => {
+              setWriteForm((prev) => {
+                return {
+                  ...prev,
+                  UploadTag: "공모전",
+                };
+              });
+            }}
+            className={`${writeForm.UploadTag === "공모전" && "selected"}`}
+          >
             <Text
               fontSize={"11px"}
               fontWeight={"400"}
@@ -91,7 +101,17 @@ const DetailContent: StoryFn = ({
               공모전
             </Text>
           </button>
-          <button>
+          <button
+            onClick={() => {
+              setWriteForm((prev) => {
+                return {
+                  ...prev,
+                  UploadTag: "한림대학교",
+                };
+              });
+            }}
+            className={`${writeForm.UploadTag === "한림대학교" && "selected"}`}
+          >
             <Text
               fontSize={"11px"}
               fontWeight={"400"}

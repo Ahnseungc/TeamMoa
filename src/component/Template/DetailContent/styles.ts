@@ -64,6 +64,15 @@ export const TagLayout = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  .selected {
+    border: 1px solid rgba(217, 74, 86, 1);
+    background-color: rgba(236, 163, 169, 1);
+    & span {
+      color: rgba(217, 74, 86, 1);
+    }
+  }
+
   & button:hover {
     border: 1px solid rgba(217, 74, 86, 1);
     background-color: rgba(236, 163, 169, 1);
