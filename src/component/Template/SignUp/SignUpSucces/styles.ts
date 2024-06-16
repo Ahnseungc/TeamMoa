@@ -28,9 +28,9 @@ export const SignUpSuccessTextHeader = styled.div`
 `;
 
 export const SignUpSucessImg = styled.img`
-  width: 265px;
+  width: 235px;
   height: 265px;
-  background-color: aliceblue;
+  margin-top: 0;
 `;
 
 export const SignUpSuccessBody = styled.div`

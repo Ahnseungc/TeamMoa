@@ -4,9 +4,14 @@ import { ButtonType, InputType } from "@type/Tb";
 import { PositionInfoInputLayout } from "./styles";
 import { InputLayout } from "@atom/Input/styles";
 
-export interface PositionInfoInputType extends Omit<InputType, "type">, Omit<ButtonType, "type">  {
+export interface PositionInfoInputType
+  extends Omit<InputType, "type">,
+    Omit<ButtonType, "type"> {
   iptype: InputType["type"];
   btntype: ButtonType["type"];
+  writeForm: any;
+  onChangeWriteForm: any;
+  index?: number;
 }
 
 const PositionInfoInput: FC<PositionInfoInputType> = ({
@@ -22,7 +27,10 @@ const PositionInfoInput: FC<PositionInfoInputType> = ({
   placeholder,
   onClick,
   icon,
-  content
+  index,
+  content,
+  writeForm,
+  onChangeWriteForm,
 }) => {
   return (
     <PositionInfoInputLayout>
@@ -36,46 +44,46 @@ const PositionInfoInput: FC<PositionInfoInputType> = ({
       />
       <InputLayout
         type={iptype}
-        id={id}
+        id={`NeedPosistionName${index}`}
         placeholder={placeholder}
-        // readonly={readonly}
         disabled={disabled}
         error={error}
         Inputtype={inputtype}
-        value={value}
+        value={writeForm.NeedPosistionName}
+        onChange={onChangeWriteForm}
         style={{
           width: "92px",
-          height:"26px",
-          marginLeft: "3px"
+          height: "26px",
+          marginLeft: "3px",
         }}
       />
       <InputLayout
         type={iptype}
-        id={id}
+        id={`NeedPosistionSkill${index}`}
         placeholder={placeholder}
-        // readonly={readonly}
         disabled={disabled}
         error={error}
         Inputtype={inputtype}
-        value={value}
+        value={writeForm.NeedPosistionSkill}
+        onChange={onChangeWriteForm}
         style={{
           width: "159px",
-          height:"26px",
+          height: "26px",
           margin: "0 5px",
         }}
       />
       <InputLayout
         type={iptype}
-        id={id}
+        id={`NeedPosistionNumber${index}`}
         placeholder={placeholder}
-        // readonly={readonly}
         disabled={disabled}
         error={error}
         Inputtype={inputtype}
-        value={value}
+        value={writeForm.NeedPosistionNumber}
+        onChange={onChangeWriteForm}
         style={{
           width: "25px",
-          height:"26px",
+          height: "26px",
         }}
       />
     </PositionInfoInputLayout>

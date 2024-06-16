@@ -68,11 +68,11 @@ const HomeBoardForm: FC<HomeMainProps> = ({
           </Text>
         </HomeBoardHeaderBody>
         <HomeBannerFooter>
-          {needposistion.map((posistion) => {
+          {needposistion?.map((posistion) => {
             return (
               <PosistionIcon
-                count={posistion.count}
-                name={posistion.name}
+                count={posistion?.NeedPosistionNumber}
+                name={posistion?.NeedPosistionName}
                 PosistionType={"HomePosistion"}
               />
             );

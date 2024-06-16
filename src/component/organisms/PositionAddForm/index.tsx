@@ -1,5 +1,5 @@
 import { StoryFn } from "@storybook/react";
-import { PositionAddFormProps } from "@type/Tb";
+import { NeedPosistionType, PositionAddFormProps } from "@type/Tb";
 import {
   PositionAddFormLayout,
   PositionFormContentLayout,
@@ -10,17 +10,90 @@ import Button from "@atom/Button";
 import Text from "@atom/Text";
 import Heading from "@atom/Heading";
 import cancelBtn from "@asset/image/icon_cancel.png";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
-const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
+const PositionAddForm: StoryFn<PositionAddFormProps> = ({
+  positionCount,
+  writeForm,
+  onChangeWriteForm,
+  setWriteForm,
+}) => {
   const titleName = ["포지션명", "필요스킬", "인원수"];
-  const [count, setCount] = useState(positionCount);
 
-  const onClickAdd = () => setCount(count + 1);
+  const [needPosistion, setNeedPosistion] = useState<Array<NeedPosistionType>>(
+    []
+  );
+  const [testList, setTestList] = useState([]);
+
+  const onChangeNeedPosistion = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setNeedPosistion((prev) => {
+      return {
+        ...prev,
+        [id]: value,
+      };
+    });
+    setWriteForm((prev) => {
+      return {
+        ...prev,
+        NeedPosistion: needPosistion,
+      };
+    });
+  };
+
+  //   ApplyCount
+  // :
+
+  // Detail
+  // :
+  // "글"
+  // ExpireDate
+  // :
+  // "2024-04-03"
+  // Id
+  // :
+  // "askleml1"
+  // IsRecruiting
+  // :
+  // true
+  // NeedPosistion
+  // :
+  // []
+  // Title
+  // :
+  // "제목"
+  // UploadTag
+  // :
+  // (2) ['뭘까', '뭘까']
+  // UserList
+  // :
+  // []
+  // createdAt
+  // :
+  // "2024-06-12T10:36:40.940Z"
+  // updatedAt
+  // :
+  // "2024-06-12T10:36:40.940Z"
+  // __v
+  // :
+  // 0
+  // _id
+  // :
+  // "66697a387a039f87d8feeb4d
+
+  const onClickAdd = () => {
+    const newNeedPosition = {
+      NeedPosistionName: "",
+      NeedPosistionNumber: 0,
+      NeedPosistionSkill: "",
+    };
+    setTestList((prev) => [...prev, newNeedPosition]);
+  };
   const onClickDelete = () => {
-    if (count !== 1) 
-      setCount(count - 1);
-  }
+    setTestList((prev) => prev.slice(0, prev.length - 1));
+  };
 
   return (
     <PositionAddFormLayout>
@@ -35,7 +108,8 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
             </Text>
           ))}
         </FormTitle>
-        {[...Array(count)].map((item, idx) => {
+
+        {testList?.map((NeedPosistion, index) => {
           return (
             <PositionInfoInput
               iptype="text"
@@ -44,13 +118,17 @@ const PositionAddForm: StoryFn<PositionAddFormProps> = ({ positionCount }) => {
               inputtype="website"
               disabled={false}
               readonly={false}
-              id={item}
+              // id={NeedPosistion}
+              id=""
+              index={index}
               placeholder=""
               value=""
               error=""
               content=""
               onClick={onClickDelete}
               icon={cancelBtn}
+              writeForm={needPosistion}
+              onChangeWriteForm={onChangeNeedPosistion}
             />
           );
         })}

@@ -44,7 +44,7 @@ const Kakao = () => {
           )
           .then((res: any) => {
             setUser({
-              id: res.data.id,
+              id: res.data.id.toString(),
               name: res.data.properties.nickname,
               img: res.data.properties.profile_image,
               email: res.data.kakao_account.email,

@@ -16,20 +16,24 @@ const WritingBoardForm: FC<WritingBoardFormProps> = ({
   userName,
   userPosition,
   writedDate,
+  Title,
+  Detail,
+  IsRecruiting,
 }) => {
   return (
     <WritingBoardFormLayouts>
       <div>
         <WritingHeader>
           <Heading fontSize="20px" fontWeight="700" color="rgba(0,0,0,1)">
-            제목
+            {Title}
           </Heading>
           <Button
             type="button"
             buttontype="posistionbutton"
             content="모집중"
             disabled={false}
-            onClick={() => "d"}/>
+            onClick={() => "d"}
+          />
         </WritingHeader>
         <ApplyUserForm
           src={src}
@@ -42,7 +46,7 @@ const WritingBoardForm: FC<WritingBoardFormProps> = ({
         />
         <WritingParagraph>
           <Text fontSize="16px" fontWeight="400" color="rgba(0,0,0,1)">
-            글내용글내용글내용길게 쓰여진 글
+            {Detail}
           </Text>
         </WritingParagraph>
       </div>

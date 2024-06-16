@@ -11,6 +11,7 @@ import HomeNoneWrite from "@organisms/HomeNoneWrite";
 const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
   const Navigate = useNavigate();
 
+  console.log(BoardData);
   return (
     <HomemainLayout>
       <HomeBannerHeader>
@@ -24,20 +25,20 @@ const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
         />
       </HomeBannerHeader>
       <HomeBanner isactive={isActive} onclick={() => setIsActive(!isActive)} />
-      {BoardData.length === 0 ? (
+      {BoardData?.length === 0 ? (
         <HomeNoneWrite />
       ) : (
-        BoardData.map((data) => {
+        BoardData?.map((data) => {
           return (
             <HomeBoardForm
               onclick={() => Navigate("/posting")}
-              name={data.name}
-              position={data.position}
-              title={data.title}
-              date={data.date}
-              iscruiting={data.iscruiting}
-              subtitle={data.subtitle}
-              needposistion={data.needposistion}
+              name={data.Writer}
+              position="팀장"
+              title={data.Title}
+              date={data.createdAt}
+              iscruiting={data.IsRecruiting}
+              subtitle={data.Detail}
+              needposistion={data.NeedPosistion}
             />
           );
         })

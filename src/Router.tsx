@@ -7,10 +7,6 @@ const HomePage = lazy(() => import("@page/Home"));
 const UserInfoPage = lazy(() => import("@page/UserInfo"));
 const ApplyPage = lazy(() => import("@page/Apply"));
 const WriteContentPage = lazy(() => import("@page/Write/WritingContent"));
-const WriteDetailContentPage = lazy(
-  () => import("@page/Write/WritingDetailContent")
-);
-const WriteUploadPage = lazy(() => import("@page/Write/WritingUpload"));
 const AlarmPage = lazy(() => import("@page/Alarm"));
 const SearchForm = lazy(() => import("@templates/SearchFrom"));
 const KakaoLoading = lazy(() => import("@page/Auth/kakao"));
@@ -30,8 +26,6 @@ const Router = () => {
       <Route path="/apply" element={<ApplyPage />} />
       <Route path="/posting" element={<PostingPage />} />
       <Route path="/writecontent" element={<WriteContentPage />} />
-      <Route path="/writedetailcontent" element={<WriteDetailContentPage />} />
-      <Route path="/writeupload" element={<WriteUploadPage />} />
       <Route path="/search" element={<SearchForm />} />
       <Route path="/auth/kakao" element={<KakaoLoading />} />
     </Routes>

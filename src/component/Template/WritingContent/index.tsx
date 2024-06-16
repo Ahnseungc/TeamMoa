@@ -12,13 +12,13 @@ import Heading from "@atom/Heading";
 import Input from "@atom/Input";
 import { useNavigate } from "react-router-dom";
 
-const WritingContent: StoryFn = () => {
-  const [title, setTitle] = useState<string>("");
+const WritingContent: StoryFn = ({
+  setIndex,
+  onChangeWriteForm,
+  writeForm,
+}) => {
   const Navigate = useNavigate();
-
-  const onChangeTitle = (e: ChangeEvent<HTMLInputElement>) => {
-    setTitle(e.target.value);
-  };
+  console.log(writeForm);
 
   return (
     <WritingContentLayout>
@@ -28,7 +28,8 @@ const WritingContent: StoryFn = () => {
           buttontype="icon"
           icon={CancelIcon}
           disabled={false}
-          onClick={() => Navigate("/home")}/>
+          onClick={() => Navigate("/home")}
+        />
         <Heading fontSize="20px" fontWeight="400" color="#636363">
           글쓰기
         </Heading>
@@ -37,20 +38,27 @@ const WritingContent: StoryFn = () => {
           buttontype="smallbutton"
           content="다음"
           disabled={false}
-          onClick={() => Navigate(("/writedetailcontent"))}/>
+          onClick={() => setIndex(1)}
+        />
       </Header>
       <ContentInputLayout>
         <Input
-          id=""
-          value={title}
+          id="Title"
+          value={writeForm.Title}
           type="text"
           inputtype="textheader"
           readonly={false}
           disabled={false}
-          onChange={onChangeTitle}
+          onChange={onChangeWriteForm}
           error=""
-          placeholder="제목"/>
-        <ContentInput placeholder="내용을 입력하세요"/>
+          placeholder="제목"
+        />
+        <ContentInput
+          id="Detail"
+          placeholder="내용을 입력하세요"
+          value={writeForm.Detail}
+          onChange={onChangeWriteForm}
+        />
       </ContentInputLayout>
     </WritingContentLayout>
   );

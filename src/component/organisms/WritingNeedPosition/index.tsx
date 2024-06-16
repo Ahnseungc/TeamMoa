@@ -7,18 +7,19 @@ import NeedPosistionForm from "@molecules/NeedPositionForm";
 const WritingNeedPosition: FC<WritingNeedPositionProps> = ({
   NeedPosition,
 }) => {
+  console.log(NeedPosition);
   return (
     <WritingNeedPositionLayout>
       <Heading fontSize="20px" fontWeight="600" color="rgba(0, 0, 0, 1)">
         필요 포지션
       </Heading>
       <NeedPosistionList>
-        {NeedPosition.map((EachPosition) => {
+        {NeedPosition?.map((EachPosition) => {
           return (
             <NeedPosistionForm
-              needTitle={EachPosition.needTitle}
-              needCount={EachPosition.needCount}
-              needFramework={EachPosition.needFramework}
+              NeedPosistionName={EachPosition.NeedPosistionName}
+              NeedPosistionNumber={EachPosition.NeedPosistionNumber}
+              NeedPosistionSkill={EachPosition.NeedPosistionSkill}
             />
           );
         })}

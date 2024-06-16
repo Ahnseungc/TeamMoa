@@ -2,7 +2,7 @@ import { setMajorProps } from "@type/Tb";
 import { ChangeEvent, useState } from "react";
 import { lazy } from "react";
 import { Axios } from "src/apis/api/axiosFetch";
-import { useRecoilValue } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { userAtom } from "src/atom";
 const SignUpSettingName = lazy(
   () => import("@templates/SignUp/SignUpSettingName")
@@ -20,6 +20,7 @@ const SignUpPage = () => {
   const [name, setName] = useState<string>("");
   const [school, setSchool] = useState<string>("");
   const userAtomValue = useRecoilValue(userAtom);
+  const setUserAtomValue = useSetRecoilState(userAtom);
 
   const [major, setMajor] = useState<setMajorProps>({
     StudentID: "",
@@ -54,8 +55,10 @@ const SignUpPage = () => {
         email: userAtomValue.email,
         img: userAtomValue.img,
       });
+      setUserAtomValue({ ...userAtomValue, nickName: name });
 
       res.status === 201 && setIndex(4);
+      console.log(res);
     } catch (err) {
       console.log(err);
     }

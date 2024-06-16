@@ -1,5 +1,4 @@
 import Button from "@atom/Button";
-
 import AddText from "@asset/image/icon_AddText.png";
 import NavBar from "@organisms/NavBar";
 import { FC } from "react";

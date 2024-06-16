@@ -9,7 +9,7 @@ const PosistionIcon: FunctionComponent<PosistionType> = ({
 }) => {
   return (
     <PosistionIconLayout PosistionType={PosistionType}>
-      {PosistionType === "HomePosistion" ? (
+      {count !== undefined && PosistionType === "HomePosistion" ? (
         <h3>{`${name}(${count})`}</h3>
       ) : (
         <h3>{name}</h3>

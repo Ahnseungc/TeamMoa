@@ -82,12 +82,18 @@ export interface WritingBoardFormProps extends WritingUserFormProps, TextProps {
   textColor: string;
   textSize: string;
   writedDate: string;
+  Title?: string;
+  Detail?: string;
+  IsRecruiting?: boolean;
 }
 
 export interface EachPosition {
-  needTitle: string;
-  needCount: number;
-  needFramework: Array<string>;
+  NeedPosistionSkill?: string[];
+  NeedPosistionName?: string;
+  NeedPosistionNumber?: string;
+  needTitle?: string;
+  needCount?: number;
+  needFramework?: Array<string>;
 }
 
 export interface WritingNeedPositionProps {
@@ -103,6 +109,9 @@ export interface ContentInputType {
 
 export interface PositionAddFormProps {
   positionCount: number;
+  writeForm: any;
+  onChangeWriteForm: any;
+  setWriteForm: any;
 }
 
 export interface ApplyAnnounceHeadingProps {
@@ -133,6 +142,8 @@ export interface HomeBannerProps {
   onclick: () => void;
 }
 export interface PosistionArrayType {
+  NeedPosistionName?: string;
+  NeedPosistionNumber?: number;
   name: string;
   count: number;
 }
@@ -151,6 +162,14 @@ export interface HomeMainProps {
   subtitle: string;
   needposistion: Array<PosistionArrayType>;
   onclick?: () => void;
+  Writer?: string;
+  Detail?: string;
+  Title?: string;
+  uploadTag?: Array<string>;
+  ExpireDate?: string;
+  createdAt?: string;
+  IsRecruiting?: boolean;
+  NeedPosistion?: any;
 }
 
 export interface HomeBoardData {
@@ -242,4 +261,23 @@ export interface ApplyPageProps {
 
 export interface SearchFormProps {
   BoardData: Array<HomeMainProps>;
+}
+
+export interface WriteForm {
+  Title: string;
+  Detail: string;
+  NeedPosistion: Array<NeedPosistionType>;
+  ApplyCount: number;
+  IsRecruiting: boolean;
+  UploadTag: Array<string>;
+  ExpireDate: string;
+  id: string;
+  Writer: string;
+  WebSiteUri: string;
+}
+
+export interface NeedPosistionType {
+  NeedPosistionName: string;
+  NeedPosistionNumber: number;
+  NeedPosistionSkill: string;
 }
