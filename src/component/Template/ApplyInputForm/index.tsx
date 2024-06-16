@@ -78,6 +78,7 @@ const ApplyInputForm: StoryFn = () => {
           }
           value={message}
           onchange={onChangeMsg}
+          setMessage={setMessage}
         />
       </ContentInputLayout>
       <ConsentText />

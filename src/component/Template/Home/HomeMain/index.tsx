@@ -35,7 +35,9 @@ const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
         HallymData?.map((data) => {
           return (
             <HomeBoardForm
-              onclick={() => Navigate("/posting")}
+              onclick={() =>
+                Navigate("/posting", { state: { id: 1, name: data.writeid } })
+              }
               name={data.Writer}
               position="팀장"
               title={data.Title}
@@ -43,6 +45,7 @@ const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
               iscruiting={data.IsRecruiting}
               subtitle={data.Detail}
               needposistion={data.NeedPosistion}
+              writeid={data.writeid}
             />
           );
         })

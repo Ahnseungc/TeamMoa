@@ -1,9 +1,12 @@
 import { setMajorProps } from "@type/Tb";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { lazy } from "react";
 import { Axios } from "src/apis/api/axiosFetch";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { userAtom } from "src/atom";
+import useSWR from "swr";
+import fetcher from "src/apis/util/fetcher";
+import { useNavigate } from "react-router-dom";
 const SignUpSettingName = lazy(
   () => import("@templates/SignUp/SignUpSettingName")
 );
@@ -21,6 +24,18 @@ const SignUpPage = () => {
   const [school, setSchool] = useState<string>("");
   const userAtomValue = useRecoilValue(userAtom);
   const setUserAtomValue = useSetRecoilState(userAtom);
+  const navigate = useNavigate();
+  const { data, isLoading, error } = useSWR(
+    () =>
+      userAtomValue
+        ? `http://localhost:3000/api/user?kakaoId=${userAtomValue.id}`
+        : null,
+    fetcher
+  );
+
+  useEffect(() => {
+    data?.length !== 0 && navigate("/home");
+  }, [data]);
 
   const [major, setMajor] = useState<setMajorProps>({
     StudentID: "",

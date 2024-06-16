@@ -107,6 +107,7 @@ export interface ContentInputType {
   placeholder: string;
   value: string;
   onchange?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
+  setMessage?: any;
 }
 
 export interface PositionAddFormProps {
@@ -172,6 +173,7 @@ export interface HomeMainProps {
   createdAt?: string;
   IsRecruiting?: boolean;
   NeedPosistion?: any;
+  writeid?: string;
 }
 
 export interface HomeBoardData {
@@ -192,12 +194,16 @@ export interface PostInfoProps {
 }
 
 export interface PostInfoData {
-  PostInfo: Array<PostInfoProps>;
-  BoardData: Array<HomeMainProps>;
+  PostInfo: any;
+  BoardData: Array<any>;
+  userInfo: any;
+  setSkill?: any;
+  skill?: any;
 }
 
 export interface UserStackData {
   userstack: Array<string>;
+  setSkill?: any;
 }
 
 export interface ProjectInfoProps {

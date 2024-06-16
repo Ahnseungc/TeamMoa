@@ -22,9 +22,10 @@ const HomeBoardForm: FC<HomeMainProps> = ({
   subtitle,
   needposistion,
   onclick,
+  writeid,
 }) => {
   return (
-    <HomeBoardFormLayout onClick={onclick}>
+    <HomeBoardFormLayout onClick={onclick} key={writeid}>
       <HomeBoardFormContentLayout>
         <HomeBoardFormContentHeader>
           <HomeBoardHeaderTiteName>

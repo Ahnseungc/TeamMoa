@@ -6,26 +6,22 @@ import Text from "@atom/Text";
 import PosistionIcon from "@atom/PosistionIcon";
 import { FC } from "react";
 
-const UserStackForm: FC<UserStackData> = ({ userstack }) => {
+const UserStackForm: FC<UserStackData> = ({ userstack, setSkill }) => {
   return (
     <UserStackFormLayout>
       <div>
-        <Heading
-          fontSize={"20"}
-          fontWeight={"600"}
-          color={"rgba(99, 99, 99, 1)"}
-        >
+        <Heading fontSize={"20"} fontWeight={"600"} color={"rgba(0, 0, 0, 1)"}>
           내 스택
         </Heading>
         <StackListLayout>
-          {userstack.map((stack) => (
+          {userstack?.map((stack) => (
             <PosistionIcon
               name={stack}
               PosistionType={"MyPagePosistion"}
               count={1}
             />
           ))}
-          <ButtonLayout>
+          <ButtonLayout onClick={setSkill}>
             <Text
               fontSize={"12px"}
               fontWeight={"400"}

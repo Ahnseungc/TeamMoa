@@ -55,9 +55,11 @@ const WritingBoardForm: FC<WritingBoardFormProps> = ({
         <Text fontSize="15px" fontWeight="350" color="rgba(99, 99, 99, 1)">
           {`프로젝트 마감일자: ${writedDate}`}
         </Text>
-        <Text fontSize="15px" fontWeight="350" color="rgba(99, 99, 99, 1)">
-          {`공모전 웹사이트: ${WebSiteUri}`}
-        </Text>
+        {WebSiteUri && (
+          <Text fontSize="15px" fontWeight="350" color="rgba(99, 99, 99, 1)">
+            {`공모전 웹사이트: ${WebSiteUri}`}
+          </Text>
+        )}
       </WritingFooter>
     </WritingBoardFormLayouts>
   );

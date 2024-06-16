@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy } from "react";
 import Layout from "@templates/Layout";
-
 const SignUpPage = lazy(() => import("@page/SignUp"));
 const HomePage = lazy(() => import("@page/Home"));
 const UserInfoPage = lazy(() => import("@page/UserInfo"));
@@ -12,6 +11,7 @@ const SearchForm = lazy(() => import("@templates/SearchFrom"));
 const KakaoLoading = lazy(() => import("@page/Auth/kakao"));
 const LoginPage = lazy(() => import("@page/Login"));
 const PostingPage = lazy(() => import("@page/Posting"));
+const WriteApply = lazy(() => import("@page/WriteApply"));
 
 const Router = () => {
   return (
@@ -28,6 +28,7 @@ const Router = () => {
       <Route path="/writecontent" element={<WriteContentPage />} />
       <Route path="/search" element={<SearchForm />} />
       <Route path="/auth/kakao" element={<KakaoLoading />} />
+      <Route path="/WriteApply" element={<WriteApply />} />
     </Routes>
   );
 };

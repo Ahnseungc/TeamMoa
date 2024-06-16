@@ -16,7 +16,6 @@ import {
 import { useNavigate } from "react-router-dom";
 
 const ApplyStatistics = () => {
-  const Navigate = useNavigate();
   const data = [
     { name: "Page A", uv: 4, pv: 4, amt: 2400 },
     { name: "Page B", uv: 3, pv: 3, amt: 2210 },
@@ -56,14 +55,6 @@ const ApplyStatistics = () => {
           }}
         />
       </ComposedChart>
-
-      <Button
-        type={"button"}
-        buttontype={"largebuttonactive"}
-        content={"지원하기"}
-        disabled={false}
-        onClick={() => Navigate("/apply")}
-      />
     </WritingBoardFormLayouts>
   );
 };

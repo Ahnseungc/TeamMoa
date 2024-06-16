@@ -1,125 +1,56 @@
+import Spinner from "@atom/Spinner";
 import UserInfo from "@templates/Mypage/UserProfile";
-
-const dummy = [
-  {
-    name: "홍길동",
-    position: "프론트엔드",
-    title: "김성우 교수님 HCI 프로젝트 모집",
-    date: "2024-05-03",
-    iscruiting: true,
-    subtitle:
-      "팀원을 모으는 서비스를 주제로 HCI수업에서 함께할학우를 찾습니다!",
-    needposistion: [
-      {
-        count: 2,
-        name: "프론트엔드",
-      },
-      {
-        count: 1,
-        name: "백엔드",
-      },
-      {
-        count: 1,
-        name: "기획",
-      },
-    ],
-  },
-  {
-    name: "홍길동",
-    position: "프론트엔드",
-    title: "김성우 교수님 HCI 프로젝트 모집",
-    date: "2024-05-03",
-    iscruiting: true,
-    subtitle:
-      "팀원을 모으는 서비스를 주제로 HCI수업에서 함께할학우를 찾습니다!",
-    needposistion: [
-      {
-        count: 2,
-        name: "프론트엔드",
-      },
-      {
-        count: 1,
-        name: "백엔드",
-      },
-      {
-        count: 1,
-        name: "기획",
-      },
-    ],
-  },
-  {
-    name: "홍길동",
-    position: "프론트엔드",
-    title: "김성우 교수님 HCI 프로젝트 모집",
-    date: "2024-05-03",
-    iscruiting: true,
-    subtitle:
-      "팀원을 모으는 서비스를 주제로 HCI수업에서 함께할학우를 찾습니다!",
-    needposistion: [
-      {
-        count: 2,
-        name: "프론트엔드",
-      },
-      {
-        count: 1,
-        name: "백엔드",
-      },
-      {
-        count: 1,
-        name: "기획",
-      },
-    ],
-  },
-  {
-    name: "홍길동",
-    position: "프론트엔드",
-    title: "김성우 교수님 HCI 프로젝트 모집",
-    date: "2024-05-03",
-    iscruiting: true,
-    subtitle:
-      "팀원을 모으는 서비스를 주제로 HCI수업에서 함께할학우를 찾습니다!",
-    needposistion: [
-      {
-        count: 2,
-        name: "프론트엔드",
-      },
-      {
-        count: 1,
-        name: "백엔드",
-      },
-      {
-        count: 1,
-        name: "기획",
-      },
-    ],
-  },
-  {
-    name: "홍길동",
-    position: "프론트엔드",
-    title: "김성우 교수님 HCI 프로젝트 모집",
-    date: "2024-05-03",
-    iscruiting: true,
-    subtitle:
-      "팀원을 모으는 서비스를 주제로 HCI수업에서 함께할학우를 찾습니다!",
-    needposistion: [
-      {
-        count: 2,
-        name: "프론트엔드",
-      },
-      {
-        count: 1,
-        name: "백엔드",
-      },
-      {
-        count: 1,
-        name: "기획",
-      },
-    ],
-  },
-];
+import axios from "axios";
+import { useState } from "react";
+import { useRecoilValue } from "recoil";
+import { Axios } from "src/apis/api/axiosFetch";
+import fetcher from "src/apis/util/fetcher";
+import { userAtom } from "src/atom";
+import useSWR from "swr";
 
 const UserInfoPage = () => {
-  return <UserInfo PostInfo={[]} BoardData={[]} />;
+  const userinfo = useRecoilValue(userAtom);
+  const [skill, setSkill] = useState([]);
+
+  const { data, isLoading, error } = useSWR(
+    () =>
+      userinfo ? `http://localhost:3000/api/user?kakaoId=${userinfo.id}` : null,
+    fetcher
+  );
+
+  const { data: postData } = useSWR(
+    () =>
+      userinfo ? `http://localhost:3000/api/posts?id=${userinfo.id}` : null,
+    fetcher
+  );
+
+  const onSubmit = async () => {
+    try {
+      try {
+        const response = await axios.put(
+          `http://localhost:3000/updateuser?kakaoId=${userinfo.id}`,
+          {}
+        );
+        console.log("User updated:", response.data);
+      } catch (error) {
+        console.error("Error updating user:", error);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  return data ? (
+    <UserInfo
+      PostInfo={data[0]}
+      userInfo={userinfo}
+      BoardData={postData}
+      skill={skill}
+      setSkill={setSkill}
+    />
+  ) : (
+    <Spinner />
+  );
 };
 
 export default UserInfoPage;

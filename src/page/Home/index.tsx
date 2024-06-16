@@ -14,7 +14,6 @@ const Home = () => {
     () => (userInfo ? `http://localhost:3000/api/postsAll` : null),
     fetcher
   );
-  console.log(data);
 
   if (isLoading) return <Spinner />;
   if (error) return <div>..로딩중</div>;

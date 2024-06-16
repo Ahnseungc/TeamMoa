@@ -23,7 +23,7 @@ export const isActivedStyle = css`
 `;
 
 export const BannerLayout = styled.button<BannerType>`
-  width: 186px;
+  width: 50%;
   height: 44px;
   display: flex;
   justify-content: center;
