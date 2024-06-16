@@ -108,6 +108,7 @@ export interface ContentInputType {
   value: string;
   onchange?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
   setMessage?: any;
+  setLoading?: any;
 }
 
 export interface PositionAddFormProps {

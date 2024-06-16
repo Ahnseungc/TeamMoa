@@ -14,11 +14,13 @@ import ContentInput from "@molecules/ContentInput";
 import ContentCheckForm from "@organisms/ContentCheckForm";
 import StackSelectForm from "@organisms/StackSelectForm";
 import ConsentText from "@molecules/ConsentText";
+import Spinner from "@atom/Spinner";
 
 const ApplyInputForm: StoryFn = () => {
   const Navigate = useNavigate();
   const [message, setMessage] = useState<string>("");
   const [portfolio, setPortfolio] = useState<string>("");
+  const [loading, setLoading] = useState(false);
 
   const onChangeMsg = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(e.target.value);
@@ -29,67 +31,83 @@ const ApplyInputForm: StoryFn = () => {
   };
 
   return (
-    <ApplyInputFormLayout>
-      <HeaderTextLayout>
-        <Heading fontSize="20px" fontWeight="400" color="rgba(99, 99, 99, 1)">
-          지원하기
-        </Heading>
-      </HeaderTextLayout>
-      <ApplyAnnounceHeading title="HCI 팀원 구합니다." />
-      <ContentCheckForm
-        name={"홍길동"}
-        temp={90}
-        callNumber={"010-0000-0000"}
-        kakaoId={"asdf1234"}
-        applyStatus={true}
-      />
-      <StackSelectForm
-        stackList={[
-          {
-            position: "프론트",
-            stack: ["React", "PWA"],
-            count: 2,
-          },
-          {
-            position: "백",
-            stack: ["JAVA"],
-            count: 1,
-          },
-          {
-            position: "디자인",
-            stack: ["Figma"],
-            count: 1,
-          },
-        ]}
-        applyStatus={true}
-      />
-      <ContentInputLayout>
-        <ContentInput
-          contentTitle={"지원자 포트폴리오"}
-          placeholder={"깃허브링크, 노션링크 다양한 경로를 입력해주세요."}
-          value={portfolio}
-          onchange={onChangePortfolio}
+    <>
+      {loading && (
+        <div
+          style={{
+            width: "100vw",
+            height: "100vh",
+            position: "fixed",
+            backgroundColor: "rgba(32, 30, 30, 0.1)",
+            zIndex: 1,
+          }}
+        >
+          <Spinner />
+        </div>
+      )}
+      <ApplyInputFormLayout loading={loading}>
+        <HeaderTextLayout>
+          <Heading fontSize="20px" fontWeight="400" color="rgba(99, 99, 99, 1)">
+            지원하기
+          </Heading>
+        </HeaderTextLayout>
+        <ApplyAnnounceHeading title="HCI 팀원 구합니다." />
+        <ContentCheckForm
+          name={"홍길동"}
+          temp={90}
+          callNumber={"010-0000-0000"}
+          kakaoId={"asdf1234"}
+          applyStatus={true}
         />
-        <Line />
-        <ContentInput
-          contentTitle={"전달메시지"}
-          placeholder={
-            "자신을 어필할 수 있도록 지원 포지션에 맞게 스택을 어필해보세요."
-          }
-          value={message}
-          onchange={onChangeMsg}
-          setMessage={setMessage}
+        <StackSelectForm
+          stackList={[
+            {
+              position: "프론트",
+              stack: ["React", "PWA"],
+              count: 2,
+            },
+            {
+              position: "백",
+              stack: ["JAVA"],
+              count: 1,
+            },
+            {
+              position: "디자인",
+              stack: ["Figma"],
+              count: 1,
+            },
+          ]}
+          applyStatus={true}
         />
-      </ContentInputLayout>
-      <ConsentText />
-      <Button
-        type={"button"}
-        buttontype={"largebuttonactive"}
-        content={"지원하기"}
-        disabled={false}
-        onClick={() => Navigate("/home")}
-      />
-    </ApplyInputFormLayout>
+        <ContentInputLayout>
+          <ContentInput
+            contentTitle={"지원자 포트폴리오"}
+            placeholder={"깃허브링크, 노션링크 다양한 경로를 입력해주세요."}
+            value={portfolio}
+            onchange={onChangePortfolio}
+          />
+          <Line />
+          <ContentInput
+            contentTitle={"전달메시지"}
+            placeholder={
+              "자신을 어필할 수 있도록 지원 포지션에 맞게 스택을 어필해보세요."
+            }
+            value={message}
+            onchange={onChangeMsg}
+            setMessage={setMessage}
+            setLoading={setLoading}
+          />
+        </ContentInputLayout>
+        <ConsentText />
+        <Button
+          type={"button"}
+          buttontype={"largebuttonactive"}
+          content={"지원하기"}
+          disabled={false}
+          onClick={() => Navigate("/home")}
+        />
+      </ApplyInputFormLayout>
+    </>
   );
 };
 

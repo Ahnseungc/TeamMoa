@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const ApplyInputFormLayout = styled.div`
+export const ApplyInputFormLayout = styled.div<{ loading: boolean }>`
   width: 100vw;
   display: flex;
   flex-direction: column;
   padding: 12px 0 15px 0;
   position: relative;
+  overflow: ${(props) => (props.loading ? "hidden" : "")};
 `;
 
 export const HeaderTextLayout = styled.div`
