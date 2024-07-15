@@ -18,7 +18,6 @@ const WritingUpload: StoryFn = ({
   NewNeedPosistion,
   onSubmit,
 }) => {
-  console.log(wirteForm);
   return (
     <WritingUploadLayout>
       <Header>

@@ -11,7 +11,7 @@ const Home = () => {
   const userInfo = useRecoilState(userAtom);
 
   const { data, isLoading, error } = useSWR(
-    () => (userInfo ? `http://3.106.143.87:3000/api/postsAll` : null),
+    () => (userInfo ? `http://localhost:3000/api/postsAll` : null),
     fetcher
   );
 
@@ -19,7 +19,11 @@ const Home = () => {
   if (error) return <div>..로딩중</div>;
 
   return (
-    <HomeMain BoardData={data} isActive={isActive} setIsActive={setIsActive} />
+    <HomeMain
+      BoardData={data && data}
+      isActive={isActive}
+      setIsActive={setIsActive}
+    />
   );
 };
 

@@ -14,6 +14,7 @@ const HomeMain: FC<HomeBoardData> = ({ BoardData, setIsActive, isActive }) => {
   const HallymData = BoardData?.filter(
     (post) => post.UploadTag === "한림대학교"
   );
+
   const OtherData = BoardData?.filter((post) => post.UploadTag === "공모전");
 
   return (

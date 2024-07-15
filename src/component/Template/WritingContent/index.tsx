@@ -18,8 +18,6 @@ const WritingContent: StoryFn = ({
   writeForm,
 }) => {
   const Navigate = useNavigate();
-  console.log(writeForm);
-
   return (
     <WritingContentLayout>
       <Header>

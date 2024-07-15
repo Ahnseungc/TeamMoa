@@ -16,7 +16,6 @@ const StackSelectForm: StoryFn<StackSelectFormProps> = ({
       </Heading>
       <div style={{ marginTop: "15px" }}>
         {stackList.map((item) => {
-          console.log(item);
           return (
             <SelectStack
               position={item?.NeedPosistionName}
