@@ -21,10 +21,7 @@ const Posting = () => {
   const Navigate = useNavigate();
 
   const { data, isLoading, error } = useSWR(
-    () =>
-      userInfo
-        ? `http://3.106.143.87:3000/api/postsDetail?writeid=${name}`
-        : null,
+    () => (userInfo ? `http://localhost:3000/?writeid=${name}` : null),
     fetcher
   );
 
