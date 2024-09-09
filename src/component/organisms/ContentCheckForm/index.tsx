@@ -35,7 +35,7 @@ const ContentCheckForm: StoryFn<ContentCheckFormProps> = ({
           )}
         </Header>
         <InfoLayout>
-          <span style={{ width: "103px", marginRight: "15px" }}>
+          {/* <span style={{ width: "103px", marginRight: "15px" }}>
             <Text fontSize={"16"} fontWeight={"700"} color={"black"}>
               이름(팀플온도)
             </Text>
@@ -44,7 +44,7 @@ const ContentCheckForm: StoryFn<ContentCheckFormProps> = ({
             <Text fontSize={"16"} fontWeight={"400"} color={"black"}>
               {`${name} ${temp}점`}
             </Text>
-          </span>
+          </span> */}
         </InfoLayout>
         <InfoLayout>
           <span style={{ width: "103px", marginRight: "15px" }}>
